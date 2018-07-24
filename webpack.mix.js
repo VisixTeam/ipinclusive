@@ -30,4 +30,5 @@ mix.sass('resources/scss/app.scss', 'assets/css/app.css', {
             './../base/resources/scss'
         ]
     })
-    .js('resources/js/app.js', 'assets/js/app.js');
+    .js('resources/js/app.js', 'assets/js/app.js')
+    .extract(['jquery']);
