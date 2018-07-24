@@ -1,15 +1,16 @@
 @import 'settings';
 @import 'foundation';
 
-// for demo
-@include foundation-everything;
-
 // Global styles
+@include foundation-global-styles;
 @import 'fonts';
 @import 'icons';
+@include foundation-typography;
 @import 'typography';
 
 // Grids (choose one)
+@include foundation-xy-grid-classes;
+@include foundation-forms;
 
 // helper components
 @import 'helpers/mixins';
