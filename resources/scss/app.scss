@@ -4,7 +4,7 @@
 // Global styles
 @include foundation-global-styles;
 @import 'fonts';
-@import 'icons';
+// @import 'icons';
 @include foundation-typography;
 @import 'typography';
 
@@ -20,7 +20,7 @@
 
 // Modules
 @import 'modules/sidebar-widgets';
-@import 'modules/slick-base';
+// @import 'modules/slick-base';
 
 // Plugins
 // @import 'plugins/woocommerce';

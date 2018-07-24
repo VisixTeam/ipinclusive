@@ -7,7 +7,7 @@ require( 'libs/fastclick' )
 require( 'libs/smoothscroll' )
 
 // dependancies
-require( 'slick-carousel' )
+// require( 'slick-carousel' )
 // require( 'jquery-zoom/jquery.zoom.min.js' )
 
 // plugins
