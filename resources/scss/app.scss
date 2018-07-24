@@ -1,0 +1,25 @@
+@import 'settings';
+@import 'foundation';
+
+// for demo
+@include foundation-everything;
+
+// Global styles
+@import 'fonts';
+@import 'icons';
+@import 'typography';
+
+// Grids (choose one)
+
+// helper components
+@import 'helpers/mixins';
+@import 'helpers/spacers';
+
+// UI components
+
+// Modules
+@import 'modules/sidebar-widgets';
+@import 'modules/slick-base';
+
+// Plugins
+// @import 'plugins/woocommerce';
