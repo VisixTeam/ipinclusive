@@ -42,5 +42,13 @@ dwsync.xml
 # folders to ignore
 node_modules
 
+# files to ignore
+assets/css/app.css
+assets/js/app.js
+assets/js/manifest.js
+assets/js/vendor.js
+package-lock.json
+mix-manifest.json
+
 # for netbeans
 nbproject
