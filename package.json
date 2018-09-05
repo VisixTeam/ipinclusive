@@ -21,6 +21,8 @@
         "jquery-zoom": "^1.7.21",
         "headroom.js": "^0.9.4",
         "slick-carousel": "^1.7.1",
-        "smoothscroll-for-websites": "^1.4.6"
+        "smoothscroll-for-websites": "^1.4.6",
+        "blazy": "^1.8.2",
+        "parsleyjs": "^2.8.1"
     }
 }
