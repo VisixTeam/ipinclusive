@@ -13,16 +13,14 @@ add_action('visix_base_loaded', function () {
 /**
  * Sets child asset version
  */
-function blank_child_asset_version() {
+add_filter('visix_alter_child_asset_version', function () {
   return '1.0.0';
-}
-add_filter('visix_alter_child_asset_version', 'blank_child_asset_version', 10, 0);
+}, 10, 0);
 
 /**
 * Adds admin ajax to script vars
 */
-function blank_script_vars($script_vars = array()) {
+add_filter('visix_alter_script_vars', function ($script_vars = array()) {
   $script_vars['ajax_url'] = admin_url('admin-ajax.php');
   return $script_vars;
-}
-add_filter('visix_alter_script_vars', 'blank_script_vars', 10, 1);
+}, 10, 1);
