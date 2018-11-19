@@ -1,26 +1,26 @@
 @import 'settings';
 @import 'foundation';
+@import 'fonts';
+@import "icons";
 
 // Global styles
 @include foundation-global-styles;
-@import 'fonts';
-// @import 'icons';
 @include foundation-typography;
-@import 'typography';
-
-// Grids (choose one)
 @include foundation-xy-grid-classes;
-@include foundation-forms;
 
-// helper components
+// helper mixins/functions
 @import 'helpers/mixins';
-@import 'helpers/spacers';
 
-// UI components
+// components
+// @import 'components/spacers';
+// @import 'components/stars';
+// @import 'components/social';
 
-// Modules
-@import 'modules/sidebar-widgets';
-// @import 'modules/slick-base';
-
-// Plugins
+// plugins
 // @import 'plugins/woocommerce';
+// @import 'plugins/forms';
+
+// modules
+// @import 'modules/iubenda';
+// @import 'modules/sidebar-widgets';
+// @import 'modules/slick-base';
