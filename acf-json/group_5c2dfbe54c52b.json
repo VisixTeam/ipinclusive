@@ -1,0 +1,90 @@
+{
+    "key": "group_5c2dfbe54c52b",
+    "title": "Setting - Profile",
+    "fields": [
+        {
+            "key": "field_5c2dfcd62a57a",
+            "label": "Profile",
+            "name": "profile",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5c2dffd20a570",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Profile",
+            "sub_fields": [
+                {
+                    "key": "field_5c2dffd20a570",
+                    "label": "Social Profile",
+                    "name": "social_profile",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "twitter": "Twitter",
+                        "facebook": "Facebook",
+                        "linkedin": "Linkedin",
+                        "googleplus": "Google Plus",
+                        "pinterest": "Pinterest",
+                        "instagram": "Instagram"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5c2e003f0a571",
+                    "label": "Social Profile Url",
+                    "name": "social_profile_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "general-information"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1546518139
+}
