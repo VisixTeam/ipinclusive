@@ -38,5 +38,7 @@ mix.browserSync({
   files: [
     "resources/**/*",
     "*.php",
+    "partials/**/*.php",
+    "function/**/*.php",
   ]
 });

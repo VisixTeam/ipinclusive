@@ -2,4 +2,8 @@
   .ip-#{$name} {
     color: $color;
   }
+
+  .ip-#{$name}-bg {
+    background-color: $color;
+  }
 }

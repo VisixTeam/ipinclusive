@@ -1,3 +1,3 @@
 <aside class="sidebar">
-  testing
+  <?php visix_menu('Header - Main', 'header-main'); ?>
 </aside>

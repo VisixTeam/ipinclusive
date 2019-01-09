@@ -1,13 +1,5 @@
 <?php get_header(); ?>
-<main>
-    <?php if ( have_posts() ) :  ?>
+<div style="height: 400px;">
 
-           <?php  while ( have_posts() ) : the_post();  ?>
-
-                <?php the_content();  ?>
-
-            <?php endwhile;  ?>
-
-       <?php endif;  ?>
-</main>
+</div>
 <?php get_footer(); ?>

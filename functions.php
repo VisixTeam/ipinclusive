@@ -24,6 +24,13 @@ add_action('visix_footer', function(){
   visix_partial('modules/footer');
 });
 
+// register all the menus
+function register_menus() {
+  register_nav_menu( 'header-main', 'Header - Main' );
+  // register_nav_menu( 'footer-pages', 'Footer - Pages' );
+}
+add_action( 'init', 'register_menus' );
+
 /**
 * Adds admin ajax to script vars
 */

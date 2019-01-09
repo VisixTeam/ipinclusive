@@ -3,24 +3,109 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 4;
 
   .sticky {
     padding: 20px 0px;
-    z-index: 2;
-    @include transition(background-color);
+    z-index: 4;
+    @include transition(background-color, box-shadow);
 
     &.no-transparent {
-      background-color: red;
+      background-color: $white;
+      box-shadow: 0 10px 10px 0 rgba($black ,0.1);
     }
   }
 
   a {
     &:not(.button) {
       color: map-get($ip-palette, "teal");
+      text-transform: uppercase;
     }
   }
 
   .logo {
     width: 271px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  right: -100%;
+  background-color: $white;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  padding-left: 40px;
+  z-index: 3;
+  box-shadow: -3px 0 10px 0 rgba(0,0,0,0.36);
+  @include transition(right);
+
+  &.open {
+    right: 0;
+  }
+
+  @include breakpoint(medium up) {
+    max-width: 435px;
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      margin-bottom: 20px;
+      line-height: 1.2;
+
+      &.super-parent {
+        a {
+          color: map-get($ip-palette, "orange");
+          font-size: rem-calc(18);
+          font-weight: $global-weight-bold;
+          text-transform: none;
+        }
+      }
+
+      a {
+        font-size: rem-calc(21);
+        color: map-get($ip-palette, "teal");
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        position: relative;
+        font-weight: $global-weight-bold;
+
+        &:hover {
+          &::after {
+            right: 15%;
+          }
+        }
+
+        &::after{
+          content: '\f301';
+          font-family: 'Material-Design-Iconic-Font';
+          font-size: 30px;
+          color: map-get($ip-palette, "orange");
+          position: absolute;
+          right: 10%;
+          @include transition(right);
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    ul {
+      text-indent: 0;
+      margin: 20px 0 0;
+
+      li {
+        margin-bottom: 17px;
+      }
+
+      a {
+        font-size: rem-calc(16);
+        text-transform: none;
+        font-weight: $global-weight-normal;
+      }
+    }
   }
 }

@@ -48,6 +48,7 @@ assets/js/app.js
 assets/js/manifest.js
 assets/js/vendor.js
 package-lock.json
+package.json
 mix-manifest.json
 
 # for netbeans
