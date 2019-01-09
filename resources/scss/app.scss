@@ -10,17 +10,27 @@
 
 // helper mixins/functions
 @import 'helpers/mixins';
+@import 'helpers/color';
+@import 'helpers/blazy';
 
 // components
-// @import 'components/spacers';
+@import 'components/spacers';
+@import 'components/hamburgers';
+@include foundation-visibility-classes;
+@import 'components/flex-classes';
+@import 'components/sticky';
+@import 'components/buttons';
 // @import 'components/stars';
 // @import 'components/social';
 
+
 // plugins
 // @import 'plugins/woocommerce';
-// @import 'plugins/forms';
+@import 'plugins/forms';
+@import 'plugins/post-forms';
 
 // modules
 // @import 'modules/iubenda';
 // @import 'modules/sidebar-widgets';
 // @import 'modules/slick-base';
+@import 'modules/header';

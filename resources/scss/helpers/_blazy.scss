@@ -1,0 +1,9 @@
+.b-lazy {
+  @include transition(opacity);
+  max-width: 100%;
+  opacity: 0;
+
+  &.b-loaded {
+    opacity: 1;
+  }
+}

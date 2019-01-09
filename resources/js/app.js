@@ -13,10 +13,17 @@ require( 'libs/smoothscroll' )
 require( 'libs/validation' )
 // includes blazy.js lazy loading
 require( 'libs/lazy-loading' )
+// includes post ajaxing and prerendering
+require( 'libs/post-forms' )
+
+require('./main')
+require('./modules/nav')
 
 $(function () {
 
-    // initialise foundation
-    $(document).foundation()
-
+  // initialise foundation
+  $(document).foundation()
+  $('form[data-post-form-id][data-post-container][data-post-pagination][data-post-loading]').each(function () {
+    $(this).postForm()
+  })
 })

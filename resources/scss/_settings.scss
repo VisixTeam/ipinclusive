@@ -1,1 +1,67 @@
+// 1. Global
+// ---------
 
+$ip-palette: (
+  "gray": #555555,
+  "pink": #9E3D90,
+  "orange": #F49B25,
+  "green": #7FA025,
+  "teal": #0077A1,
+  "white": #ffffff,
+  "black": #000000,
+);
+
+$white-smoke: #F6F6F6;
+$white: #fff;
+$light-gray: #C4C4C4;
+$medium-gray: #555555;
+$dark-gray: #505050;
+$black: #000000;
+
+$global-weight-light: 300;
+$global-weight-normal: 400;
+$global-weight-medium: 500;
+$global-weight-bold: 700;
+$global-weight-heavy: 900;
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 768px,
+  mediumLand: 992px,
+  large: 1025px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium mediumLand large xlarge xxlarge);
+
+
+// 4. Base Typography
+// --
+$body-font-family: 'knockout', Helvetica, Roboto, Arial, sans-serif;
+
+$header-margin-bottom: 0.5rem;
+$header-font-weight: $global-weight-bold;
+$header-styles: (
+  small: (
+    'h1': ('font-size': 30),
+    'h2': ('font-size': 22),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 13),
+    'h6': ('font-size': 10),
+  ),
+  medium: (
+    'h1': ('font-size': 50),
+    'h2': ('font-size': 32),
+    'h3': ('font-size': 21),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 13),
+  ),
+);
+
+$anchor-color: #F49B25;

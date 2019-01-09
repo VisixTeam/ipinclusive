@@ -1,0 +1,5 @@
+@each $name, $color in $ip-palette {
+  .ip-#{$name} {
+    color: $color;
+  }
+}

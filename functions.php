@@ -17,6 +17,13 @@ add_filter('visix_alter_child_asset_version', function () {
   return '1.0.0';
 }, 10, 0);
 
+add_action('visix_header', function(){
+  visix_partial('modules/header');
+});
+add_action('visix_footer', function(){
+  visix_partial('modules/footer');
+});
+
 /**
 * Adds admin ajax to script vars
 */
@@ -39,16 +46,5 @@ if(function_exists('acf_add_options_page')) {
 	));
 }
 
-function add_file_types_to_uploads($file_types) {
-  $new_filetypes = array();
-  $new_filetypes['svg'] = 'image/svg+xml';
-  $file_types = array_merge($file_types, $new_filetypes );
-  return $file_types;
-}
-add_action('upload_mimes', 'add_file_types_to_uploads');
-function remove_menu_items(){
-  remove_menu_page( 'edit-comments.php' );
-}
-add_action( 'admin_menu', 'remove_menu_items', 999 );
-
+include 'functions/utility.php';
 include 'functions/post_types.php';

@@ -111,7 +111,7 @@ function create_post_type() {
         'add_new' => __( 'Add New Company', 'companies' ),
         'edit_item' => __( 'Edit Company', 'companies' ),
         'new_item' => __( 'New Company', 'companies' ),
-        'menu_name' => _x( 'Companies', 'companies' ),
+        'menu_name' => _x( 'Supporters & Partners', 'companies' ),
       ),
       'public'      => false,
       'show_ui'     => true,

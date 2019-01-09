@@ -1,0 +1,30 @@
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 40px;
+$hamburger-layer-color: map-get($ip-palette, "teal");
+$hamburger-layer-border-radius: 5px;
+$hamburger-layer-spacing: 10px;
+$hamburger-hover-opacity: 1;
+
+
+$hamburger-types: (
+  squeeze,
+);
+
+@import "./../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+
+.hamburger {
+  outline: none;
+  transform: rotate(180deg);
+  margin-bottom: 20px;
+
+  .hamburger-inner {
+    width: $hamburger-layer-width - 15px;
+  }
+
+  &.is-active {
+    .hamburger-inner {
+      width: $hamburger-layer-width;
+    }
+  }
+}

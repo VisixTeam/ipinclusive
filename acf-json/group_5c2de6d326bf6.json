@@ -19,13 +19,40 @@
             "placeholder": ""
         },
         {
+            "key": "field_5c2e14bb2b47c",
+            "label": "IP Inclusive Key Individual",
+            "name": "ip_inclusive_key_individual_",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5c2de80b8ea02",
             "label": "Related Communities",
             "name": "related_communities",
             "type": "post_object",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c2e14bb2b47c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -58,5 +85,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546513157
+    "modified": 1546524011
 }

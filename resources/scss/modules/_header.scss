@@ -1,0 +1,26 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .sticky {
+    padding: 20px 0px;
+    z-index: 2;
+    @include transition(background-color);
+
+    &.no-transparent {
+      background-color: red;
+    }
+  }
+
+  a {
+    &:not(.button) {
+      color: map-get($ip-palette, "teal");
+    }
+  }
+
+  .logo {
+    width: 271px;
+  }
+}

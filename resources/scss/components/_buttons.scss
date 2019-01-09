@@ -1,0 +1,14 @@
+$button-palette: $ip-palette;
+$button-color: $white;
+$button-color-alt: $white;
+$button-responsive-expanded: true;
+$button-padding: 19px 41.5px;
+$button-transition: all 150ms ease-in-out;
+@include foundation-button;
+
+.button {
+  text-transform: uppercase;
+  outline: none;
+  position: relative;
+  font-weight: $global-weight-bold;
+}
