@@ -2,27 +2,27 @@
 
   $(document).ready(function() {
     detectBroswer();
-    readMore();
   });
 
+  let section = $('.section');
 
-  function readMore() {
-    let readMoreContent = $('.read-more-content');
+  section.each(function(){
+    currentSection = $(this);
+    readMore(currentSection);
+  });
 
-    $('.read-more').each(function(){
+  function readMore(currentSection) {
+    let readMoreBtn = currentSection.find('.read-more');
+    let readMoreContent = currentSection.find('.read-more-content');
 
-      readMoreBtn = $(this);
-
-      readMoreBtn.click(function(){
-        if(readMoreContent.hasClass('hide')){
-          readMoreContent.removeClass('hide');
-          readMoreBtn.text('Read less');
-        } else {
-          readMoreContent.addClass('hide');
-          readMoreBtn.text('Read more');
-        }
-      });
-
+    readMoreBtn.click(function(){
+      if(readMoreContent.hasClass('hide')){
+        readMoreContent.removeClass('hide');
+        readMoreBtn.text('Read less');
+      } else {
+        readMoreContent.addClass('hide');
+        readMoreBtn.text('Read more');
+      }
     });
   }
 
