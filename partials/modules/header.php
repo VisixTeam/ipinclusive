@@ -27,6 +27,5 @@
     </div>
   </div>
 </header>
-<div class="spacer tiny"></div>
 
 <?php visix_partial('inc/sidebar'); ?>

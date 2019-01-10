@@ -1,4 +1,5 @@
 @each $name, $color in $ip-palette {
+
   .ip-#{$name} {
     color: $color;
   }
@@ -7,3 +8,8 @@
     background-color: $color;
   }
 }
+
+$teal: map-get($ip-palette, "teal");
+$orange: map-get($ip-palette, "orange");
+$pink: map-get($ip-palette, "pink");
+$green: map-get($ip-palette, "green"); 

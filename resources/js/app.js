@@ -17,7 +17,10 @@ require( 'libs/lazy-loading' )
 require( 'libs/post-forms' )
 
 require('./main')
+
 require('./modules/nav')
+
+require('./components/slick')
 
 $(function () {
 

@@ -1,0 +1,142 @@
+.banner {
+  overflow: hidden;
+
+  &.home-banner {
+
+    .mobile-slide-content {
+      background-color: $white-smoke;
+
+      .grid-x {
+        @include breakpoint(small only) {
+          height: 100%;
+
+          &::after {
+            content: none;
+          }
+        }
+      }
+
+      .cell {
+        padding: 0px 20px;
+      }
+    }
+
+    .grid-x {
+      padding: 100px 0px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+
+      @include breakpoint(small only) {
+        height: 220px;
+      }
+
+      .slide-container {
+        max-width: 75em;
+        width: 100%;
+        margin: auto;
+
+        .cell {
+            @media screen and #{breakpoint(medium)} and #{breakpoint(mediumLand down)} {
+              padding: 0 20px;
+            }
+        }
+      }
+
+      .slide-title, a {
+        text-transform: uppercase;
+      }
+
+      .slide-title {
+        font-size: rem-calc(20);
+      }
+
+      .slide-content {
+        margin-bottom: 39px;
+        margin-top: 35px;
+        line-height: 1.1;
+      }
+
+
+      a {
+        font-weight: $global-weight-bold;
+        font-size: rem-calc(21);
+
+        &:hover {
+          .icon {
+            right: 10px;
+          }
+        }
+
+        .icon {
+          font-size: 30px;
+          vertical-align: top;
+          margin-left: 19px;
+          position: relative;
+          right: 0;
+          @include transition(right);
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $white;
+        background: linear-gradient(to right, rgba($white, .9) 25%, transparent 75%);
+        z-index: -1;
+      }
+
+      @include breakpoint(medium up) {
+        padding: 150px 0px;
+      }
+    }
+
+    .slide-content {
+      max-width: 609px;
+    }
+  }
+
+  &.top-banner {
+    padding: 100px 0px;
+    background-color: red;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($black, .4);
+      z-index: -1;
+    }
+
+    @include breakpoint(medium up) {
+      padding: 150px 0;
+
+      &::after {
+        background-color: $white;
+        background: linear-gradient(to right, rgba($white, .9) 25%, transparent 75%);
+      }
+    }
+
+    h1 {
+      color: $white;
+
+      @include breakpoint(medium up) {
+        color: $teal;
+      }
+    }
+  }
+}
