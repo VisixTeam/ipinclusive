@@ -11,4 +11,43 @@ $button-transition: all 150ms ease-in-out;
   outline: none;
   position: relative;
   font-weight: $global-weight-bold;
+
+  &.white {
+    @each $name, $color in $ip-palette {
+
+      &.ip-#{$name} {
+        color: $color !important;
+      }
+    }
+  }
+
+  &.clear {
+    padding: 0;
+
+    &.expanded {
+      text-align: left;
+
+      .icon {
+        margin-left: 20px;
+
+        @include breakpoint(small only) {
+          position: absolute;
+          margin-left: 0;
+          right: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $ip-palette {
+    &.#{$name} {
+      &.ip-#{$name} {
+        color: $color !important;
+      }
+    }
+  }
+
 }

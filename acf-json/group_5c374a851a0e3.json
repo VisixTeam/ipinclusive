@@ -1,0 +1,138 @@
+{
+    "key": "group_5c374a851a0e3",
+    "title": "Sections",
+    "fields": [
+        {
+            "key": "field_5c374abfa39f4",
+            "label": "Sections",
+            "name": "sections",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5c374acac58db": {
+                    "key": "5c374acac58db",
+                    "name": "option-section",
+                    "label": "Options",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c374ae8a39f5",
+                            "label": "Option",
+                            "name": "option",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c37492f192d5"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c375d555383f": {
+                    "key": "layout_5c375d555383f",
+                    "name": "simple-section",
+                    "label": "Simple",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c375d6053840",
+                            "label": "Simple",
+                            "name": "simple",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1c27c2366a5"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c37638350073": {
+                    "key": "layout_5c37638350073",
+                    "name": "list-section",
+                    "label": "List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c37638c50074",
+                            "label": "List",
+                            "name": "list",
+                            "type": "clone",
+                            "instructions": "A section list of item can be other numbered or dotted list",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1cc1ece1f11"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Section",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1547133897
+}

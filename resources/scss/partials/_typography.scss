@@ -1,0 +1,41 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+.custom-bullets {
+  list-style: none;
+  margin: 0;
+
+  li {
+    margin-left: 3em;
+    margin-bottom: 30px;
+
+    @include breakpoint(medium) {
+      margin-left: 2em;
+    }
+
+    .num {
+
+      float: left;
+      width: 30.8px;
+      height: 30.8px;
+      background-color: $orange;
+      margin: 0 0 0 -3em;
+      border-radius: 50%;
+      color: $white;
+      font-weight: $global-weight-bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint(medium) {
+        margin: 0 2em 0 -2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.section {
+  padding: 70px 0px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &.option-section {
+    .button {
+      text-align: left;
+      box-shadow: 0 0 10px 0 rgba($black, 0.25);
+
+      &:hover {
+        .icon {
+          right: 30px;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        @include transition(right);
+      }
+
+      @include breakpoint(medium up) {
+        font-size: rem-calc(21);
+      }
+    }
+  }
+}

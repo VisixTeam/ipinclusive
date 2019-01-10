@@ -2,8 +2,30 @@
 
   $(document).ready(function() {
     detectBroswer();
+    readMore();
   });
-  
+
+
+  function readMore() {
+    let readMoreContent = $('.read-more-content');
+
+    $('.read-more').each(function(){
+
+      readMoreBtn = $(this);
+
+      readMoreBtn.click(function(){
+        if(readMoreContent.hasClass('hide')){
+          readMoreContent.removeClass('hide');
+          readMoreBtn.text('Read less');
+        } else {
+          readMoreContent.addClass('hide');
+          readMoreBtn.text('Read more');
+        }
+      });
+
+    });
+  }
+
   function detectBroswer() {
     var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 

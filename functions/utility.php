@@ -65,3 +65,15 @@ function get_all_child_pages(){
 
   return $children;
 }
+
+function readmore($fullText){
+	if(@strpos($fullText, '<!--more-->')){
+		$morePos  = strpos($fullText, '<!--more-->');
+		$fullText = preg_replace('/<!--(.|\s)*?-->/', '', $fullText);
+		print substr($fullText,0,$morePos);
+		print "<div class=\"read-more-content hide\">". substr($fullText,$morePos,-1) . "</div>";
+		print "<a class=\"button clear orange read-more\">Read More</a>";
+	} else {
+		print $fullText;
+	}
+}

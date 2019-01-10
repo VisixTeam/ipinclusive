@@ -1,19 +1,25 @@
 <?php get_header(); ?>
 
-<!-- Home Slider There are two one to be shown in mobile -->
+<?php $post_id = (is_home() ? get_option('page_for_posts') : get_the_ID());?>
 
-<section class="section banner home-banner" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "infinite": true, "variableWidth": false}'>
+<?php $hero_slider = get_field('hero_slider'); ?>
+<?php if ($hero_slider): ?>
+
+<section class="banner home-banner" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "infinite": true, "variableWidth": false}'>
+
+  <?php foreach($hero_slider as $slide): ?>
+
   <div class="slide-item">
-    <div class="grid-x grid-margin-y align-middle" style="background-image: url(/wp-content/uploads/2019/01/banner-example.jpg);">
+    <div class="grid-x grid-margin-y align-middle" style="background-image: url(<?= esc_url($slide['slide_image']); ?>);">
       <div class="slide-container hide-for-small-only">
         <div class="cell">
-          <h5 class="ip-pink slide-title">Slide Title</h5>
+          <h5 class="ip-pink slide-title"><?php $slide['slide_title'];  ?></h5>
         </div>
         <div class="cell large-6">
-          <h2 class="h1 ip-teal slide-content">IP Inclusive is a network of intellectual property professionals working to make our community more equal, diverse and inclusive.</h2>
+          <h2 class="h1 ip-teal slide-content"><?= $slide['slide_content']; ?></h2>
         </div>
         <div class="cell">
-          <a href="#" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
+          <a href="<?= $slide['slide_cta_url']; ?>" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
         </div>
       </div>
     </div>
@@ -22,50 +28,34 @@
       <div class="grid-x grid-margin-y grid-padding-x align-middle">
         <div class="slide-container">
           <div class="cell">
-            <h5 class="ip-pink slide-title">Slide Title</h5>
+            <h5 class="ip-pink slide-title"><?php $slide['slide_title'];  ?></h5>
           </div>
           <div class="cell large-6">
-            <h2 class="h1 ip-teal slide-content">IP Inclusive is a network of intellectual property professionals working to make our community more equal, diverse and inclusive.</h2>
+            <h2 class="h1 ip-teal slide-content"><?= $slide['slide_content']; ?></h2>
           </div>
           <div class="cell">
-            <a href="#" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
+            <a href="<?= $slide['slide_cta_url']; ?>" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="slide-item">
-    <div class="grid-x grid-margin-y align-middle" style="background-image: url(/wp-content/uploads/2019/01/banner-example.jpg);">
-      <div class="slide-container hide-for-small-only">
-        <div class="cell">
-          <h5 class="ip-pink slide-title">Slide Title</h5>
-        </div>
-        <div class="cell large-6">
-          <h2 class="h1 ip-teal slide-content">IP Inclusive is a network of intellectual property professionals working to make our community more equal, diverse and inclusive.</h2>
-        </div>
-        <div class="cell">
-          <a href="#" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
-        </div>
-      </div>
-    </div>
+  <?php endforeach; ?>
 
-    <div class="mobile-slide-content show-for-small-only">
-      <div class="grid-x grid-margin-y grid-padding-x align-middle">
-        <div class="slide-container">
-          <div class="cell">
-            <h5 class="ip-pink slide-title">Slide Title</h5>
-          </div>
-          <div class="cell large-6">
-            <h2 class="h1 ip-teal slide-content">IP Inclusive is a network of intellectual property professionals working to make our community more equal, diverse and inclusive.</h2>
-          </div>
-          <div class="cell">
-            <a href="#" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
+
+<?php endif; ?>
+
+<?php if ( have_rows('sections', $post_id) ): ?>
+
+  <?php while ( have_rows('sections', $post_id) ) : the_row();  ?>
+
+    <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
+
+  <?php endwhile;  ?>
+
+<?php endif; ?>
+
 
 <?php get_footer(); ?>

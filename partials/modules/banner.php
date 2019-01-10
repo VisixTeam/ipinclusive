@@ -1,7 +1,7 @@
 
 <?php if($has_background_image): ?>
 
-<section class="banner top-banner" style="background-image: url(<?= esc_url($image); ?>);">
+<section class="banner top-banner b-lazy" data-blazy="<?= esc_url($image); ?>">
 
 <?php else: ?>
 
