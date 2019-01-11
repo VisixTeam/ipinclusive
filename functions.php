@@ -55,3 +55,4 @@ if(function_exists('acf_add_options_page')) {
 
 include 'functions/utility.php';
 include 'functions/post_types.php';
+include 'functions/forms.php';

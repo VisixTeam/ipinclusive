@@ -15,6 +15,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "layouts": {
                 "5c374acac58db": {
                     "key": "5c374acac58db",
@@ -108,6 +109,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5c3868c4a1a59": {
+                    "key": "layout_5c3868c4a1a59",
+                    "name": "contact-form-section",
+                    "label": "Forms",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c3868d4a1a5a",
+                            "label": "Contact Form",
+                            "name": "contact_form",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "clone": [
+                                "group_5c3867a380a63"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -134,5 +167,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1547133897
+    "modified": 1547209381
 }

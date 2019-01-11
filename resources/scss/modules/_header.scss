@@ -19,13 +19,21 @@
     &.no-transparent {
       background-color: $white;
       box-shadow: 0 10px 10px 0 rgba($black ,0.1);
+
+      a {
+        &:not(.button) {
+          color: $teal;
+        }
+      }
     }
   }
 
   a {
     &:not(.button) {
-      color: map-get($ip-palette, "teal");
+      color: $white;
       text-transform: uppercase;
+      font-weight: $global-weight-bold;
+      font-size: rem-calc(20);
     }
   }
 

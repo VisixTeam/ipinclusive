@@ -5,8 +5,15 @@
         <h3><a href="<?= site_url('about'); ?>" class="ip-white">About us</a></h3>
 
         <ul class="menu no-bullet">
-          <li><a href="" class="">Link 1</a></li>
-          <li><a href="" class="">Link 2</a></li>
+          <?php $about_page_title = get_page_id_by_title('About'); ?>
+
+          <?php $child_pages = get_all_child_pages($about_page_title);
+
+          foreach($child_pages as $child): ?>
+          <li>
+            <a href="<?= get_permalink($child); ?>"><?= get_the_title($child); ?></a>
+          </li>
+          <?php endforeach; ?>
         </ul>
       </div>
 

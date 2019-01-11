@@ -161,7 +161,7 @@ function create_post_type() {
         'add_new' => __( 'Add New Date', 'date' ),
         'edit_item' => __( 'Edit Date', 'date' ),
         'new_item' => __( 'New Date', 'date' ),
-        'menu_name' => _x( 'Important Date', 'date' ),
+        'menu_name' => _x( 'Awareness Date', 'date' ),
       ),
       'public'      => false,
       'show_ui'     => true,

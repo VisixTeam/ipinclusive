@@ -52,12 +52,13 @@ function get_page_id_by_title($title){
 
 get_page_id_by_title('how are you');
 
-function get_all_child_pages(){
-  $page_id = get_page_id_by_title('About');
+function get_all_child_pages($page_title){
+  $page_id = $page_title;
 
   $args = array(
     'post_parent' => $page_id,
     'post_status' => 'publish',
+    'fields' => 'ids',
     'post_type' => 'page'
   );
 
