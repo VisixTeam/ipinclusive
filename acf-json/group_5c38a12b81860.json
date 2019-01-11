@@ -167,7 +167,7 @@
             },
             "hide_admin": 0,
             "default_value": "",
-            "placeholder": "+44",
+            "placeholder": "",
             "prepend": "",
             "append": "",
             "min": "",
@@ -218,5 +218,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547221053
+    "modified": 1547221288
 }

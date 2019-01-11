@@ -13,7 +13,7 @@
     <div class="grid-x grid-margin-y align-middle" style="background-image: url(<?= esc_url($slide['slide_image']); ?>);">
       <div class="slide-container hide-for-small-only">
         <div class="cell">
-          <h5 class="ip-pink slide-title"><?php $slide['slide_title'];  ?></h5>
+          <h5 class="ip-pink slide-title"><?= $slide['slide_title'];  ?></h5>
         </div>
         <div class="cell large-6">
           <h2 class="h1 ip-teal slide-content"><?= $slide['slide_content']; ?></h2>
@@ -28,7 +28,7 @@
       <div class="grid-x grid-margin-y grid-padding-x align-middle">
         <div class="slide-container">
           <div class="cell">
-            <h5 class="ip-pink slide-title"><?php $slide['slide_title'];  ?></h5>
+            <h5 class="ip-pink slide-title"><?= $slide['slide_title'];  ?></h5>
           </div>
           <div class="cell large-6">
             <h2 class="h1 ip-teal slide-content"><?= $slide['slide_content']; ?></h2>

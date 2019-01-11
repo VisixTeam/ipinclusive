@@ -9,7 +9,7 @@
     <?php if($options):?>
       <div class="grid-x grid-padding-x grid-margin-y medium-up-2">
 
-          <div class="cell hide-for-large"><a href="<?= site_url('contact'); ?>" class="button expanded teal ip-white">Stay in touch <i class="icon icon-long-arrow-right ip-white"></i></a></div>
+          <div class="cell hide-for-large"><a href="<?= site_url('stay-in-touch'); ?>" class="button expanded teal ip-white">Stay in touch <i class="icon icon-long-arrow-right ip-white"></i></a></div>
           <div class="cell hide-for-large"><a href="<?= site_url('sign-up-to-the-ip-inclusive-charter'); ?>" class="button expanded orange ip-white">Sign the ip inclusive charter <i class="icon icon-long-arrow-right ip-white"></i></a></div>
 
         <?php foreach($options as $option): ?>

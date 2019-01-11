@@ -1,6 +1,6 @@
 {
     "key": "group_5c371a8c714e5",
-    "title": "Section Hero",
+    "title": "Section - Hero",
     "fields": [
         {
             "key": "field_5c371b64e5450",
@@ -41,42 +41,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "community"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "signatories"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
                 "value": "team"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "companies"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "resources"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "date"
             }
         ],
         [
@@ -108,5 +73,6 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1547130827
+    "recaptcha": 0,
+    "modified": 1547223601
 }

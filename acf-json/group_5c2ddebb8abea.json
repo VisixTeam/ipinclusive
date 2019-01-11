@@ -50,7 +50,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content",
         "excerpt",
         "discussion",
         "comments",
@@ -58,12 +57,12 @@
         "slug",
         "author",
         "format",
-        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1546510102
+    "recaptcha": 0,
+    "modified": 1547221567
 }

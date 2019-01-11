@@ -35,8 +35,6 @@ select {
   background-color: transparent;
   @extend .form-wrapper-white;
 
-
-
   select {
     color: $orange;
     border: 1px solid $orange;
@@ -56,6 +54,7 @@ select {
   [type=number], [type=tel],
   [type=search], textarea {
     border-color: $orange;
+    color: $orange;
   }
 
   .privacy {
@@ -134,6 +133,7 @@ select {
   [type=number], [type=tel],
   [type=search], textarea {
     border-color: $teal;
+    color: $teal;
   }
 
   .privacy {
@@ -144,13 +144,14 @@ select {
     }
   }
 
-  input[type=radio] + label:after, input[type=checkbox] + label:after {
-    border: 1px solid $teal;
-  }
-
-  input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
-    border-color: $teal;
-    background-color: $teal;
+  .field {
+    input[type=radio] + label:after, input[type=checkbox] + label:after {
+      border-color: $teal;
+    }
+    input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
+      border-color: $teal;
+      background-color: $teal;
+    }
   }
 }
 
@@ -166,12 +167,12 @@ select {
   }
 
   input[type=radio] + label:after, input[type=checkbox] + label:after {
-    border: 1px solid $white;
+    border: 1px solid;
   }
 
   input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
     border-color: $white;
-    background-color: $white;
+    background-color: transparent;
   }
 
   .privacy {
@@ -231,12 +232,23 @@ input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:af
   }
 }
 
-.options-list .input-container {
+.options-list {
 
-  @include breakpoint(medium) {
-    &:nth-child(-n+2) {
-      width: 50%;
-      flex: 0 1 50%;
+  &.radio-options-list {
+    .input-container {
+      @include breakpoint(medium only) {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  .input-container {
+    @include breakpoint(mediumLand) {
+      &:nth-child(-n+2) {
+        width: 50%;
+        flex: 0 1 50%;
+      }
     }
   }
 }
@@ -244,7 +256,7 @@ input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:af
 .sign-up {
   .options-list .input-container {
 
-    @include breakpoint(medium) {
+    @include breakpoint(mediumLand) {
       &:nth-child(-n+3) {
         width: 25%;
         flex: 0 1 25%;
