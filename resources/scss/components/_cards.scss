@@ -1,0 +1,76 @@
+$card-border: 0;
+$card-padding: 0;
+$card-margin-bottom: 5px;
+
+@include foundation-card;
+
+.cards-section {
+
+  .medium-6.large-4 {
+    position: relative;
+
+    .event-url {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 48px;
+      height: 48px;
+      background-color: $white;
+      box-shadow: -4px 4px 9px 0 rgba($black, .12);
+
+      a {
+        border: 1px solid $orange;
+        padding: 5px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+      }
+
+      i {
+        font-size: rem-calc(20);
+      }
+    }
+  }
+
+  time {
+    font-size: rem-calc(10);
+    font-weight: $global-weight-normal;
+
+    i {
+      margin-right: 10px;
+      font-size: rem-calc(12);
+    }
+  }
+
+  .button {
+    font-size: rem-calc(17);
+
+    &:hover {
+      .icon {
+        margin-left: 8px;
+      }
+    }
+
+    .icon {
+      margin-left: 12px;
+      @include transition(margin-left);
+    }
+  }
+}
+
+.card-image {
+  min-height: 150px;
+  background-color: $light-gray;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-section {
+  padding: 21px 19px;
+}

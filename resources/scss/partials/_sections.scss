@@ -29,4 +29,23 @@
       }
     }
   }
+
+  &.cards {
+    .medium-3 {
+      .button {
+        font-size: rem-calc(21);
+
+        &:hover {
+          .icon {
+            margin-left: 8px;
+          }
+        }
+
+        .icon {
+          margin-left: 12px;
+          @include transition(margin-left);
+        }
+      }
+    }
+  }
 }

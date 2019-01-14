@@ -80,8 +80,7 @@
                     "choices": {
                         "page": "Page",
                         "external": "External Link",
-                        "anchor": "Anchor",
-                        "modal": "Modal"
+                        "anchor": "Anchorl"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -114,69 +113,6 @@
                     },
                     "hide_admin": 0,
                     "return_format": "array"
-                },
-                {
-                    "key": "field_5c1b8b2b5b5ab",
-                    "label": "Modal Id",
-                    "name": "modal_id",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5c178c9025374",
-                                "operator": "==",
-                                "value": "modal"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "hide_admin": 0,
-                    "choices": {
-                        "contact_form": "Contact Form",
-                        "client_portal": "Client Portal",
-                        "exampleModal2": "exampleModal2"
-                    },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5c1b8d4c34cae",
-                    "label": "Modal Text",
-                    "name": "modal_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5c178c9025374",
-                                "operator": "==",
-                                "value": "modal"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "hide_admin": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 },
                 {
                     "key": "field_5c178d1025376",
@@ -441,5 +377,6 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1547138088
+    "recaptcha": 0,
+    "modified": 1547459773
 }

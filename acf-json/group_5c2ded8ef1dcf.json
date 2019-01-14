@@ -15,9 +15,11 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "choices": {
                 "sponsor": "Sponsor",
-                "partner": "Partner"
+                "partner": "Partner",
+                "supporter": "Supporter"
             },
             "default_value": [],
             "allow_null": 0,
@@ -92,5 +94,6 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1546523624
+    "recaptcha": 0,
+    "modified": 1547335994
 }
