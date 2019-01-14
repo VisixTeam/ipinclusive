@@ -14,9 +14,13 @@
         <div class="spacer"></div>
       <?php endif; ?>
 
-      <div class="cell">
-        <?= readmore($content); ?>
-      </div>
+      <?php if ($content): ?>
+
+        <div class="cell">
+          <?= readmore($content); ?>
+        </div>
+
+      <?php endif; ?>
 
       <?php if ($button['has_button']): ?>
 

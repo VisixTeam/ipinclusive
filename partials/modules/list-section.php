@@ -7,6 +7,12 @@
         <div class="cell">
           <h3 class="<?= $title_size['size']; ?> <?= 'ip-'.$text_colour['colour'];  ?>"><?= $title; ?></h3>
         </div>
+
+        <?php if($has_content): ?>
+          <div class="cell">
+            <?= $content; ?>
+          </div>
+        <?php endif; ?>
       </div>
     <?php endif; ?>
 
@@ -30,13 +36,14 @@
 
     <?php endif; ?>
 
+    <?php if ($button['has_button']): ?>
+      <div class="spacer"></div>
+      <div class="grid-x">
+        <div class="cell">
+          <?php visix_partial('components/button', $button); ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
   </div>
-
-<?php if ($button['has_button']): ?>
-
-  <div class="spacer"></div>
-
-  <?php visix_partial('components/button', $button); ?>
-
-<?php endif; ?>
 </section>

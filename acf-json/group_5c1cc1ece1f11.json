@@ -56,6 +56,54 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5c3cbea7d2cff",
+                    "label": "Has Content",
+                    "name": "has_content",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5c3cbe61d2cfe",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c3cbea7d2cff",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
                     "key": "field_5c1cc350fe407",
                     "label": "Lists",
                     "name": "lists",
@@ -220,5 +268,6 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1547134852
+    "recaptcha": 0,
+    "modified": 1547484881
 }

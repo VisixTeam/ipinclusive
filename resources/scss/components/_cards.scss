@@ -9,6 +9,14 @@ $card-margin-bottom: 5px;
   .medium-6.large-4 {
     position: relative;
 
+    &.post {
+      .event-url {
+        a {
+          border-color: $pink;
+        }
+      }
+    }
+
     .event-url {
       position: absolute;
       top: 0;
@@ -20,7 +28,7 @@ $card-margin-bottom: 5px;
 
       a {
         border: 1px solid $orange;
-        padding: 5px;
+        padding: 10px;
         border-radius: 50%;
         height: 40px;
         width: 40px;
@@ -37,7 +45,7 @@ $card-margin-bottom: 5px;
   }
 
   time {
-    font-size: rem-calc(10);
+    font-size: rem-calc(12);
     font-weight: $global-weight-normal;
 
     i {

@@ -100,6 +100,54 @@
                     "prefix_name": 0
                 },
                 {
+                    "key": "field_5c3c9bba05777",
+                    "label": "Has more Info",
+                    "name": "has_more_info",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5c3c9bd905778",
+                    "label": "Section More Information",
+                    "name": "section_more_information",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c3c9bba05777",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br"
+                },
+                {
                     "key": "field_5c3c5986afee3",
                     "label": "Overview Link",
                     "name": "button",
@@ -142,7 +190,7 @@
                     "key": "field_5c3c57a90b55e",
                     "label": "Information",
                     "name": "information",
-                    "type": "post_object",
+                    "type": "relationship",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -153,19 +201,26 @@
                     },
                     "hide_admin": 0,
                     "post_type": [
-                        "events",
-                        "date",
-                        "resources",
-                        "companies",
+                        "post",
                         "community",
+                        "date",
                         "signatories",
-                        "team"
+                        "team",
+                        "events",
+                        "companies",
+                        "resources"
                     ],
                     "taxonomy": "",
-                    "allow_null": 1,
-                    "multiple": 1,
-                    "return_format": "id",
-                    "ui": 1
+                    "filters": [
+                        "search",
+                        "post_type"
+                    ],
+                    "elements": [
+                        "featured_image"
+                    ],
+                    "min": "",
+                    "max": "",
+                    "return_format": "id"
                 },
                 {
                     "key": "field_5c3c7a8c44079",
@@ -256,5 +311,5 @@
     "active": 0,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547467317
+    "modified": 1547476227
 }

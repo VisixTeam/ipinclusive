@@ -31,3 +31,51 @@ $('[data-slick]').slick({
     },
   ]
 });
+
+var time = 5;
+var $bar,
+isPause,
+tick,
+percentTime;
+
+$bar = $('.slider-progress .progress');
+
+$('[data-slick].home-banner').on({
+  mouseenter: function() {
+    isPause = true;
+  },
+  mouseleave: function() {
+    isPause = false;
+  }
+})
+
+function startProgressbar() {
+  resetProgressbar();
+  percentTime = 0;
+  isPause = false;
+  tick = setInterval(interval, 10);
+}
+
+function interval() {
+  if(isPause === false) {
+    percentTime += 1 / (time+0.1);
+    $bar.css({
+      width: percentTime+"%"
+    });
+    if(percentTime >= 100)
+    {
+      $('[data-slick].home-banner').slick('slickNext');
+      startProgressbar();
+    }
+  }
+}
+
+
+function resetProgressbar() {
+  $bar.css({
+    width: 0+'%'
+  });
+  clearTimeout(tick);
+}
+
+startProgressbar();

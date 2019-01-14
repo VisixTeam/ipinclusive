@@ -70,7 +70,7 @@
     top: 100%;
 
     @include breakpoint(medium up) {
-      top: 28%;
+      top: 35%;
     }
 
     @include breakpoint(medium only) {
@@ -128,4 +128,24 @@
       }
     }
   }
+}
+
+.slider-progress {
+  width: 166px;
+  float: right;
+  height: 4px;
+  background: $orange;
+  position: relative;
+  bottom: 190px;
+  right: 5%;
+
+  @include breakpoint(small down) {
+    bottom: 570px;
+    width: 83px;
+  }
+}
+.slider-progress .progress {
+  width: 0%;
+  height: 4px;
+  background: $white;
 }

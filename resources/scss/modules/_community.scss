@@ -1,0 +1,20 @@
+.members {
+
+  .medium-9 {
+    font-size: rem-calc(27);
+    color: $white;
+  }
+  
+  span {
+    width: 57px;
+    height: 57px;
+    background-color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: rem-calc(27);
+    font-weight: $global-weight-bold;
+    margin-right: 20px;
+  }
+}

@@ -15,12 +15,13 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "post_type": [
                 "community"
             ],
             "taxonomy": "",
             "allow_null": 0,
-            "multiple": 0,
+            "multiple": 1,
             "return_format": "id",
             "ui": 1
         }
@@ -42,5 +43,6 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546523727
+    "recaptcha": 0,
+    "modified": 1547474611
 }

@@ -35,14 +35,50 @@
 
       <div class="cell">
         <h3><a href="" class="ip-white">Resources</a></h3>
+
+        <ul class="menu no-bullet">
+          <?php $communities = get_pages_by_post_type('resources');
+
+          foreach($communities as $community):?>
+
+          <li>
+            <a href="<?= get_permalink($community); ?>"><?= get_the_title($community); ?></a>
+          </li>
+
+          <?php endforeach; ?>
+        </ul>
       </div>
 
       <div class="cell">
-        <h3><a href="" class="ip-white">Events</a></h3>
+        <h3><a href="<?= site_url('events'); ?>" class="ip-white">Events</a></h3>
+
+        <ul class="menu no-bullet">
+          <?php $communities = get_pages_by_post_type('events');
+
+          foreach($communities as $community):?>
+
+          <li>
+            <a href="<?= get_permalink($community); ?>"><?= get_the_title($community); ?></a>
+          </li>
+
+          <?php endforeach; ?>
+        </ul>
       </div>
 
       <div class="cell">
         <h3><a href="" class="ip-white">Our Supporters &amp Partners</a></h3>
+
+        <ul class="menu no-bullet">
+          <?php $communities = get_pages_by_post_type('companies');
+
+          foreach($communities as $community):?>
+
+          <li>
+            <a href="<?= get_permalink($community); ?>"><?= get_the_title($community); ?></a>
+          </li>
+
+          <?php endforeach; ?>
+        </ul>
       </div>
 
       <div class="cell">

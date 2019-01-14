@@ -5,7 +5,7 @@
 <?php $hero_slider = get_field('hero_slider'); ?>
 <?php if ($hero_slider): ?>
 
-<section class="banner home-banner" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "autoplay": true, "autoplaySpeed": 3000 , "infinite": true, "variableWidth": false, "responsive": [{"breakpoint":992,"settings":{"slidesToShow": 1}}]}'>
+<section class="banner home-banner" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "autoplay": true, "autoplaySpeed": 5000 , "infinite": true, "variableWidth": false, "responsive": [{"breakpoint":992,"settings":{"slidesToShow": 1}}]}'>
 
   <?php foreach($hero_slider as $slide): ?>
 
@@ -23,6 +23,8 @@
         </div>
       </div>
     </div>
+
+
 
     <div class="mobile-slide-content show-for-small-only">
       <div class="grid-x grid-margin-y grid-padding-x align-middle">
@@ -44,6 +46,10 @@
   <?php endforeach; ?>
 
 </section>
+
+<div class="slider-progress">
+  <div class="progress"></div>
+</div>
 
 <?php endif; ?>
 
