@@ -57,4 +57,6 @@ include 'functions/post_types.php';
 include 'functions/forms.php';
 include 'functions/filtering.php';
 include 'functions/post.php';
+include 'functions/events.php';
+include 'functions/community.php';
 include 'functions/wp_login.php';

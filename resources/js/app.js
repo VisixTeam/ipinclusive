@@ -3,6 +3,7 @@ require('./bootstrap')
 
 // include the complete Foundation js framework
 import { Foundation } from 'foundation-sites'
+import datepickerFactory from 'jquery-datepicker'
 
 // libs from base theme
 // fast click stops the 300ms delay on touch devices when using onClick
@@ -19,8 +20,11 @@ require( 'libs/post-forms' )
 require('./main')
 
 require('./modules/nav')
+require('./modules/event-datepicker')
 
 require('./components/slick')
+require('./components/filtering')
+// require('./components/datepicker')
 
 $(function () {
 
@@ -29,4 +33,17 @@ $(function () {
   $('form[data-post-form-id][data-post-container][data-post-pagination][data-post-loading]').each(function () {
     $(this).postForm()
   })
+
+  datepickerFactory($);
+
+  $('#event-datepicker').datepicker({
+    dateFormat: "dd-mm-yy",
+    autoSize: true,
+    firstDay: 1,
+    showOtherMonths: true,
+    onSelect: function(dateText, inst) {
+      var dateAsString = dateText;
+      var date = $('#event-datepicke').val();
+    }
+  }).datepicker("setDate",new Date(2014,10-1,17));
 })

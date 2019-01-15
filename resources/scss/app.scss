@@ -23,6 +23,8 @@
 @import 'components/slick';
 @import 'components/forms';
 @import 'components/cards';
+@import 'components/tables';
+@import 'components/jquery-calendar';
 // @import 'components/stars';
 // @import 'components/social';
 
@@ -39,6 +41,7 @@
 @import 'modules/footer';
 @import 'modules/banner';
 @import 'modules/community';
+@import 'modules/events';
 
 // partials
 @import 'partials/typography';

@@ -11,6 +11,18 @@ $button-transition: all 150ms ease-in-out;
   outline: none;
   position: relative;
   font-weight: $global-weight-bold;
+  font-size: rem-calc(17);
+
+  &:hover {
+    .icon {
+      margin-left: 8px;
+    }
+  }
+
+  .icon {
+    margin-left: 12px;
+    @include transition(margin-left);
+  }
 
   &.white {
     @each $name, $color in $ip-palette {

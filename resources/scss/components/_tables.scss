@@ -1,0 +1,11 @@
+$show-header-for-stacked: true;
+$table-is-striped: false;
+
+@include foundation-table;
+
+.table-scroll {
+
+  @include breakpoint(small only) {
+    overflow-x: scroll;
+  }
+}

@@ -105,6 +105,34 @@
   }
 }
 
+.events-calendar {
+  @extend .cards-section;
+
+  .slick-slide {
+    .events {
+      @include breakpoint(medium) {
+        height: 100%;
+
+        .grid-x {
+          height: 100%;
+        }
+      }
+    }
+
+    > div {
+      position: relative;
+      right: -9px;
+    }
+  }
+
+  .slick-arrow {
+
+    @include breakpoint(small only) {
+      top: 102%;
+    }
+  }
+}
+
 .cards {
   &.ip-white-smoke-bg {
     .slick-arrow {

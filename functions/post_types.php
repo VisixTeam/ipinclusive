@@ -91,7 +91,7 @@ function create_post_type() {
       ),
       'public'      => true,
       'show_ui'     => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'menu_icon'   => 'dashicons-megaphone',
       'query_var'   => true,
       'position'    => 40,
