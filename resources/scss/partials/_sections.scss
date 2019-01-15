@@ -5,9 +5,23 @@
   position: relative;
   z-index: 1;
 
+  &.event-details {
+    padding: 20px 0;
+
+    time {
+      font-size: rem-calc(18);
+      font-weight: $global-weight-normal;
+
+      i {
+        margin-right: 10px;
+        font-size: rem-calc(18);
+      }
+    }
+  }
+
   &.option-section {
     top: -5px;
-    
+
     .button {
       text-align: left;
       box-shadow: 0 0 10px 0 rgba($black, 0.25);

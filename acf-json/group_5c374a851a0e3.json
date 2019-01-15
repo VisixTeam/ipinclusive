@@ -194,6 +194,13 @@
                 "operator": "==",
                 "value": "community"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "events"
+            }
         ]
     ],
     "menu_order": 0,
@@ -219,5 +226,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547477410
+    "modified": 1547566503
 }

@@ -43,7 +43,7 @@ $(function () {
     showOtherMonths: true,
     onSelect: function(dateText, inst) {
       var dateAsString = dateText;
-      var date = $('#event-datepicke').val();
+      var date = $('.datester').val();
     }
-  }).datepicker("setDate",new Date(2014,10-1,17));
+  })
 })

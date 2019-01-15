@@ -141,7 +141,7 @@ function create_post_type() {
       ),
       'public'      => true,
       'show_ui'     => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'menu_icon'   => 'dashicons-portfolio',
       'query_var'   => true,
       'position'    => 42,
@@ -177,3 +177,16 @@ function create_post_type() {
   );
 }
 add_action('init', 'create_post_type', 0);
+
+register_taxonomy(
+'resources_type',
+'resources',  // this is the custom post type(s) I want to use this taxonomy for
+  array(
+    'hierarchical' => false,
+    'label' => 'Resources Types',
+    'query_var' => true,
+    'rewrite' => true
+  )
+);
+
+register_taxonomy_for_object_type('resources_type', 'resources');

@@ -1,82 +1,66 @@
-<?php /* Template Name: Events */ ?>
-
 <?php get_header(); ?>
 
-<?php $hero = get_field('hero_banner'); ?>
+<?php
+$post_id = (is_home() ? get_option('page_for_posts') : get_the_ID());
 
-<?php visix_partial('modules/banner', $hero['hero']); ?>
+$id = get_the_ID();
+$content_post = get_post($id);
+$content = $content_post->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]&gt;', $content);
+?>
 
-<section class="section featured-event ip-white-smoke-bg">
+<?php $image = get_the_post_thumbnail_url($id); ?>
+
+<?php visix_partial('modules/banner', ['custom_title' => get_the_title($id), 'communities_background_image' => $image]); ?>
+
+<section class="section event-details ip-pink-bg">
   <div class="grid-container">
-    <div class="grid-x grid-margin-y">
-      <div class="cell medium-3">
-        <h3 class="ip-teal h2">Featured Event</h3>
+    <div class="grid-x grid-margin-y align-middle">
+      <div class="cell small-6 medium-3">
+        <?php $related_comunity = get_field('related_community', $info); ?>
+
+        <?php if(is_array($related_comunity)): ?>
+
+          <h4 class="ip-white">
+            <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
+
+              <?= get_the_title($comunity).'&nbsp;'; ?>
+
+            <?php endforeach; ?>
+
+          </h4>
+        <?php else: ?>
+
+          <h4 class="ip-white"><?= get_the_title($related_comunity); ?></h4>
+
+        <?php endif; ?>
       </div>
-      <div class="cell medium-9">
+      <div class="cell small-3 medium-2 ip-white">
+        <time><i class="icon icon-time ip-white"></i> <?= get_field('time', $id); ?></time>
+      </div>
 
-        <?php $featured = get_featured_event(); ?>
+      <div class="cell small-3 medium-2 ip-white">
+        <time><i class="icon icon-calendar ip-white"></i> <?= get_field('date', $id); ?></time>
+      </div>
 
-        <?php foreach($featured as $feature): ?>
+      <?php $event_url = get_field('event_url', $id);  ?>
 
-          <div class="card events">
+      <?php if ($event_url): ?>
+        <div class="cell medium-auto medium-text-right">
+          <a href="<?= $event_url; ?>" target="_blank" class="button hollow white">Book to attend <i class="icon icon-open-in-new"></i></a>
+        </div>
 
-            <div class="grid-x medium-up-2">
-              <div class="cell">
-                <?php $card_image = get_the_post_thumbnail_url($feature); ?>
-                <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($feature); ?>" <?php endif; ?>>
-                  <?php $event_url = get_field('event_url', $feature);  ?>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
 
-                  <?php if ($event_url): ?>
-
-                    <span class="event-url">
-                      <a target="_blank" href="<?= $event_url; ?>">
-                        <i class="icon icon-share"></i>
-                      </a>
-                    </span>
-
-                  <?php endif; ?>
-                </div>
-              </div>
-              <div class="cell">
-                <div class="card-section">
-                  <div class="grid-x small-up-2 align-middle">
-                    <div class="cell">
-                      <time><i class="icon icon-time ip-orange"></i> <?= get_field('time', $feature); ?></time>
-                    </div>
-                    <div class="cell">
-                      <time><i class="icon icon-calendar ip-orange"></i> <?= get_field('date', $feature); ?></time>
-                    </div>
-                  </div>
-
-                  <div class="spacer tiny"></div>
-
-                  <?php $related_comunity = get_field('related_community', $feature); ?>
-
-                  <?php if(is_array($related_comunity)): ?>
-
-                    <h5 class="ip-pink">
-                      <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
-
-                        <?= get_the_title($comunity).'&nbsp;'; ?>
-
-                      <?php endforeach; ?>
-
-                    </h5>
-                  <?php else: ?>
-
-                    <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
-
-                  <?php endif; ?>
-
-                  <h3 class="ip-teal h2"><?= get_the_title($feature); ?></h3>
-                  <div class="spacer tiny"></div>
-                  <a class="button clear orange" href="<?= get_permalink($feature); ?>">View <i class="icon icon-long-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        <?php endforeach; ?>
+<section class="section ip-white-bg">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        <?= $content; ?>
       </div>
     </div>
   </div>
@@ -86,7 +70,7 @@
   $community_id = (isset($_GET['related_community']) ? $_GET['related_community'] : null);
 ?>
 
-<section class="section events-calendar filtering">
+<section class="section events-calendar ip-white-smoke-bg filtering">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell large-3">

@@ -58,6 +58,10 @@
 
                 <?php visix_partial('inc/team', ['info' => $info]); ?>
 
+              <?php elseif($post_type == 'resources'): ?>
+
+                <?php visix_partial('inc/resources', ['info' => $info]); ?>
+
               <?php endif; ?>
 
             <?php endforeach; ?>
