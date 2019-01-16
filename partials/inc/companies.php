@@ -24,6 +24,21 @@
         <h3 class="ip-pink h5"><?= get_the_title($support_type); ?></h3>
 
       <?php endif; ?>
+
+      <?php if (is_page('our-supporters-and-partners')):
+        $content = get_field('description', $info);
+        $content = wp_strip_all_tags($content);
+      ?>
+
+        <p>
+         <?= (strlen($content) > 150 ? substr($content,0,150)."..." : $content); ?>
+        </p>
+
+        <div class="spacer tiny"></div>
+
+      <?php endif; ?>
+
+      <a class="button clear orange" href="<?= get_field('company_url',$info); ?>" target="_blank">View <i class="icon icon-open-in-new"></i></a>
     </div>
   </div>
 </div>

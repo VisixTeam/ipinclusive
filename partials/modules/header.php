@@ -7,7 +7,7 @@
             <?php visix_partial('svgs/logo'); ?>
           </a>
         </div>
-        <div class="show-for-mediumLand cell mediumLand-3 medium-text-center mediumLand-text-right">
+        <div class="show-for-mediumLand cell mediumLand-3 medium-text-center mediumLand-text-right large-text-center">
           <a href="<?= site_url('stay-in-touch'); ?>" class="button teal">Stay in touch</a>
         </div>
         <div class="show-for-mediumLand cell mediumLand-4 large-3 text-right">

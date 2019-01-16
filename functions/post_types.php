@@ -182,10 +182,14 @@ register_taxonomy(
 'resources_type',
 'resources',  // this is the custom post type(s) I want to use this taxonomy for
   array(
-    'hierarchical' => false,
+    'hierarchical' => true,
     'label' => 'Resources Types',
     'query_var' => true,
-    'rewrite' => true
+    'rewrite' => array('slug' => 'resources_type'),
+    'capabilities' => array(
+      'manage_terms' => 'manage_categories',
+      'assign_terms' => 'edit_posts',
+    ),
   )
 );
 

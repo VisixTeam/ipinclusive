@@ -6,7 +6,7 @@ add_action('visix_base_loaded', function () {
     /**
      * include Visix plugins
      */
-    visix_init_plugins(['woocommerce', 'forms']);
+    visix_init_plugins(['woocommerce', 'forms', 'post-forms']);
 
 });
 
@@ -58,5 +58,6 @@ include 'functions/forms.php';
 include 'functions/filtering.php';
 include 'functions/post.php';
 include 'functions/events.php';
-include 'functions/community.php';
+include 'functions/signatories.php';
+include 'functions/resources.php';
 include 'functions/wp_login.php';

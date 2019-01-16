@@ -40,6 +40,8 @@
 .cards-section {
   padding: 20px 0;
 
+
+
   @include breakpoint(medium) {
     .slick-list, .slick-track {
       display: flex;
@@ -132,6 +134,48 @@
     }
   }
 }
+
+.one-col {
+  padding-bottom: 40px;
+
+  @include breakpoint(mediumLand up) {
+    padding-bottom: 0;
+  }
+
+
+  .cards-section {
+    .slick-arrow {
+      @include breakpoint(mediumLand up) {
+        top: 50%;
+      }
+
+      @include breakpoint(medium down) {
+        top: 100%;
+      }
+
+      &.prev {
+        right: auto;
+        left: 35%;
+
+        @include breakpoint(mediumLand up) {
+          left: -8%;
+        }
+      }
+
+      &.next {
+        right: 35%;
+        left: auto;
+
+        @include breakpoint(mediumLand up) {
+          right: -8%;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+
 
 .cards {
   &.ip-white-smoke-bg {

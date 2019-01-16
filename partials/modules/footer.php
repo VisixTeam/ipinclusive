@@ -18,7 +18,7 @@
       </div>
 
       <div class="cell">
-        <h3><a href="" class="ip-white">Communities</a></h3>
+        <h3><a href="<?= site_url('community'); ?>" class="ip-white">Communities</a></h3>
 
         <ul class="menu no-bullet">
           <?php $communities = get_pages_by_post_type('community');
@@ -34,7 +34,7 @@
       </div>
 
       <div class="cell">
-        <h3><a href="" class="ip-white">Resources</a></h3>
+        <h3><a href="<?= site_url('resources'); ?>" class="ip-white">Resources</a></h3>
 
         <ul class="menu no-bullet">
           <?php $communities = get_pages_by_post_type('resources');
@@ -66,7 +66,7 @@
       </div>
 
       <div class="cell">
-        <h3><a href="" class="ip-white">Our Supporters &amp Partners</a></h3>
+        <h3><a href="<?= site_url('our-supporters-and-partners/'); ?>" class="ip-white">Our Supporters &amp Partners</a></h3>
 
         <ul class="menu no-bullet">
           <?php $communities = get_pages_by_post_type('companies');
@@ -82,7 +82,7 @@
       </div>
 
       <div class="cell">
-        <h3><a href="" class="ip-white">News &amp Features</a></h3>
+        <h3><a href="<?= site_url('news'); ?>" class="ip-white">News &amp Features</a></h3>
 
         <ul class="menu no-bullet">
           <?php $articles = get_pages_by_post_type('post');

@@ -47,6 +47,48 @@
     }
   }
 
+  &.signatories-filtering {
+    [type=search] {
+      border-color: $white;
+      box-shadow: 0 0 4px 0 rgba($black, 0.27);
+      color: $medium-gray;
+    }
+  }
+
+  &.resources-filtering {
+    select, [type=search] {
+      box-shadow: 0 0 4px 0 rgba($black, 0.27);
+      background-color: $white;
+      border-color: $white;
+      color: $medium-gray;
+    }
+  }
+
+  &.resources {
+    .slick-list {
+      padding: 20px 0;
+    }
+  }
+
+  &.signatories-filtering {
+    .signatory {
+
+      .card {
+        box-shadow: 0 0 15px 0 rgba(177,177,177,0.5);
+        padding: 23px 20px;
+        height: 100%;
+      }
+
+      .card-image {
+        min-height: 150px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $light-gray;
+      }
+    }
+  }
+
   &.cards {
     .medium-3 {
       .button {

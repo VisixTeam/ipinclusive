@@ -3,9 +3,6 @@
   <div class="card">
 
     <div class="card-section">
-
-      <div class="spacer tiny"></div>
-
       <a href="<?= get_permalink($info); ?>" class="ip-teal h2"><?= get_the_title($info); ?></a>
       <div class="spacer tiny"></div>
 
