@@ -10,6 +10,11 @@ $card-margin-bottom: 5px;
     position: relative;
 
     &.post {
+      @include breakpoint(medium up) {
+        display: inline-flex !important;
+        height: 100%;
+      }
+
       .event-url {
         a {
           border-color: $pink;
