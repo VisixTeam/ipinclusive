@@ -34,6 +34,15 @@ function terms_to_choices($terms = array()) {
   return $choices;
 }
 
+function tags_to_choices($terms = array()) {
+  $choices = array();
+  foreach($terms as $term) {
+    $choices[$term->term_id] = $term->name;
+  }
+
+  return $choices;
+}
+
 /**
 * Return list of date categories for filtering
 */

@@ -221,3 +221,20 @@
   height: 4px;
   background: $white;
 }
+
+.comment-slider {
+
+  .slick-arrow {
+    svg {
+      circle {
+        fill: $white-smoke;
+      }
+    }
+  }
+
+  .slick-track {
+    @include breakpoint(medium up) {
+      margin-left: 0;
+    }
+  }
+}

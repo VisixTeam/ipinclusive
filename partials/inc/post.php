@@ -1,38 +1,28 @@
 <div class="cell medium-6 large-4 <?= get_post_type($info); ?>" id="post-<?= $info; ?>">
 
-    <span class="event-url">
-
-      <a target="_blank" href="#">
-        <i class="icon ip-pink icon-share"></i>
-      </a>
-    </span>
-
   <div class="card">
-
 
     <?php $card_image = get_the_post_thumbnail_url($info); ?>
     <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($info); ?>" <?php endif; ?>>
     </div>
     <div class="card-section">
-      <?php $related_comunity = get_field('related_community', $info); ?>
+      <?php
+        $post_categories = wp_get_post_categories( $info );
+        $cats = array();
+      ?>
 
       <div class="spacer tiny"></div>
 
-      <?php if(is_array($related_comunity)): ?>
-
         <h5 class="ip-pink">
-          <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
+          <?php foreach ($post_categories as $c) :
 
-            <?= get_the_title($comunity).'&nbsp;'; ?>
+            $cat = get_category( $c ); ?>
+
+            <?= $cat->name.'&nbsp;'; ?>
 
           <?php endforeach; ?>
 
         </h5>
-      <?php else: ?>
-
-        <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
-
-      <?php endif; ?>
 
       <h3 class="ip-pink h3"><?= get_the_title($info); ?></h3>
       <div class="spacer tiny"></div>
@@ -50,7 +40,7 @@
         </div>
 
         <div class="cell">
-          <time><i class="icon icon-thumb-up ip-pink"></i> <?= getPostViews($info); ?></time>
+          <time><i class="icon icon-eye ip-pink"></i> <?= getPostViews($info); ?></time>
         </div>
       </div>
 

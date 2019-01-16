@@ -280,3 +280,28 @@ input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:af
     @include transition(margin-left);
   }
 }
+
+#commentform {
+  width: 100%;
+}
+
+.comment {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.comment-form {
+  label {
+    color: $pink;
+    font-size: rem-calc(14);
+    margin-bottom: 5px;
+  }
+
+  [type="text"], [type="email"], textarea {
+    box-shadow: 0 0 4px 0 rgba($black, 0.27);
+    background-color: $white;
+    border-color: $white;
+    color: $medium-gray;
+  }
+}

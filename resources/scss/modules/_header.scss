@@ -86,6 +86,10 @@
           font-size: rem-calc(18);
           font-weight: $global-weight-bold;
           text-transform: none;
+
+          &::after {
+            font-weight: $global-weight-normal;
+          }
         }
       }
 
@@ -123,7 +127,7 @@
       margin: 20px 0 0;
 
       li {
-        margin-bottom: 17px;
+        margin-bottom: 10px;
       }
 
       a {

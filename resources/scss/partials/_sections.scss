@@ -19,6 +19,14 @@
     }
   }
 
+  &.single-news-details {
+    time {
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+
   &.option-section {
     top: -5px;
 
@@ -48,11 +56,11 @@
   }
 
   &.signatories-filtering {
-    [type=search] {
-      border-color: $white;
-      box-shadow: 0 0 4px 0 rgba($black, 0.27);
-      color: $medium-gray;
-    }
+    @extend .resources-filtering;
+  }
+
+  &.news-filter {
+    @extend .resources-filtering;
   }
 
   &.resources-filtering {
@@ -61,6 +69,12 @@
       background-color: $white;
       border-color: $white;
       color: $medium-gray;
+    }
+  }
+
+  &.news {
+    .card {
+      box-shadow: 0 0 10px 0 rgba(177,177,177,0.5);
     }
   }
 
