@@ -1,4 +1,4 @@
-<section class="section ip-<?= $background_colour['colour']; ?>-bg">
+<section class="section simple-section ip-<?= $background_colour['colour']; ?>-bg">
 
   <div class="grid-container">
     <div class="grid-x">
@@ -16,7 +16,7 @@
 
       <?php if ($content): ?>
 
-        <div class="cell">
+        <div class="cell simple">
           <?= readmore($content); ?>
         </div>
 

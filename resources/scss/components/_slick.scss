@@ -238,3 +238,37 @@
     }
   }
 }
+.home-banner {
+  @include breakpoint(medium up){
+    .slick-list {
+      display: flex;
+    }
+
+    .slick-track {
+      display: inline-flex;
+    }
+
+    .slick-slide {
+      display: flex;
+      max-width: 100%;
+      height: auto;
+
+      > div {
+        display: inline-flex;
+        width: 100%;
+        height: auto;
+      }
+
+      .slide-item {
+        display: flex !important;
+        height: auto;
+      }
+
+      .grid-x {
+        display: flex;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }  
+}

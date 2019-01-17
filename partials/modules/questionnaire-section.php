@@ -52,7 +52,7 @@
         <div class="spacer"></div>
 
         <div class="cell">
-          <button type="reset" class="button clear orange" id="submit-questionnaire">Submit <i class="icon icon-long-arrow-right"></i></button>
+          <button type="reset" class="button clear orange" id="submit-questionnaire"><?= $submit_button_text; ?> <i class="icon icon-long-arrow-right"></i></button>
         </div>
 
       </form>

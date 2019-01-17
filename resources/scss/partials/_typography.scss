@@ -15,6 +15,10 @@ h6 {
     margin-left: 3em;
     margin-bottom: 30px;
 
+    h3, h2, h4, h5, h6 {
+      color: $teal;
+    }
+
     @include breakpoint(medium) {
       margin-left: 2em;
     }

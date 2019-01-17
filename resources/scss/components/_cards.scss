@@ -22,6 +22,12 @@ $card-margin-bottom: 3px;
       }
     }
 
+    &.team {
+      .card-image {
+        height: 217px;
+      }
+    }
+
     .event-url {
       position: absolute;
       top: 0;

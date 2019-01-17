@@ -27,7 +27,7 @@
 
               <li>
                 <span class="num"><?= $list_num + 1; ?></span>
-                <?= $list['content']; ?>
+                <?= readmore($list['content']); ?>
               </li>
             <?php endforeach; ?>
           </ul>

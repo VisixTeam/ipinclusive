@@ -2,3 +2,34 @@ $zmdi-font-path: "/wp-content/themes/ipinclusive/assets/fonts";
 $md-font-path: "/wp-content/themes/ipinclusive/assets/fonts";
 @import 'icons/md-icons';
 // @import 'icons/font-awesome';
+
+// Spinning Icons
+// --------------------------
+
+.icon-rotate-right {
+   animation: icon-span 1.5s infinite linear;
+}
+
+.icon-rotate-right-reverse {
+  animation: icon-span-reverse 1.5s infinite linear;
+}
+
+// Spin
+@keyframes icon-span {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+// Spin Reverse
+@keyframes icon-span-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}

@@ -58,11 +58,13 @@
   right: -100%;
   background-color: $white;
   bottom: 0;
+  overflow-y: auto;
   top: 0;
   width: 100%;
   padding-left: 40px;
   z-index: 3;
   box-shadow: -3px 0 10px 0 rgba(0,0,0,0.36);
+  padding-bottom: 40px;
   @include transition(right);
 
   &.open {

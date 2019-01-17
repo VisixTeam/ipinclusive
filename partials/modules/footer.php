@@ -74,7 +74,8 @@
           foreach($communities as $community):?>
 
           <li>
-            <a href="<?= get_permalink($community); ?>"><?= get_the_title($community); ?></a>
+            <a target="
+            " href="<?= get_field('company_url', $community); ?>"><?= get_the_title($community); ?></a>
           </li>
 
           <?php endforeach; ?>

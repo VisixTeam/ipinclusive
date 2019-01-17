@@ -27,6 +27,17 @@
     }
   }
 
+  &.simple-section {
+    .simple {
+      ul {
+        h2, h3, h4, h5, h6 {
+          color: $teal;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
   &.option-section {
     top: -5px;
 

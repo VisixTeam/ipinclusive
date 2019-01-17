@@ -5,7 +5,7 @@
 <?php $hero_slider = get_field('hero_slider'); ?>
 <?php if ($hero_slider): ?>
 
-<section class="banner home-banner" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "autoplay": true, "autoplaySpeed": 5000 , "infinite": true, "variableWidth": false, "fade": true, "cssEase": "ease-in-out", "responsive": [{"breakpoint":992,"settings":{"slidesToShow": 1}}]}'>
+<section class="banner home-banner" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "autoplay": false, "autoplaySpeed": 5000 , "infinite": true, "variableWidth": false, "fade": true, "cssEase": "ease-in-out", "responsive": [{"breakpoint":992,"settings":{"slidesToShow": 1}}]}'>
 
   <?php foreach($hero_slider as $slide): ?>
 
