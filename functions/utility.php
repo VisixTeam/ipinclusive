@@ -19,11 +19,6 @@ function add_file_types_to_uploads($file_types) {
 }
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
-function remove_menu_items(){
-  remove_menu_page( 'edit-comments.php' );
-}
-add_action( 'admin_menu', 'remove_menu_items', 999 );
-
 add_action( 'wp_head', 'n8f_add_ios_phone_number_blocker_to_meta');
 function n8f_add_ios_phone_number_blocker_to_meta() {
   echo '<meta name="format-detection" content="telephone=no">';

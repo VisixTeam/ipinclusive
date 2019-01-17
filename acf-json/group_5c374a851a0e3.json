@@ -173,6 +173,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5c40559b5ed6c": {
+                    "key": "layout_5c40559b5ed6c",
+                    "name": "questionnaire-section",
+                    "label": "Questionnaire",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c4055a45ed6d",
+                            "label": "Questionnaire",
+                            "name": "questionnaire",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "clone": [
+                                "group_5c405367e8124"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -201,6 +233,13 @@
                 "operator": "==",
                 "value": "events"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resources"
+            }
         ]
     ],
     "menu_order": 0,
@@ -226,5 +265,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547566503
+    "modified": 1547720124
 }

@@ -1,0 +1,97 @@
+.questionnaire-section {
+  .card {
+    box-shadow: 0 0 10px 0 rgba(177,177,177,0.5);
+  }
+
+  [data-response] {
+    h3, h2, h4, h5, h6 {
+      color: $teal;
+    }
+
+    a {
+      @extend .button;
+      @extend .teal;
+
+      &::after {
+        content: '\f301';
+        font-family: 'Material-Design-Iconic-Font';
+        font-size: 30px;
+        position: relative;
+        right: -20px;
+        top: 4px;
+        font-weight: $global-weight-light;
+      }
+    }
+  }
+
+  .options-list {
+    width: 300px;
+
+    .input-container {
+      width: 33%;
+      flex-basis: 33%;
+
+      label {
+        color: $orange;
+      }
+
+      input[type=radio]:checked + label:after {
+        background-color: $orange;
+        border-width: 2px;
+        border-color: $orange;
+      }
+
+      [type=radio] + label {
+        padding-left: 30px;
+
+        &::before {
+          width: 25px;
+          height: 25px;
+          content: '';
+        }
+
+        &::after {
+          border-width: 2px;
+          border-color: $orange;
+        }
+      }
+
+      &:first-child {
+
+        input[type=radio]:checked + label:after {
+          background-color: $green;
+          border-width: 2px;
+          border-color: $green;
+        }
+
+        [type=radio] + label {
+          &:after {
+            border-color: $green;
+          }
+        }
+
+        label {
+          color: $green;
+        }
+      }
+
+      &:last-child {
+        input[type=radio]:checked + label:after {
+          background-color: $teal;
+          border-width: 2px;
+          border-color: $teal;
+        }
+
+        label {
+          color: $teal;
+        }
+
+        [type=radio] + label {
+          &:after {
+            border-color: $teal;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+    "key": "group_5c405367e8124",
+    "title": "Module - Questionnaire",
+    "fields": [
+        {
+            "key": "field_5c4053a4cb5fd",
+            "label": "Data",
+            "name": "data",
+            "type": "group",
+            "instructions": "This is for the questionnaire form in how inclusive are you?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5c4053adcb5fe",
+                    "label": "Questionnaire",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5c405417cb603",
+                    "label": "Questionnaire",
+                    "name": "questionnaire",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "collapsed": "field_5c405432cb604",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "Add Question",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c40550fcb60a",
+                            "label": "Question",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5c405432cb604",
+                            "label": "Question",
+                            "name": "question",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c4054fbcb609",
+                            "label": "Answers",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5c405483cb606",
+                            "label": "Answer To No",
+                            "name": "answer_to_no",
+                            "type": "wysiwyg",
+                            "instructions": "Answer if user selects Yes for the question",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "answer-to-yes",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5c4054e0cb608",
+                            "label": "Answer To N\/A",
+                            "name": "answer_to_na",
+                            "type": "wysiwyg",
+                            "instructions": "Answer if user selects N\/A for the question",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "answer-to-na",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c405528cb60b",
+                    "label": "Submit button Text",
+                    "name": "submit_button_text",
+                    "type": "text",
+                    "instructions": "Text for the submit button",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c4053e0cb600",
+                    "label": "Configuration",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5c4053edcb601",
+                    "label": "Background Colour",
+                    "name": "background_colour",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "clone": [
+                        "group_5c1b78051d8e1"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "recaptcha": 0,
+    "modified": 1547730050
+}

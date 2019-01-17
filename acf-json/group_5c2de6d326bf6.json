@@ -3,6 +3,23 @@
     "title": "Post Type - Team",
     "fields": [
         {
+            "key": "field_5c3fbe2c3ea1b",
+            "label": "Details",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5c3cfaf994f37",
             "label": "Has Twitter",
             "name": "has_twitter",
@@ -75,10 +92,10 @@
             "append": ""
         },
         {
-            "key": "field_5c2e14bb2b47c",
-            "label": "IP Inclusive Key Individual",
-            "name": "ip_inclusive_key_individual_",
-            "type": "true_false",
+            "key": "field_5c3e0597675e6",
+            "label": "Job Title",
+            "name": "job_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -88,11 +105,48 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c3e05a42cc91",
+            "label": "Company",
+            "name": "company",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c3fbe393ea1c",
+            "label": "Relations",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5c2de80b8ea02",
@@ -123,6 +177,26 @@
             "multiple": 1,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_5c2e14bb2b47c",
+            "label": "IP Inclusive Key Individual",
+            "name": "ip_inclusive_key_individual_",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -143,5 +217,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547500333
+    "modified": 1547681353
 }

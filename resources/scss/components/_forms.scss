@@ -157,6 +157,27 @@ select {
 
 .form-wrapper-white {
 
+  .options-list {
+
+    &.radio-options-list {
+      .input-container {
+        @include breakpoint(medium only) {
+          width: 100%;
+          flex: 1 1 100%;
+        }
+      }
+    }
+
+    .input-container {
+      @include breakpoint(mediumLand) {
+        &:nth-child(-n+2) {
+          width: 50%;
+          flex: 0 1 50%;
+        }
+      }
+    }
+  }
+
   form {
     padding: 25px;
   }
@@ -228,27 +249,6 @@ input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:af
       top: -8px;
       padding: 0px 10px 5px 2px;
       font-size: rem-calc(14);
-    }
-  }
-}
-
-.options-list {
-
-  &.radio-options-list {
-    .input-container {
-      @include breakpoint(medium only) {
-        width: 100%;
-        flex: 1 1 100%;
-      }
-    }
-  }
-
-  .input-container {
-    @include breakpoint(mediumLand) {
-      &:nth-child(-n+2) {
-        width: 50%;
-        flex: 0 1 50%;
-      }
     }
   }
 }

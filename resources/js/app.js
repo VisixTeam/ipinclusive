@@ -21,10 +21,10 @@ require('./main')
 
 require('./modules/nav')
 require('./modules/event-datepicker')
+require('./modules/questionnaire')
 
 require('./components/slick')
 require('./components/filtering')
-// require('./components/datepicker')
 
 $(function () {
 
