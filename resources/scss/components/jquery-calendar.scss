@@ -1,12 +1,17 @@
-.ui-datepicker-calendar {
+.calendar-container {
+  position: relative;
+}
+
+.fc-unthemed {
   background-color: $white;
   box-shadow: 0 0 10px 0 rgba(177,177,177,0.5);
   border-collapse: separate;
   max-width: 100%;
 
   th {
-    padding: 21px 41px;
     font-weight: $global-weight-normal;
+    padding: 21px 13px;
+    border-color: $white;
 
     span {
       color: #7F8FA4;
@@ -16,26 +21,9 @@
   }
 
   td {
-    padding: 21px 41px;
     background-color: #FAFCFE;
     text-align: center;
-
-    &.ui-datepicker-unselectable {
-      cursor: not-allowed;
-      color: #BAC2C7;
-
-      &:hover {
-        background-color: #FAFCFE;
-      }
-    }
-
-    &:hover {
-      background-color: $orange;
-
-      a {
-        color: $white;
-      }
-    }
+    border-color: $white;
 
     a {
       color: $black;
@@ -44,26 +32,28 @@
   }
 }
 
-.ui-datepicker-header {
+.fc-ltr .fc-basic-view .fc-day-top {
+  text-align: center;
+  .fc-day-number {
+    float: none;
+  }
+}
+
+.fc-header-toolbar {
   background-color: $orange;
   color: $white;
   padding: 25px 40px;
+  margin-bottom: 0;
 
-  .ui-datepicker-prev {
+  .fc-next-button {
     float: left;
-    color: $orange;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
 
-    &::after {
-      content: '\f2ff';
-      color: $white;
-      font-family: 'Material-Design-Iconic-Font';
-      font-size: rem-calc(25);
+    span {
+      display: none;
     }
-  }
-
-  .ui-datepicker-next {
-    float: right;
-    color: $orange;
 
     &::after {
       content: '\f301';
@@ -72,11 +62,27 @@
       font-size: rem-calc(25);
     }
   }
+
+  .fc-prev-button {
+    float: right;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+
+    span {
+      display: none;
+    }
+
+    &::after {
+      content: '\f2ff';
+      color: $white;
+      font-family: 'Material-Design-Iconic-Font';
+      font-size: rem-calc(25);
+    }
+  }
 }
 
-.ui-datepicker-title {
+.fc-center h2 {
   text-align: center;
   font-size: 23px;
-  text-transform: uppercase;
-  font-weight: $global-weight-normal;
 }

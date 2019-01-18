@@ -52,6 +52,19 @@ if(function_exists('acf_add_options_page')) {
 	));
 }
 
+/**
+* Enqueue styles
+*/
+function wpb_adding_styles() {
+
+  if(is_page('events')) {
+    wp_register_style('fullcalendar', get_stylesheet_directory_uri() . '/assets/css/fullcalendar.min.css', array(), null, 'screen');
+    wp_enqueue_style('fullcalendar', get_stylesheet_directory_uri() . '/assets/css/fullcalendar.min.css', array(), null, 'screen');
+  }
+}
+
+add_action('wp_enqueue_scripts', 'wpb_adding_styles');
+
 include 'functions/utility.php';
 include 'functions/post_types.php';
 include 'functions/forms.php';

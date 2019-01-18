@@ -19,13 +19,18 @@ $content = str_replace(']]>', ']]&gt;', $content);
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell">
-        <?= $content; ?>
+        <?= readmore($content); ?>
       </div>
 
-      <div class="cell">
-        <?php $download = get_field('download', $id) ?>
-        <h5><a class="button clear pink" target="_blank" href="<?= $download['url']; ?>">Download <i class="icon icon-download ip-pink"></i></a></h5>
-      </div>
+      <?php if ($download): ?>
+
+        <div class="cell">
+          <?php $download = get_field('download', $id) ?>
+          <h5><a class="button clear pink" target="_blank" href="<?= $download['url']; ?>">Download <i class="icon icon-download ip-pink"></i></a></h5>
+        </div>
+
+      <?php endif; ?>
+
     </div>
   </div>
 </section>

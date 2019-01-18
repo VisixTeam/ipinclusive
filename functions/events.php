@@ -27,6 +27,32 @@ function get_featured_event() {
   return $query->posts;
 }
 
+function get_events_and_dates() {
+  $args = array(
+    'post_type' => array('events'),
+    'post_status'  => 'publish',
+    'showposts' => -1,
+  );
+
+  $query = new WP_Query($args);
+
+  $results = array();
+  foreach ($query->posts as $post) {
+    $date = DateTime::createFromFormat('d/m/Y', get_field('date', $post->ID));
+    $date_time = DateTime::createFromFormat('d/m/Y g:i a', get_field('date_and_time', $post->ID));
+
+    $results[] = array(
+      'id' => $post->ID,
+      'title' => $post->post_title,
+      'date' => $date->format('Y-m-d'),
+      'start' => $date_time->format('Y-m-d T g:i a'),
+    );
+  }
+
+  return $results;
+}
+
+
 function get_events_query_args($community_id = null) {
   $args = array(
     'post_type' => 'events',
@@ -58,8 +84,6 @@ function get_events_query_args($community_id = null) {
   }
 
   return $args;
-
-  pp($args);
 }
 
 function get_all_events_by_community($community_id = null) {

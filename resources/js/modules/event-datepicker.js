@@ -1,35 +1,44 @@
 (function($){
 
-  let calendarView = $('#calendar-view')
+  var events = $('.calendar-container').attr('data-events');
 
-  let listView = $('#list-view')
+  if($('#calendar').length > 0) {
 
-  let listViewDisplay = $('.list-view')
-  let calendarViewDisplay = $('.calendar-view')
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev',
+        center: 'title',
+        right: 'next'
+      },
+      height: 'auto',
+      aspectRatio: 3,
+      eventBorderColor: 'transparent',
+      eventSources: [
+        {
+          events: JSON.parse(events),
+          backgroundColor: '#0077A1',
+          textColor: '#fff',
+          overlap: true,
+          allDay: false,
+        }
+      ],
+      timeFormat: 'H:mm',
+      displayEventTime: false,
+      displayEventEnd: false,
+      eventLimit: true
+    })
 
-  let eventSlider = $('[data-slick].list-view')
+    $('.change-calendar-view').each(function(){
+      $(this).on('click', function(){
+        if(!$(this).hasClass('active-view')) {
+          $('.change-calendar-view.active-view').removeClass('active-view')
+          $(this).addClass('active-view')
+          $('#calendar').fullCalendar('changeView', $(this).attr('data-view'))
+        }
+      })
+    })
+  }
 
-  listViewDisplay.addClass('hide')
-  calendarView.addClass('active-view')
 
-
-  calendarView.click(function(){
-    calendarView.addClass('active-view')
-    calendarViewDisplay.removeClass('hide')
-
-    listView.removeClass('active-view')
-    listViewDisplay.addClass('hide')
-  });
-
-  listView.click(function(){
-    calendarView.removeClass('active-view')
-    calendarViewDisplay.addClass('hide')
-
-    listView.addClass('active-view')
-    listViewDisplay.removeClass('hide')
-
-    $('[data-slick].list-view').slick()
-
-  });
 
 })(jQuery);

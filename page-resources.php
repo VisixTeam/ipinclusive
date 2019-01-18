@@ -6,6 +6,16 @@
 
 <?php visix_partial('modules/banner', $hero['hero']); ?>
 
+<?php if ( have_rows('sections', $post_id) ): ?>
+
+  <?php while ( have_rows('sections', $post_id) ) : the_row();  ?>
+
+    <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
+
+  <?php endwhile;  ?>
+
+<?php endif; ?>
+
 
 <?php
   $recommended = (isset($_GET['recommended']) ? $_GET['recommended'] : null);
@@ -91,17 +101,6 @@
      </div>
    </div>
  </div>
-
-<?php endif; ?>
-
-
-<?php if ( have_rows('sections', $post_id) ): ?>
-
-  <?php while ( have_rows('sections', $post_id) ) : the_row();  ?>
-
-    <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
-
-  <?php endwhile;  ?>
 
 <?php endif; ?>
 

@@ -60,7 +60,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
 <article class="section main-article">
   <div class="grid-container">
     <div class="grid-x">
-      <?= $content; ?>
+      <?= readmore($content); ?>
     </div>
     <div class="spacer tiny"></div>
     <div class="grid-x grid-margin-y">

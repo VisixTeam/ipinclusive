@@ -60,7 +60,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
-        <?= $content; ?>
+        <?= readmore($content); ?>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
   $community_id = (isset($_GET['related_community']) ? $_GET['related_community'] : null);
 ?>
 
-<section class="section events-calendar ip-white-smoke-bg filtering">
+<section class="section events-calendar filtering">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell large-3">
@@ -79,125 +79,20 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
       <div class="cell large-9">
 
-        <div class="grid-x grid-margin-y">
-          <div class="cell">
-            <div class="grid-x grid-margin-x">
-              <div class="cell small-4 large-7 view-options">
-                <span id="calendar-view">
-                  <i class="icon icon-calendar ip-orange"></i>
-                </span>
+        <div class="calendar-container" data-events="<?php echo htmlspecialchars(json_encode(get_events_and_dates()), ENT_QUOTES, 'UTF-8'); ?>">
+          <div class="view-options">
+            <a href="javascript:;" data-view="month" class="change-calendar-view active-view" id="calendar-view">
+              <i class="icon icon-calendar ip-orange"></i>
+            </a>
 
-                <span id="list-view">
-                  <i class="icon icon-view-list-alt ip-orange"></i>
-                </span>
-              </div>
-
-              <div class="cell small-8 large-5">
-
-                <div class="grid-x align-middle">
-                  <div class="cell small-4 medium-6 large-4">
-                    <p>Filter by:</p>
-                  </div>
-                  <div class="cell small-8 medium-6 large-8">
-                    <?php visix_partial( 'inputs/field', [
-                      'field' => [
-                        'name' => 'related_community',
-                        'id' => 'community',
-                        'type' => 'select',
-                        'allow_null' => true,
-                        'placeholder' => 'Search by Community',
-                        'choices' => ids_to_choices(get_pages_by_post_type('community')),
-                        'attributes' => [
-                          'data-minlength' => '10'
-                        ],
-                        'option' => [
-                          'attributes' => [
-                          ]
-                        ]
-                      ]
-                    ], VISIX_PLUGIN_FORMS_NAME ); ?>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="javascript:;" data-view="listMonth" class="change-calendar-view" id="list-view">
+              <i class="icon icon-view-list-alt ip-orange"></i>
+            </a>
           </div>
 
-          <?php $events = get_all_events_by_community($community_id); ?>
-
-          <div class="cell calendar-view">
-            <div id="event-datepicker" class="table-scroll"></div>
-            <input type="hidden" name="" class="datest" value="22/01/2019">
-
-          </div>
-
-          <div class="cell list-view" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": true, "infinite": true, "variableWidth": false, "responsive": [{"breakpoint":992,"settings":{"slidesToShow": 1}}]}'>
-
-
-            <?php foreach($events as $event): ?>
-
-              <div class="card events">
-
-                <div class="grid-x medium-up-2">
-                  <div class="cell">
-                    <?php $card_image = get_the_post_thumbnail_url($event); ?>
-                    <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($event); ?>" <?php endif; ?>>
-                      <?php $event_url = get_field('event_url', $event);  ?>
-
-                      <?php if ($event_url): ?>
-
-                        <span class="event-url">
-                          <a target="_blank" href="<?= $event_url; ?>">
-                            <i class="icon icon-share"></i>
-                          </a>
-                        </span>
-
-                      <?php endif; ?>
-                    </div>
-                  </div>
-                  <div class="cell">
-                    <div class="card-section">
-                      <div class="grid-x small-up-2 align-middle">
-                        <div class="cell">
-                          <time><i class="icon icon-time ip-orange"></i> <?= get_field('time', $event); ?></time>
-                        </div>
-                        <div class="cell">
-                          <time><i class="icon icon-calendar ip-orange"></i> <?= get_field('date', $event); ?></time>
-                        </div>
-                      </div>
-
-                      <div class="spacer tiny"></div>
-
-                      <?php $related_comunity = get_field('related_community', $event); ?>
-
-                      <?php if(is_array($related_comunity)): ?>
-
-                        <h5 class="ip-pink">
-                          <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
-
-                            <?= get_the_title($comunity).'&nbsp;'; ?>
-
-                          <?php endforeach; ?>
-
-                        </h5>
-                      <?php else: ?>
-
-                        <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
-
-                      <?php endif; ?>
-
-                      <h3 class="ip-teal h2"><?= get_the_title($event); ?></h3>
-                      <div class="spacer tiny"></div>
-                      <a class="button clear orange" href="<?= get_permalink($event); ?>">View <i class="icon icon-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            <?php endforeach; ?>
-          </div>
-
+          <div id="calendar"></div>
         </div>
-      </div>
+    </div>
 
 
     </div>

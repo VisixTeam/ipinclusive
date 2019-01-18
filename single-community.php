@@ -33,7 +33,7 @@
 <section class="section ip-white-smoke-bg">
   <div class="grid-container">
     <div class="grid-x">
-      <?= $content; ?>
+      <?= readmore($content); ?>
     </div>
   </div>
 </section>

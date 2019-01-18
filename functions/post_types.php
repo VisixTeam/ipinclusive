@@ -194,3 +194,37 @@ register_taxonomy(
 );
 
 register_taxonomy_for_object_type('resources_type', 'resources');
+
+register_taxonomy(
+'team_communities',
+'team',  // this is the custom post type(s) I want to use this taxonomy for
+  array(
+    'hierarchical' => true,
+    'label' => 'Team Communities',
+    'query_var' => true,
+    'rewrite' => array('slug' => 'team_communities'),
+    'capabilities' => array(
+      'manage_terms' => 'manage_categories',
+      'assign_terms' => 'edit_posts',
+    ),
+  )
+);
+
+register_taxonomy_for_object_type('team_communities', 'team');
+
+register_taxonomy(
+'events_communities',
+'events',  // this is the custom post type(s) I want to use this taxonomy for
+  array(
+    'hierarchical' => true,
+    'label' => 'Events Communities',
+    'query_var' => true,
+    'rewrite' => array('slug' => 'events_communities'),
+    'capabilities' => array(
+      'manage_terms' => 'manage_categories',
+      'assign_terms' => 'edit_posts',
+    ),
+  )
+);
+
+register_taxonomy_for_object_type('events_communities', 'events');
