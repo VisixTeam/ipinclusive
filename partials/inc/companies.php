@@ -1,10 +1,11 @@
 <div class="cell medium-6 large-4 <?= get_post_type($info); ?>" id="post-<?= $info; ?>">
 
   <div class="card">
+    <?php $image_id = get_post_thumbnail_id($info); ?>
 
 
     <?php $card_image = get_the_post_thumbnail_url($info); ?>
-    <a target="_blank" href="<?= get_field('company_url',$info); ?>" class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($info); ?>" <?php endif; ?>>
+    <a target="_blank" href="<?= get_field('company_url',$info); ?>" class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
     </a>
     <div class="card-section">
       <?php $support_type = get_field('type', $info); ?>

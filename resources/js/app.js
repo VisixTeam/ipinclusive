@@ -47,4 +47,8 @@ $(function () {
     $('#signatories-count').text(postform.form_parts.container.find('.signatories').length)
   })
 
+  $('[data-slick]').on('afterChange', function () {
+    bLazy.revalidate()
+  });
+
 })

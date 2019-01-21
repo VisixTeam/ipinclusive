@@ -84,7 +84,7 @@ $card-margin-bottom: 3px;
 .card-image {
   min-height: 150px;
   background-color: $light-gray;
-  overflow: hidden;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

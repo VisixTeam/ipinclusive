@@ -1,8 +1,10 @@
 <div class="cell medium-6 large-4 <?= get_post_type($info); ?>" id="post-<?= $info; ?>">
 
+  <?php $image_id = get_post_thumbnail_id($info); ?>
+
   <div class="card">
-    <?php $card_image = get_the_post_thumbnail_url($info); ?>
-    <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($info); ?>" <?php endif; ?>>
+    <?php $card_image = $image_id; ?>
+    <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
     </div>
     <div class="card-section">
       <div class="grid-x">
