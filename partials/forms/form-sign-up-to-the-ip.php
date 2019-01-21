@@ -36,7 +36,7 @@
                   <div class="grid-x grid-margin-y">
 
                     <div class="cell">
-                      <p>* Indicates required field</p>
+                      <p>Please indicate the basis on which you are signing the Charter: *</p>
                     </div>
 
                     <div class="cell">
