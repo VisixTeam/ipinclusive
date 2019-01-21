@@ -37,20 +37,20 @@ $card-margin-bottom: 3px;
       background-color: $white;
       box-shadow: -4px 4px 9px 0 rgba($black, .12);
 
-      a {
-        border: 1px solid $orange;
-        padding: 10px;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        display: flex;
+      .sharethis-inline-share-buttons {
+        height: 100%;
+        display: flex !important;
         align-items: center;
-        margin: auto;
         justify-content: center;
-      }
 
-      i {
-        font-size: rem-calc(20);
+        .st-btn {
+          border: 1px solid $orange !important;
+          background-color: transparent !important;
+        }
+
+        path {
+          fill: $orange;
+        }
       }
     }
   }

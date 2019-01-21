@@ -29,7 +29,7 @@ function get_featured_event() {
 
 function get_events_and_dates() {
   $args = array(
-    'post_type' => array('events'),
+    'post_type' => array('date', 'events'),
     'post_status'  => 'publish',
     'showposts' => -1,
   );
@@ -38,14 +38,11 @@ function get_events_and_dates() {
 
   $results = array();
   foreach ($query->posts as $post) {
-    $date = DateTime::createFromFormat('d/m/Y', get_field('date', $post->ID));
-    $date_time = DateTime::createFromFormat('d/m/Y g:i a', get_field('date_and_time', $post->ID));
-
+    $date = DateTime::createFromFormat('d/m/Y g:i a', get_field('date_and_time', $post->ID));
     $results[] = array(
       'id' => $post->ID,
       'title' => $post->post_title,
       'date' => $date->format('Y-m-d'),
-      'start' => $date_time->format('Y-m-d T g:i a'),
     );
   }
 

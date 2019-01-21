@@ -57,7 +57,7 @@ if(function_exists('acf_add_options_page')) {
 */
 function wpb_adding_styles() {
 
-  if(is_page('events')) {
+  if(is_page('events') || is_singular('events')) {
     wp_register_style('fullcalendar', get_stylesheet_directory_uri() . '/assets/css/fullcalendar.min.css', array(), null, 'screen');
     wp_enqueue_style('fullcalendar', get_stylesheet_directory_uri() . '/assets/css/fullcalendar.min.css', array(), null, 'screen');
   }

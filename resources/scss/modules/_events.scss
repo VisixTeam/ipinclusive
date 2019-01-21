@@ -32,20 +32,21 @@
       display: flex;
       align-items: center;
 
-      a {
-        border: 1px solid $orange;
-        padding: 5px;
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        display: flex;
+      .sharethis-inline-share-buttons {
+        height: 100%;
+        display: flex !important;
         align-items: center;
-        margin: auto;
         justify-content: center;
-      }
+        width: 100%;
 
-      i {
-        font-size: rem-calc(15);
+        .st-btn {
+          border: 1px solid $orange !important;
+          background-color: transparent !important;
+        }
+
+        path {
+          fill: $orange;
+        }
       }
     }
 

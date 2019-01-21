@@ -26,15 +26,10 @@
                 <a href="<?= get_permalink($feature); ?>" class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($feature); ?>" <?php endif; ?>>
                   <?php $event_url = get_field('event_url', $feature);  ?>
 
-                  <?php if ($event_url): ?>
 
-                    <span class="event-url">
-                      <a target="_blank" href="<?= $event_url; ?>">
-                        <i class="icon icon-share"></i>
-                      </a>
-                    </span>
-
-                  <?php endif; ?>
+                  <span class="event-url">
+                    <?php echo sharethis_inline_buttons(); ?>
+                  </span>
                 </a>
               </div>
               <div class="cell">

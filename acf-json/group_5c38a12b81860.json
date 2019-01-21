@@ -47,7 +47,7 @@
             "label": "Postcode*",
             "name": "postcode",
             "type": "text",
-            "instructions": "Please now provide the contact details for your Authorised Charter Signatory (this person must have the authority to make the six Charter commitments on behalf of the organisation or department):",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -366,5 +366,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1548068756
+    "modified": 1548076854
 }

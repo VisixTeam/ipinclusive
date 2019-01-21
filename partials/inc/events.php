@@ -1,17 +1,8 @@
 <div class="cell medium-6 large-4 <?= get_post_type($info); ?>" id="post-<?= $info; ?>">
 
-  <?php $event_url = get_field('event_url', $info);  ?>
-
-  <?php if ($event_url): ?>
-
     <span class="event-url">
-
-      <a target="_blank" href="<?= $event_url; ?>">
-        <i class="icon icon-share"></i>
-      </a>
-    </span
-    >
-  <?php endif; ?>
+      <?php echo sharethis_inline_buttons(); ?>
+    </span>
 
   <div class="card">
 

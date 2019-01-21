@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="cell">
-                      <p>The organisation will be named as a signatory in the public area of the IP Inclusive website.</p>
+                      <p class="help-text">Please now provide the contact details for your Authorised Charter Signatory (this person must have the authority to make the six Charter commitments on behalf of the organisation or department):</p>
                     </div>
 
                     <div class="cell">
