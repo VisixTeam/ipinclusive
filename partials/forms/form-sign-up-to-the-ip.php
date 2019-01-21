@@ -60,7 +60,24 @@
 
                       <?php foreach ($field_group['fields'] as $key => $field) : ?>
 
-                        <?php if ($key >= 3 && $key < 8): ?>
+                        <?php if ($key >= 3 && $key < 9): ?>
+                          <?php visix_partial( 'inputs/field', compact( 'field' ), VISIX_PLUGIN_FORMS_NAME ); ?>
+                          <div class="spacer tiny"></div>
+                        <?php endif; ?>
+
+                      <?php endforeach; ?>
+
+                    </div>
+
+                    <div class="cell">
+                      <p>Details of Equality, Diversity and Inclusion Officer or Representative (if not same as above).</p>
+                    </div>
+
+                    <div class="cell">
+
+                      <?php foreach ($field_group['fields'] as $key => $field) : ?>
+
+                        <?php if ($key >= 9 && $key < 15): ?>
                           <?php visix_partial( 'inputs/field', compact( 'field' ), VISIX_PLUGIN_FORMS_NAME ); ?>
                           <div class="spacer tiny"></div>
                         <?php endif; ?>

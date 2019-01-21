@@ -43,10 +43,10 @@
       <div class="grid-x small-up-3 align-middle">
         <div class="cell">
           <?php
-          global $post;
-          $author_id=$post->post_author;
-          ?>
-          <time><i class="icon icon-account-o ip-pink"></i> <?= ucwords(get_the_author_meta( 'user_nicename' , $author_id )); ?></time>
+            $post_author_id = get_post_field( 'post_author', $post_id );
+            $authord = get_the_author_meta( 'user_nicename', $post_author_id);
+           ?>
+          <time><i class="icon icon-account-o ip-pink"></i> <?= ucwords($authord); ?></time>
         </div>
         <div class="cell">
           <time><i class="icon icon-comment ip-pink"></i> <?= get_comments_number($post_id); ?></time>

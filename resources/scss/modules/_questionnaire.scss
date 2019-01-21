@@ -9,18 +9,7 @@
     }
 
     a {
-      @extend .button;
-      @extend .teal;
-
-      &::after {
-        content: '\f301';
-        font-family: 'Material-Design-Iconic-Font';
-        font-size: 30px;
-        position: relative;
-        right: -20px;
-        top: 4px;
-        font-weight: $global-weight-light;
-      }
+      color: $teal;
     }
   }
 

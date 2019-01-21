@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_5c38a4ee82509",
-            "label": "Name of organisation\/Department*",
+            "label": "Name of organisation\/department*",
             "name": "department",
             "type": "text",
-            "instructions": "Please enter the name as you wish it to appear - for example \"Adams & Brown LLP\" or \"Collingdale PLC IP Department\".",
+            "instructions": "Please enter the name as you wish it to appear - for example \"Adams & Brown LLP\" or \"Collingdale PLC IP Department\"",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -27,7 +27,7 @@
             "label": "Address*",
             "name": "address",
             "type": "text",
-            "instructions": "",
+            "instructions": "This must be a UK address",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -47,7 +47,7 @@
             "label": "Postcode*",
             "name": "postcode",
             "type": "text",
-            "instructions": "",
+            "instructions": "Please now provide the contact details for your Authorised Charter Signatory (this person must have the authority to make the six Charter commitments on behalf of the organisation or department):",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -64,11 +64,11 @@
         },
         {
             "key": "field_5c38a5218250c",
-            "label": "Prefix*",
+            "label": "Prefix",
             "name": "prefix",
             "type": "select",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -81,17 +81,37 @@
                 "mrs": "Mrs",
                 "miss": "Miss",
                 "ms": "Ms",
-                "dr": "Ds",
+                "dr": "Dr",
                 "prof": "Prof",
                 "other": "Other (indicate Below)"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_5c459783dc12b",
+            "label": "Other Prefix (If Not indicated above)",
+            "name": "other_prefix",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5c38a5968250d",
@@ -156,7 +176,7 @@
             "key": "field_5c38a5b682510",
             "label": "Contact Telephone Number*",
             "name": "telephone",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -170,9 +190,137 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c449d3433d54",
+            "label": "Prefix",
+            "name": "prefix_2",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "choices": {
+                "mr": "Mr",
+                "mrs": "Mrs",
+                "miss": "Miss",
+                "ms": "Ms",
+                "dr": "Dr",
+                "prof": "Prof",
+                "other": "Other (indicate Below)"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c4597dfdc12e",
+            "label": "Other Prefix (If Not indicated above",
+            "name": "other_prefix_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c449daa33d55",
+            "label": "First Name*",
+            "name": "first_name2",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c449ddc33d56",
+            "label": "Last Name*",
+            "name": "last_name2",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c449e0633d57",
+            "label": "Contact Email*",
+            "name": "email2",
+            "type": "email",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5c449e6b48dc3",
+            "label": "Contact Telephone Number*",
+            "name": "telephone2",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5c38b24d0ad91",
@@ -218,5 +366,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547221288
+    "modified": 1548068756
 }

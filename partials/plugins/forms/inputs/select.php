@@ -2,6 +2,10 @@
   <div class="input-container">
     <select <?= acf_esc_atts($attributes); ?>>
       <?php if ($field['allow_null']) : ?>
+
+        <?php if (is_page('sign-up-to-the-ip-inclusive-charter')): ?>
+          <option value=""><?= 'Please Select'; ?></option>  
+        <?php endif; ?>
         <option value=""><?= (isset($field['placeholder']) ? $field['placeholder'] : 'Please Select'); ?></option>
       <?php endif; ?>
       <?php foreach ($field['choices'] as $value => $label) : ?>

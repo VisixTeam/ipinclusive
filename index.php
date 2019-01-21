@@ -11,7 +11,7 @@ $news_cat_id = (isset($_GET['news_cat_id']) ? $_GET['news_cat_id'] : null);
 $news_tag_id = (isset($_GET['news_tag_id']) ? $_GET['news_tag_id'] : null);
 ?>
 
-<section class="section ip-white-smoke-bg filtering news-filter">
+<section class="section ip-white-smoke-bg filtering--old news-filter">
   <div class="grid-container">
     <form class="posts-form" data-post-form-id="news" data-post-container="#news" data-post-pagination="#news-pagination" data-post-loading="#news-loading">
       <div class="grid-x grid-margin-y grid-padding-x medium-up-3">

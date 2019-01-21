@@ -30,8 +30,4 @@
     });
   });
 
-  $('#submit-questionnaire').on('click', function(){
-    $('[data-response]').addClass('hide')
-  });
-
 })(jQuery);

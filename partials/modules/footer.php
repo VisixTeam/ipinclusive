@@ -141,18 +141,3 @@
     </div>
   </div>
 </footer>
-
-<aside class="fixed-social">
-  <?php if (have_rows('profile', 'option')): ?>
-
-    <?php while(have_rows('profile', 'option')): the_row();
-      $social_profile = get_sub_field('social_profile'); ?>
-
-      <div class="social">
-        <a href="<?= get_sub_field('social_profile_url'); ?>" target="_blank"><i class="icon icon-<?= $social_profile['value']; ?>"></i></a>
-      </div>
-
-    <?php endwhile; ?>
-
-  <?php endif; ?>
-</aside>

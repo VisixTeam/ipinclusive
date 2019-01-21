@@ -196,7 +196,24 @@ select {
     background-color: transparent;
   }
 
+  .privacy_link {
+    b {
+      font-size: 15px;
+      font-weight: $global-weight-normal;
+
+      a {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+  }
+
   .privacy {
+
+    input[type=radio] + label:before, input[type=radio] + label:after, input[type=checkbox] + label:before, input[type=checkbox] + label:after {
+      top: -23px;
+      left: 15px;
+    }
 
     .field > label {
       display: none;
@@ -204,21 +221,7 @@ select {
 
     .switch-paddle {
       > * {
-        &:not(.show-for-sr) {
-          display: none;
-        }
-      }
-
-      .show-for-sr {
-        width: 204px;
-        height: auto;
-        clip: unset;
-        white-space: unset;
-        overflow: visible;
-        display: block;
-        font-size: rem-calc(14);
-        line-height: 1;
-        top: 6px;
+        display: none;
       }
     }
   }

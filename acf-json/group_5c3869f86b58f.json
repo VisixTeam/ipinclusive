@@ -17,8 +17,8 @@
             },
             "hide_admin": 0,
             "choices": {
-                "ip_updates": "IP Inclusive updates",
-                "news_events": "Notifications of news and events"
+                "ip_updates": "IP Inclusive Updates",
+                "news_events": "News and Features Updates"
             },
             "allow_custom": 0,
             "default_value": [],
@@ -44,7 +44,7 @@
             "choices": {
                 "ip_me": "IP & ME",
                 "ip_out": "IP Out",
-                "women_in_IP": "women_in_IP"
+                "women_in_IP": "Women in IP"
             },
             "allow_custom": 0,
             "default_value": [],
@@ -134,7 +134,7 @@
         },
         {
             "key": "field_5c386b3867c48",
-            "label": "Agree to our Privacy Policy",
+            "label": "Agree to our privacy policy",
             "name": "privacy_policy",
             "type": "true_false",
             "instructions": "",
@@ -142,7 +142,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "cell privacy",
+                "class": "privacy",
                 "id": ""
             },
             "hide_admin": 0,
@@ -170,5 +170,6 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547208180
+    "recaptcha": 0,
+    "modified": 1548069492
 }

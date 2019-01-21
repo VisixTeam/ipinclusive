@@ -7,7 +7,7 @@ function get_signatories($query = null) {
   $args = array(
     'post_type' => 'signatories',
     'post_status' => 'publish',
-    'showposts' => 16,
+    'showposts' => -1,
     'fields' => 'ids',
   );
 

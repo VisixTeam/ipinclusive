@@ -3,16 +3,16 @@
 // when our parent theme has loaded
 add_action('visix_base_loaded', function () {
 
-    /**
-     * include Visix plugins
-     */
-    visix_init_plugins(['woocommerce', 'forms', 'post-forms']);
+  /**
+  * include Visix plugins
+  */
+  visix_init_plugins(['woocommerce', 'forms', 'post-forms']);
 
 });
 
 /**
- * Sets child asset version
- */
+* Sets child asset version
+*/
 add_filter('visix_alter_child_asset_version', function () {
   return '1.0.0';
 }, 10, 0);
@@ -44,12 +44,12 @@ add_filter('visix_alter_script_vars', function ($script_vars = array()) {
 add_theme_support( 'post-thumbnails' );
 
 if(function_exists('acf_add_options_page')) {
-	acf_add_options_page(array(
-		'page_title' 	=> 'General Information',
-		'menu_title' 	=> 'General Information',
-		'menu_slug' 	=> 'general-information',
-	  'icon_url'    => 'dashicons-format-aside',
-	));
+  acf_add_options_page(array(
+    'page_title' 	=> 'General Information',
+    'menu_title' 	=> 'General Information',
+    'menu_slug' 	=> 'general-information',
+    'icon_url'    => 'dashicons-format-aside',
+  ));
 }
 
 /**
@@ -64,6 +64,7 @@ function wpb_adding_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'wpb_adding_styles');
+
 
 include 'functions/utility.php';
 include 'functions/post_types.php';

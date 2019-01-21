@@ -33,7 +33,7 @@ mix.sass('resources/scss/app.scss', 'assets/css/app.css', {
 .js('resources/js/app.js', 'assets/js/app.js');
 
 mix.browserSync({
-  proxy: 'ipinclusive.dev',
+  proxy: 'ipinclusive.work',
   notify: false,
   files: [
     "resources/**/*",

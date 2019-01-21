@@ -1,5 +1,5 @@
 <div class="cell">
-  <div class="card">
+  <div class="card signatories">
     <?php $signatory = get_field('signatories', $post_id); ?>
     <?php $card_image = $signatory['image']; ?>
 

@@ -20,11 +20,15 @@
 $query = (isset($_GET['query']) ? $_GET['query'] : null);
 ?>
 
-<section class="section filtering signatories-filtering ip-white-bg">
+<section class="section filtering--old signatories-filtering ip-white-bg">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell medium-3">
         <h2 class="ip-teal">Signatories</h2>
+        <?php $signatories = get_signatories(); ?>
+
+        <p class="ip-orange">Showing <span id="signatories-count"><?= count($signatories); ?></span> of <?= count($signatories); ?></p>
+
       </div>
       <div class="cell medium-9">
         <form class="posts-form" data-post-form-id="signatories" data-post-container="#signatories" data-post-pagination="#signatories-pagination" data-post-loading="#signatories-loading">

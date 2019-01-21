@@ -23,7 +23,7 @@
             <div class="grid-x medium-up-2">
               <div class="cell">
                 <?php $card_image = get_the_post_thumbnail_url($feature); ?>
-                <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($feature); ?>" <?php endif; ?>>
+                <a href="<?= get_permalink($feature); ?>" class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($feature); ?>" <?php endif; ?>>
                   <?php $event_url = get_field('event_url', $feature);  ?>
 
                   <?php if ($event_url): ?>
@@ -35,7 +35,7 @@
                     </span>
 
                   <?php endif; ?>
-                </div>
+                </a>
               </div>
               <div class="cell">
                 <div class="card-section">
@@ -68,7 +68,7 @@
 
                   <?php endif; ?>
 
-                  <h3 class="ip-teal h2"><?= get_the_title($feature); ?></h3>
+                  <a href="<?= get_permalink($feature); ?>" class="ip-teal h2"><?= get_the_title($feature); ?></a>
                   <div class="spacer tiny"></div>
                   <a class="button clear orange" href="<?= get_permalink($feature); ?>">View <i class="icon icon-long-arrow-right"></i></a>
                 </div>

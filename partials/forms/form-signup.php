@@ -26,7 +26,27 @@
 
           <?php foreach ($field_group['fields'] as $key => $field) : ?>
 
-            <?php visix_partial( 'inputs/field', compact( 'field' ), VISIX_PLUGIN_FORMS_NAME ); ?>
+            <?php if ($key < 6): ?>
+
+              <?php visix_partial( 'inputs/field', compact( 'field' ), VISIX_PLUGIN_FORMS_NAME ); ?>
+
+            <?php endif; ?>
+
+            <?php if ($key >= 6): ?>
+              <div class="grid-x grid-margin-x align-middle">
+                <div class="cell small-3">
+                  <?php
+                  $field = get_form_field_by_name($field_group['fields'], 'privacy_policy');
+                  $field['show_label'] = false;
+                  visix_partial( 'inputs/field', compact( 'field' ), VISIX_PLUGIN_FORMS_NAME );
+                  ?>
+                </div>
+                <div class="cell small-9 privacy_link">
+                  <p class="ip-white"><b>Agree to our <a href="<?= site_url("privacy-policy") ?>">Privacy policy</a></b></p>
+                </div>
+              </div>
+
+            <?php endif; ?>
 
           <?php endforeach; ?>
 
