@@ -43,6 +43,8 @@ function get_events_and_dates() {
       'id' => $post->ID,
       'title' => $post->post_title,
       'date' => $date->format('Y-m-d'),
+      'event_link' => get_permalink($post->ID),
+      'type' => $post->post_type,
     );
   }
 

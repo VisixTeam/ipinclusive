@@ -82,20 +82,20 @@ footer {
   }
 }
 
-body #st-2 {
-  &.st-sticky-share-buttons {
-    .st-btn {
-      background-color: $white;
+body .st-sticky-share-buttons {
 
-      &:not(.st-last) {
-        border-bottom: 1px solid $light-gray;
-      }
+  .st-btn {
+    background-color: $white !important;
 
-      svg {
-        path {
-          fill: $orange;
-        }
+    &:not(.st-last) {
+      border-bottom: 1px solid $light-gray !important;
+    }
+
+    svg {
+      path {
+        fill: $orange;
       }
     }
   }
+
 }

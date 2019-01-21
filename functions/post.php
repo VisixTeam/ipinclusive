@@ -70,7 +70,7 @@ add_filter('visix_register_post_forms', function ($post_forms) {
 add_filter('visix_post_forms_args_news', function ($args, $post_data) {
 
   $args['post_type'] = 'post';
-  $args['showposts'] = 6;
+
   if(isset($post_data['news_cat_id']) && $post_data['news_cat_id'] ) {
     $args['cat'] = $post_data['news_cat_id'];
   }

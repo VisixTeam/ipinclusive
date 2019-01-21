@@ -77,10 +77,6 @@
   </div>
 </section>
 
-<?php
-  $community_id = (isset($_GET['related_community']) ? $_GET['related_community'] : null);
-?>
-
 <section class="section events-calendar filtering">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
@@ -89,7 +85,6 @@
       </div>
 
       <div class="cell large-9">
-
         <div class="calendar-container" data-events="<?php echo htmlspecialchars(json_encode(get_events_and_dates()), ENT_QUOTES, 'UTF-8'); ?>">
           <div class="view-options">
             <a href="javascript:;" data-view="month" class="change-calendar-view active-view" id="calendar-view">
@@ -100,15 +95,40 @@
               <i class="icon icon-view-list-alt ip-orange"></i>
             </a>
           </div>
-
           <div id="calendar"></div>
         </div>
-    </div>
-
-
+      </div>
     </div>
   </div>
 </section>
+
+
+<div class="tiny reveal" id="calendar-more_info" data-reveal>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <i class="icon icon-close-circle-o"></i>
+  </button>
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-y grid-padding-x">
+      <div class="cell">
+        <h3 class="ip-teal h2" id="event-title">Awesome. I Have It.</h3>
+      </div>
+
+      <div class="cell">
+        <p id="testr"></p>
+      </div>
+
+      <div class="cell">
+        <a href="#" id="event-link" class="button clear orange">View all <i class="icon icon-long-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
 
 <?php if ( have_rows('sections', $post_id) ): ?>
 

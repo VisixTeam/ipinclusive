@@ -50,7 +50,7 @@ add_filter('visix_post_forms_args_signatories', function ($args, $post_data) {
 
 	// E.g. query by category
   $args['post_type'] = 'signatories';
-  $args['showposts'] = 16;
+  $args['post_per_page'] = 6;
   $args['s'] = $post_data['query'];
   return $args;
 

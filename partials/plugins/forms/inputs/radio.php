@@ -22,12 +22,12 @@
           <?php if ($key == 'option-a'): ?>
             <p class="ip-teal">I am signing on behalf of a whole business or organisation.</p>
             <p>
-              ​Please select Option A if you are a director, partner or other senior officer representing your organisation.
+              ​Please select Option A if you are a sole trader or a director, partner or other senior officer representing your organisation.
             </p>
 
           <?php elseif($key == 'option-b'): ?>
-            <p class="ip-teal">I am signing on behalf of an IP department/team within a Company or Group we support the objectives of IP Inclusive and will comply with the Charter for Equality, Diversity and Inclusion to the extent possible and appropriate within our larger organisation.</p>
-            <p>Please select Option B if you are a director or manager representing your in-house IP department/team within a Company or Group.</p>
+            <p class="ip-teal">I am signing on behalf of an IP department or team within a company or group. We support the objectives of IP Inclusive and will comply with its EDI Charter to the extent possible and appropriate within our larger organisation.</p>
+            <p>Please select Option B if you are a manager or other senior representative of your in-house department or team.</p>
 
           <?php endif; ?>
         <?php endif; ?>

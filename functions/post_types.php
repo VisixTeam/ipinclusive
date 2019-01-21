@@ -228,3 +228,20 @@ register_taxonomy(
 );
 
 register_taxonomy_for_object_type('events_communities', 'events');
+
+register_taxonomy(
+'signatories_category',
+'signatories',  // this is the custom post type(s) I want to use this taxonomy for
+  array(
+    'hierarchical' => true,
+    'label' => 'Signatories Category',
+    'query_var' => true,
+    'rewrite' => array('slug' => 'signatories_category'),
+    'capabilities' => array(
+      'manage_terms' => 'manage_categories',
+      'assign_terms' => 'edit_posts',
+    ),
+  )
+);
+
+register_taxonomy_for_object_type('signatories_category', 'signatories');

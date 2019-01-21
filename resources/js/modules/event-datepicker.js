@@ -22,6 +22,17 @@
           allDay: false,
         }
       ],
+      eventClick: function(calEvent) {
+        $('#event-title').text(calEvent.title);
+
+        if(calEvent.type == 'events') {
+          $('#event-link').attr('href', calEvent.event_link).show()
+        } else {
+          $('#event-link').hide()
+        }
+
+        $('#calendar-more_info').foundation('open');
+      },
       timeFormat: 'H:mm',
       displayEventTime: false,
       displayEventEnd: false,
@@ -38,7 +49,6 @@
       })
     })
   }
-
 
 
 })(jQuery);

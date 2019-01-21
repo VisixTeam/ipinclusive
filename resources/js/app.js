@@ -26,6 +26,7 @@ require('./modules/event-datepicker')
 require('./modules/questionnaire')
 
 require('./components/slick')
+require('./components/filtering')
 
 $(function () {
   var bLazy = new Blazy({

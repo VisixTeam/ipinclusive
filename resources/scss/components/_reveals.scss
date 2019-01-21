@@ -1,0 +1,15 @@
+$reveal-border: 0;
+
+@include foundation-reveal;
+
+.close-button {
+  float: right;
+  outline: none;
+
+  cursor: pointer;
+
+  i {
+    font-size: 30px;
+    color: $orange;
+  }
+}
