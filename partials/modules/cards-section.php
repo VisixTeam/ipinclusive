@@ -27,7 +27,7 @@
 
       <div class="cell <?= ($section_title ? 'medium-9' : 'one-col'); ?>">
         <?php if ($information): ?>
-          <div class="grid-x grid-margin-x grid-margin-y cards-section card-<?= $information_theme_colour; ?>-theme" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": true, "infinite": true, "variableWidth": false}'>
+          <div class="grid-x grid-margin-x grid-margin-y cards-section card-<?= $information_theme_colour; ?>-theme" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": true, "infinite": true, "variableWidth": false <?= (($auto_play_slider && $auto_play_slider == true) ? ', "autoplay": true' : ''); ?>}'>
 
             <?php foreach($information as $info): ?>
 
