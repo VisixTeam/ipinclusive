@@ -22,10 +22,10 @@ $content = str_replace(']]>', ']]&gt;', $content);
         <?= readmore($content); ?>
       </div>
 
+      <?php $download = get_field('download', $id) ?>
       <?php if ($download): ?>
 
         <div class="cell">
-          <?php $download = get_field('download', $id) ?>
           <h5><a class="button clear pink" target="_blank" href="<?= $download['url']; ?>">Download <i class="icon icon-download ip-pink"></i></a></h5>
         </div>
 

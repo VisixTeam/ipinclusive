@@ -40,14 +40,7 @@
 
       <div class="spacer tiny"></div>
 
-      <div class="grid-x small-up-3 align-middle">
-        <div class="cell">
-          <?php
-            $post_author_id = get_post_field( 'post_author', $post_id );
-            $authord = get_the_author_meta( 'user_nicename', $post_author_id);
-           ?>
-          <time><i class="icon icon-account-o ip-pink"></i> <?= ucwords($authord); ?></time>
-        </div>
+      <div class="grid-x small-up-2 align-middle">
         <div class="cell">
           <time><i class="icon icon-comment ip-pink"></i> <?= get_comments_number($post_id); ?></time>
         </div>
