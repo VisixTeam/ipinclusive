@@ -47,19 +47,23 @@
 
                   <?php $related_comunity = get_field('related_community', $feature); ?>
 
-                  <?php if(is_array($related_comunity)): ?>
+                  <?php if (isset($related_comunity) && !empty($related_comunity)): ?>
 
-                    <h5 class="ip-pink">
-                      <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
+                    <?php if(is_array($related_comunity)): ?>
 
-                        <?= get_the_title($comunity).'&nbsp;'; ?>
+                      <h5 class="ip-pink">
+                        <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
 
-                      <?php endforeach; ?>
+                          <?= get_the_title($comunity).'&nbsp;'; ?>
 
-                    </h5>
-                  <?php else: ?>
+                        <?php endforeach; ?>
 
-                    <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
+                      </h5>
+                    <?php else: ?>
+
+                      <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
+
+                    <?php endif; ?>
 
                   <?php endif; ?>
 

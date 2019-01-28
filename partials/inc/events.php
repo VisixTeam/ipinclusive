@@ -1,8 +1,8 @@
 <div class="cell medium-6 large-4 <?= get_post_type($info); ?>" id="post-<?= $info; ?>">
 
-    <span class="event-url">
-      <?php echo sharethis_inline_buttons(); ?>
-    </span>
+  <span class="event-url">
+    <?php echo sharethis_inline_buttons(); ?>
+  </span>
 
   <div class="card">
 
@@ -25,20 +25,24 @@
 
       <div class="spacer tiny"></div>
 
-      <?php if(is_array($related_comunity)): ?>
+      <?php if (isset($related_comunity) && !empty($related_comunity)): ?>
 
-        <h5 class="ip-pink">
-          <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
+        <?php if(is_array($related_comunity)): ?>
 
-            <?= get_the_title($comunity).'&nbsp;'; ?>
+          <h5 class="ip-pink">
+            <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
 
-          <?php endforeach; ?>
+              <?= get_the_title($comunity).'&nbsp;'; ?>
 
-        </h5>
-      <?php else: ?>
+            <?php endforeach; ?>
 
-        <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
+          </h5>
+        <?php else: ?>
 
+          <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
+
+        <?php endif; ?>
+        
       <?php endif; ?>
 
       <h3 class="ip-teal h3"><?= get_the_title($info); ?></h3>

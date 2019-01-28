@@ -4,14 +4,6 @@ function get_featured_event() {
 
   $featured = get_field('is_featured');
 
-  $meta_query = array('relation' => 'OR');
-
-  $meta_query[] = array(
-    'key'     => 'is_featured',
-    'value'   => $featured,
-    'compare' => 'LIKE',
-  );
-
   $args = array(
     'post_type' => 'events',
     'post_status'  => 'publish',
@@ -19,7 +11,13 @@ function get_featured_event() {
     'order' => 'ASC',
     'fields' => 'ids',
     'showposts' => 1,
-    'meta_query' => $meta_query,
+    'meta_query' => array(
+      array(
+        'key' => 'is_featured',
+        'value' => '1',
+        'compare' => '==' // not really needed, this is the default
+      )
+    )
   );
 
   $query = new WP_Query($args);
@@ -40,7 +38,7 @@ function get_events_and_dates() {
   foreach ($query->posts as $post) {
     $originalDate = get_field('date_and_time', $post->ID);
     $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
-    
+
     $results[] = array(
       'id' => $post->ID,
       'title' => $post->post_title,
