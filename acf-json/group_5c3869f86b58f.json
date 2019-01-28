@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5c386a2767c42",
-            "label": "Choose how you wish to stay in touch",
+            "label": "Choose how you want to stay in touch",
             "name": "stay_in_touch",
             "type": "checkbox",
             "instructions": "",
@@ -55,7 +55,7 @@
         },
         {
             "key": "field_5c386af767c44",
-            "label": "First Name",
+            "label": "First name*",
             "name": "first_name",
             "type": "text",
             "instructions": "",
@@ -75,7 +75,7 @@
         },
         {
             "key": "field_5c386b0e67c45",
-            "label": "Last Name",
+            "label": "Last name*",
             "name": "last_name",
             "type": "text",
             "instructions": "",
@@ -95,7 +95,7 @@
         },
         {
             "key": "field_5c386b1767c46",
-            "label": "Company \/ Organisation",
+            "label": "Organisation",
             "name": "company__organisation",
             "type": "text",
             "instructions": "",
@@ -115,7 +115,7 @@
         },
         {
             "key": "field_5c386b2967c47",
-            "label": "Email",
+            "label": "Email*",
             "name": "email",
             "type": "email",
             "instructions": "",
@@ -171,5 +171,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1548069492
+    "modified": 1548325977
 }

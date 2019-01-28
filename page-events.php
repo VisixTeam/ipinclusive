@@ -81,7 +81,7 @@
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell large-3">
-        <h2 class="ip-teal">Upcoming IP out events</h2>
+        <h2 class="ip-teal">Upcoming Events</h2>
       </div>
 
       <div class="cell large-9">
@@ -123,11 +123,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
 </div>
 
 <?php if ( have_rows('sections', $post_id) ): ?>

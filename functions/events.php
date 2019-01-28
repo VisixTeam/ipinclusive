@@ -38,11 +38,13 @@ function get_events_and_dates() {
 
   $results = array();
   foreach ($query->posts as $post) {
-    $date = DateTime::createFromFormat('d/m/Y g:i a', get_field('date_and_time', $post->ID));
+    $originalDate = get_field('date_and_time', $post->ID);
+    $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
+    
     $results[] = array(
       'id' => $post->ID,
       'title' => $post->post_title,
-      'date' => $date->format('Y-m-d'),
+      'date' => date_format($date, 'Y-m-d'),
       'event_link' => get_permalink($post->ID),
       'type' => $post->post_type,
     );
