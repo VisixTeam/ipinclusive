@@ -26,7 +26,7 @@
                         'choices' => [
                           'yes',
                           'no',
-                          'Do Not Know'
+                          'Don\'t know'
                         ],
                         'attributes' => [
                         ]
@@ -43,7 +43,7 @@
                     <?= $question['answer_to_no']; ?>
                   </div>
 
-                  <div class="cell hide" data-response="Do Not Know">
+                  <div class="cell hide" data-response="Don't know">
                     <?= $question['answer_to_na']; ?>
                   </div>
                 </div>
