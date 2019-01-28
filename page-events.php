@@ -6,6 +6,10 @@
 
 <?php visix_partial('modules/banner', $hero['hero']); ?>
 
+<?php $featured = get_featured_event(); ?>
+
+<?php if (!empty($featured) && $featured): ?>
+
 <section class="section featured-event ip-white-smoke-bg">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
@@ -14,7 +18,6 @@
       </div>
       <div class="cell medium-9">
 
-        <?php $featured = get_featured_event(); ?>
 
         <?php foreach($featured as $feature): ?>
 
@@ -80,6 +83,7 @@
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <section class="section events-calendar filtering">
   <div class="grid-container">

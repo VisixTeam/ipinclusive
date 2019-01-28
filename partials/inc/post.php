@@ -1,5 +1,9 @@
 <div class="cell medium-6 large-4 <?= get_post_type($info); ?>" id="post-<?= $info; ?>">
 
+  <span class="event-url">
+    <?php echo sharethis_inline_buttons(); ?>
+  </span>
+
   <div class="card">
 
     <?php $image_id = get_post_thumbnail_id($info); ?>

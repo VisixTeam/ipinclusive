@@ -17,20 +17,22 @@ $content = str_replace(']]>', ']]&gt;', $content);
 <section class="section ip-white-smoke-bg single-news-details">
   <div class="grid-container">
     <div class="grid-x grid-margin-y grid-padding-x">
-      <div class="cell">
-        <?php
-        $post_categories = wp_get_post_categories( $id );
-        $cats = array();
-        ?>
 
-        <div class="spacer tiny"></div>
+      <?php
+        $post_categories = wp_get_post_categories( $id );
+        $post_tags = get_the_tags($id);
+      ?>
+
+      <?php if ($post_categories): ?>
+      <div class="cell <?= ($post_tags ? 'small-6' : ''); ?>">
 
         <h3 class="ip-pink">
+
           <?php foreach ($post_categories as $c) :
 
             $cat = get_category( $c ); ?>
 
-            <?= $cat->name.'&nbsp;'; ?>
+            <a class="ip-pink" href="<?= site_url("news/?news_cat_id=$cat->term_id"); ?>"><?= $cat->name; ?></a>&nbsp;
 
           <?php endforeach; ?>
 
@@ -38,19 +40,29 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
       </div>
 
-      <div class="cell small-4">
-        <?php
-        global $post;
-        $author_id=$post->post_author;
-        ?>
-        <time><i class="icon icon-account-o ip-pink"></i> <?= ucwords(get_the_author_meta( 'user_nicename' , $author_id )); ?></time>
+      <?php endif; ?>
+
+      <?php if ($post_tags): ?>
+
+      <div class="cell <?= ($post_categories ? 'small-6' : ''); ?>">
+        <h3 class="ip-pink">
+
+          <?php foreach ($post_tags as $tags): ?>
+
+            <a class="ip-pink" href="<?= site_url("news/?news_tag_id=$tags->term_id"); ?>"><?= $tags->name; ?></a>&nbsp;
+
+          <?php endforeach; ?>
+
+        </h3>
       </div>
 
-      <div class="cell small-4">
+      <?php endif; ?>
+
+      <div class="cell small-6">
         <time><i class="icon icon-comment ip-pink"></i> <?= get_comments_number($id); ?></time>
       </div>
 
-      <div class="cell small-4">
+      <div class="cell small-6">
         <time><i class="icon icon-eye ip-pink"></i> <?= getPostViews($id); ?></time>
       </div>
     </div>

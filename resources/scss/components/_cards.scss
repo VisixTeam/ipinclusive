@@ -10,14 +10,22 @@ $card-margin-bottom: 3px;
     position: relative;
 
     &.post {
+
       @include breakpoint(medium up) {
         display: inline-flex !important;
         height: 100%;
       }
 
       .event-url {
-        a {
-          border-color: $pink;
+        .sharethis-inline-share-buttons {
+
+          .st-btn {
+            border: 1px solid $pink !important;
+          }
+
+          path {
+            fill: $pink;
+          }
         }
       }
     }

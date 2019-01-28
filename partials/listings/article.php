@@ -7,32 +7,48 @@
     <a href="<?= get_permalink($post_id); ?>" class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= get_the_post_thumbnail_url($post_id); ?>" <?php endif; ?>>
     </a href="<?= get_permalink($post_id); ?>">
     <div class="card-section">
-      <?php
-      $post_categories = wp_get_post_categories( $post_id );
-      $cats = array();
 
-      foreach($post_categories as $c){
-        $cat = get_category( $c );
-        $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-      }
+      <div class="grid-x grid-margin-x">
+        <?php $post_categories = wp_get_post_categories( $post_id ); ?>
 
-      ?>
+        <?php if ($post_categories): ?>
+
+          <div class="cell small-6">
+
+            <h5 class="ip-pink">
+              <?php foreach ($post_categories as $c) :
+
+                $cat = get_category( $c ); ?>
+
+                <?= $cat->name.'&nbsp;'; ?>
+
+              <?php endforeach; ?>
+
+            </h5>
+          </div>
+
+        <?php endif; ?>
+
+        <?php $post_tags = get_the_tags($post_id);?>
+
+        <?php if ($post_tags): ?>
+
+          <div class="cell <?= ($post_categories ? 'small-6' : ''); ?>">
+            <h5 class="ip-pink">
+
+              <?php foreach ($post_tags as $tags): ?>
+
+                <?= $tags->name.'&nbsp;'; ?>
+
+              <?php endforeach; ?>
+
+            </h5>
+          </div>
+
+        <?php endif; ?>
+      </div>
 
       <div class="spacer tiny"></div>
-
-        <h5 class="ip-pink">
-          <?php foreach ($post_categories as $c) :
-
-            $cat = get_category( $c ); ?>
-
-            <?= $cat->name.'&nbsp;'; ?>
-
-          <?php endforeach; ?>
-
-        </h5>
-
-      <div class="spacer tiny"></div>
-
 
       <h3  class="ip-pink h3">
         <a class="ip-pink" href="<?= get_permalink($post_id); ?>"><?= get_the_title($post_id); ?></a>
