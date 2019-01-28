@@ -46,4 +46,8 @@ h6 {
 
 p {
   width: 100%;
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(21);
+  }
 }
