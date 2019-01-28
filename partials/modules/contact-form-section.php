@@ -12,7 +12,16 @@
 
 
         <div class="cell <?= ($form_title ? 'medium-9': ''); ?> ip-teal-bg form-wrapper-<?= $form_theme_colour; ?>">
+
+          <?php if ($contact_form == 310): ?>
+
+            <?php visix_partial('inc/mailchimp-form'); ?>
+
+          <?php else: ?>
+
           <?php visix_form( $contact_form , ['redirect' => '/contact-us/confirmation']); ?>
+
+          <?php endif; ?>
         </div>
       </div>
     </div>
