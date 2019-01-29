@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 
 <?php
-$post_id = (is_home() ? get_option('page_for_posts') : get_the_ID());
+  $post_id = (is_home() ? get_option('page_for_posts') : get_the_ID());
 
-$id = get_the_ID();
-$content_post = get_post($id);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
+  $id = get_the_ID();
+  $content_post = get_post($id);
+  $content = $content_post->post_content;
+  $content = apply_filters('the_content', $content);
+  $content = str_replace(']]>', ']]&gt;', $content);
+  setPostViews($id);
 ?>
 
 <?php $image = get_the_post_thumbnail_url($id); ?>

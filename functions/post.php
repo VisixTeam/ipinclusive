@@ -14,6 +14,7 @@ function get_all_news_tags(){
   ));
 }
 
+// function to display number of posts.
 function getPostViews($postID){
   $count_key = 'post_views_count';
   $count = get_post_meta($postID, $count_key, true);
@@ -25,6 +26,7 @@ function getPostViews($postID){
   return $count;
 }
 
+// function to count views.
 function setPostViews($postID) {
   $count_key = 'post_views_count';
   $count = get_post_meta($postID, $count_key, true);
@@ -37,8 +39,22 @@ function setPostViews($postID) {
     update_post_meta($postID, $count_key, $count);
   }
 }
+
 // Remove issues with prefetching adding extra views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+// Add it to a column in WP-Admin
+add_filter('manage_posts_columns', 'posts_column_views');
+add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+function posts_column_views($defaults){
+  $defaults['post_views'] = __('Views');
+  return $defaults;
+}
+function posts_custom_column_views($column_name, $id){
+  if($column_name === 'post_views'){
+    echo getPostViews(get_the_ID());
+  }
+}
 
 /**
 * Register post form with options
@@ -119,19 +135,19 @@ add_filter('visix_post_forms_posts_html_news', function ($posts_html, $post_ids)
 }, 1, 10);
 
 /**
- * Generate empty posts html message
- *
- * @param array $post_ids	List of post ids from query
- *
- * @return String HTML of no posts found
- */
+* Generate empty posts html message
+*
+* @param array $post_ids	List of post ids from query
+*
+* @return String HTML of no posts found
+*/
 add_filter('visix_post_forms_posts_empty_html_signatories', function () {
 
-	return sprintf('
+  return sprintf('
   <div class="cell text-center">
-    <div class="spacer"></div>
-      <h3>No Signatories found</h3>
-    <div class="spacer"></div>
+  <div class="spacer"></div>
+  <h3>No Signatories found</h3>
+  <div class="spacer"></div>
   </div>
   ');
 
