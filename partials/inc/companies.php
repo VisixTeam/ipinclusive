@@ -13,13 +13,19 @@
       <?php if(is_array($support_type)): ?>
 
         <h3 class="ip-pink h5">
+          <?php
+            $numItems = count($support_type);
+            $i = 1;
+          ?>
           <?php foreach ($support_type as $support_type_index =>  $support) : ?>
 
-            <?= $support.'&nbsp;'; ?>
+              <?php $itemPos = ( $support_type_index !== count( $support_type ) -1 ) ? "," : ""; ?>
+
+              <?= $support.$itemPos; ?>
 
           <?php endforeach; ?>
-
         </h3>
+
       <?php else: ?>
 
         <h3 class="ip-pink h5"><?= get_the_title($support_type); ?></h3>
