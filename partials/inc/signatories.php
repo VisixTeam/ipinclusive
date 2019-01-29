@@ -3,8 +3,10 @@
   <?php $signatory = get_field('signatories', $info); ?>
   <?php $card_image = $signatory['image']; ?>
 
+  <?php $image_id = get_post_thumbnail_id($info); ?>
+
   <div class="card">
-    <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" <?php if($card_image): ?> data-blazy="<?= $card_image; ?>" <?php endif; ?>>
+    <div class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
     </div>
     <div class="card-section">
       <a target="_blank" href="<?= $signatory['signatory_url']; ?>" class="ip-pink h3"><?= get_the_title($info); ?></a>

@@ -9,7 +9,7 @@
     <?php $image_id = get_post_thumbnail_id($info); ?>
 
     <?php $card_image = get_the_post_thumbnail_url($info); ?>
-    <div class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
+    <div class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'small')[0]; ?>">
     </div>
     <div class="card-section">
       <?php $related_comunity = get_field('related_community', $info); ?>
@@ -42,7 +42,7 @@
           <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
 
         <?php endif; ?>
-        
+
       <?php endif; ?>
 
       <h3 class="ip-teal h3"><?= get_the_title($info); ?></h3>
