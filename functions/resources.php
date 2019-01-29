@@ -28,12 +28,12 @@ function get_all_resources($recommended = null, $resource_cat_id = null , $query
       $args['meta_query'] = array(
         array(
           'key' => 'post_views_count',
-          'value' => 5,
-          'compare' => '>='
+          'value' => 0,
+          'compare' => '>'
         )
       );
     } elseif($recommended == '2') {
-      $args['orderby'] = 'date';
+      $args['orderby'] = 'publish_date';
       $args['order'] = 'ASC';
     }
   }
