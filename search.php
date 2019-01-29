@@ -13,7 +13,7 @@
 
 <?php visix_partial('modules/banner', ['communities_title' => 'Your search for', 's' => $s ,'communities_background_image' => '/wp-content/uploads/2019/01/parrots-277093_1280.jpg)']); ?>
 
-<section class="section search-form">
+<section class="section search-form ip-white-smoke-bg">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
