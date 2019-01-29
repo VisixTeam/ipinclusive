@@ -71,6 +71,11 @@
 }
 
 .search-form {
+
+  &.section {
+    padding-top: 0;
+  }
+
   input {
     border-color: $pink;
     color: $black;

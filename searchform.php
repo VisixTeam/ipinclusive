@@ -2,7 +2,7 @@
   <div class="grid-container">
     <form class="grid-x grid-margin-y" method="get" action="<?php echo home_url() ?>">
       <div class="cell">
-        <h3 class="ip-pink">Search</h3>
+        <h3 class="ip-pink h2">Search</h3>
       </div>
       <div class="cell">
         <?php visix_partial( 'inputs/field', [
