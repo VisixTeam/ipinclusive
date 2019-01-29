@@ -56,10 +56,24 @@
     }
 
     @include breakpoint(mediumLand) {
-      .mediumLand-8 {
+      .mediumLand-7 {
         padding-right: 20px;
       }
     }
+  }
+}
+
+#search {
+  i {
+    font-size: 30px;
+    color: $teal;
+  }
+}
+
+.search-form {
+  input {
+    border-color: $pink;
+    color: $black;
   }
 }
 
