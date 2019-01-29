@@ -111,7 +111,7 @@ function setPostViews($postID) {
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 $type = 'resources';
-  if (isset($_GET['post_type'])) {
+if (isset($_GET['post_type'])) {
   $type = $_GET['post_type'];
 }
 // Add it to a column in WP-Admin
@@ -129,3 +129,26 @@ function posts_custom_column_views($column_name, $id){
     echo getPostViews(get_the_ID());
   }
 }
+
+// functions to add a class to search terms on search results page
+function search_title_highlight() {
+  $title = get_the_title();
+  $keys = implode('|', explode(' ', get_search_query()));
+  $title = preg_replace('/(' . $keys .')/iu', '<mark>\0</mark>', $title);
+
+  echo $title;
+}
+
+function search_excerpt_highlight() {
+    $excerpt = the_excerpt();
+    $keys = implode('|', explode(' ', get_search_query()));
+    $excerpt = preg_replace('/(' . $keys .')/iu', '<mark>\0</mark>', $excerpt);
+
+    echo '<p>' . $excerpt . '</p>';
+}
+
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

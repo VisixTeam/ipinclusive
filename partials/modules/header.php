@@ -7,15 +7,15 @@
             <?php visix_partial('svgs/logo'); ?>
           </a>
         </div>
-        <div class="cell small-2 mediumLand-1 text-left medium-text-right">
-          <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange"><i class="icon icon-search"></i></a>
-        </div>
         <div class="show-for-mediumLand cell mediumLand-7 text-right">
           <a href="<?= site_url('stay-in-touch'); ?>" class="button teal">Stay in touch</a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="<?= site_url('sign-up-to-the-ip-inclusive-charter'); ?>" class="button orange">Sign the ip inclusive charter</a>
         </div>
-        <div class="cell small-3 mediumLand-1 medium-text-center large-text-right hide-for-mediumLand-only">
+        <div class="cell small-4 mediumLand-1 medium-text-center large-text-right hide-for-mediumLand-only">
           <a href="<?= site_url('contact'); ?>">Contact us</a>
+        </div>
+        <div class="cell small-1 mediumLand-1 text-center medium-text-right">
+          <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange"><i class="icon icon-search"></i></a>
         </div>
         <div class="cell small-2 mediumLand-1 text-right">
           <button class="hamburger hamburger--squeeze" data-toggle="main-menu" type="button">

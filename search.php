@@ -2,10 +2,10 @@
 
 <?php $allsearch = new WP_Query(
   array(
-    'post_type' => array('page', 'post', 'resources', 'events'),
+    'post_type' => array('page', 'post' ,'resources', 'events', 'community'),
     'post_status' => 'publish',
     'orderby' => 'title',
-    'order' => 'ASC',
+    'order' => 'DESC',
     'showposts' => 9,
     's' => $s
   )
@@ -23,7 +23,7 @@
   </div>
 </section>
 
-<main class="section">
+<main class="section search-results-section">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell">
@@ -38,8 +38,10 @@
         <?php while($allsearch->have_posts()) : $allsearch->the_post(); ?>
           <?php $post_type = get_post_type(); ?>
           <div class="cell medium-4">
-            <a href="<?= get_permalink();?>"><h4 class="ip-orange h3"><?= get_the_title(); ?></h4></a>
+            <a href="<?= get_permalink();?>"><h4 class="ip-orange h3"><?= search_title_highlight(); ?></h4></a>
             <div class="spacer tiny"></div>
+
+            <?= search_excerpt_highlight(); ?>
 
             <a href="<?= get_permalink();?>" class="button clear teal">View <?= $post_type; ?> <i class="icon icon-long-arrow-right"></i></a>
           </div>
