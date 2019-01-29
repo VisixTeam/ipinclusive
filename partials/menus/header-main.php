@@ -1,4 +1,13 @@
 <ul>
+  <li class="show-for-small-only">
+    <a href="<?= site_url('stay-in-touch'); ?>" class="button expanded teal ip-white">Stay in touch <i class="icon icon-long-arrow-right ip-white"></i></a>
+  </li>
+
+  <li class="show-for-small-only">
+    <a href="<?= site_url('sign-up-to-the-ip-inclusive-charter'); ?>" class="button expanded orange ip-white">Sign the ip inclusive charter <i class="icon icon-long-arrow-right ip-white"></i></a>
+  </li>
+
+  <li class="spacer show-for-small-only"></li>
   <?php foreach ($items as $item) : ?>
     <?php if ($item->menu_item_parent == 0) : ?>
 

@@ -20,6 +20,7 @@ $hamburger-types: (
 
   .hamburger-inner {
     width: $hamburger-layer-width - 15px;
+    margin-top: -7px;
   }
 
   &.is-active {

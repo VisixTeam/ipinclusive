@@ -16,21 +16,19 @@
     z-index: 4;
     @include transition(background-color, box-shadow);
 
+    @include breakpoint(large) {
+      background-color: rgba($white, .8);
+    }
+
     &.no-transparent {
       background-color: $white;
       box-shadow: 0 10px 10px 0 rgba($black ,0.1);
-
-      a {
-        &:not(.button) {
-          color: $teal;
-        }
-      }
     }
   }
 
   a {
     &:not(.button) {
-      color: $white;
+      color: $teal;
       text-transform: uppercase;
       font-weight: $global-weight-bold;
       font-size: rem-calc(20);
@@ -51,6 +49,18 @@
       }
     }
   }
+
+  .main-menu {
+    .button {
+      display: inline;
+    }
+
+    @include breakpoint(mediumLand) {
+      .mediumLand-8 {
+        padding-right: 20px;
+      }
+    }
+  }
 }
 
 .sidebar {
@@ -61,7 +71,6 @@
   overflow-y: auto;
   top: 0;
   width: 100%;
-  padding-left: 40px;
   z-index: 3;
   box-shadow: -3px 0 10px 0 rgba(0,0,0,0.36);
   padding-bottom: 40px;
@@ -96,30 +105,54 @@
       }
 
       a {
-        font-size: rem-calc(21);
-        color: map-get($ip-palette, "teal");
-        text-transform: uppercase;
-        display: block;
-        width: 100%;
-        position: relative;
-        font-weight: $global-weight-bold;
 
-        &:hover {
-          &::after {
-            right: 15%;
+        &.button {
+          text-align: left;
+
+          .icon {
+            font-size: 30px;
+            position: absolute;
+            right: 5%;
+            @include transition(right);
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &.expanded {
+            width: 90%;
           }
         }
 
-        &::after{
-          content: '\f301';
-          font-family: 'Material-Design-Iconic-Font';
-          font-size: 30px;
-          color: map-get($ip-palette, "orange");
-          position: absolute;
-          right: 10%;
-          @include transition(right);
-          top: 50%;
-          transform: translateY(-50%);
+        &:not(.button) {
+          font-size: rem-calc(21);
+          color: map-get($ip-palette, "teal");
+          text-transform: uppercase;
+          display: block;
+          width: 100%;
+          position: relative;
+          font-weight: $global-weight-bold;
+
+          @include breakpoint(medium) {
+            padding-left: 40px;
+          }
+
+          &:hover {
+            &::after {
+              right: 15%;
+            }
+          }
+
+          &::after{
+            content: '\f301';
+            font-family: 'Material-Design-Iconic-Font';
+            font-size: 30px;
+            color: map-get($ip-palette, "orange");
+            position: absolute;
+            right: 10%;
+            @include transition(right);
+            top: 50%;
+            transform: translateY(-50%);
+          }
         }
       }
     }

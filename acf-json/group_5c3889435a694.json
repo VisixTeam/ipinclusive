@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_5c3894da9b856",
-            "label": "Subject",
+            "label": "Subject*",
             "name": "subject",
-            "type": "select",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -16,21 +16,15 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "choices": {
-                "general": "General Enquiry",
-                "newsletter": "Newsletter Signup"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5c3889435e262",
-            "label": "First Name",
+            "label": "First Name*",
             "name": "first_name",
             "type": "text",
             "instructions": "",
@@ -50,7 +44,7 @@
         },
         {
             "key": "field_5c3889435e2c3",
-            "label": "Last Name",
+            "label": "Last Name*",
             "name": "last_name",
             "type": "text",
             "instructions": "",
@@ -70,7 +64,7 @@
         },
         {
             "key": "field_5c3889435e358",
-            "label": "Email",
+            "label": "Email*",
             "name": "email",
             "type": "email",
             "instructions": "",
@@ -111,7 +105,7 @@
         },
         {
             "key": "field_5c3896679b858",
-            "label": "Message",
+            "label": "Message*",
             "name": "message",
             "type": "textarea",
             "instructions": "",
@@ -131,11 +125,11 @@
         },
         {
             "key": "field_5c3889435e3b1",
-            "label": "Agree to our Privacy Policy",
+            "label": "Agree to our Privacy Policy*",
             "name": "privacy_policy",
             "type": "true_false",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -155,7 +149,7 @@
             "name": "captcha",
             "type": "recaptcha",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -166,7 +160,7 @@
             "site_key": "6LdjW0wUAAAAAPmqtVB0kTm4bhcITRlkIxLSVQQz",
             "secret_key": "6LdjW0wUAAAAANGFW0wZTbI0eoGxM8kQPIyMsmqI",
             "re_theme": "light",
-            "re_type": "audio",
+            "re_type": "image",
             "re_size": "normal"
         }
     ],
@@ -188,5 +182,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547214438
+    "modified": 1548751453
 }
