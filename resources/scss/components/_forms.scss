@@ -144,6 +144,17 @@ select {
     }
   }
 
+  .privacy_link {
+    b {
+      a {
+
+        &.ip-teal {
+          color: $teal;
+        }
+      }
+    }
+  }
+
   .field {
     input[type=radio] + label:after, input[type=checkbox] + label:after {
       border-color: $teal;

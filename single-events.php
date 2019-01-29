@@ -17,15 +17,23 @@ $content = str_replace(']]>', ']]&gt;', $content);
 <section class="section event-details ip-pink-bg">
   <div class="grid-container">
     <div class="grid-x grid-margin-y align-middle">
-      <div class="cell small-6 medium-3">
-        <?php $related_comunity = get_field('related_community', $info); ?>
+      <?php
+        $originalDate = get_field('date_and_time', $id);
+        $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
+        $event_url = get_field('event_url', $id);
+      ?>
+
+      <div class="cell small-6 <?= ($event_url ? 'medium-3': 'medium-4');  ?>">
+
+
+        <?php $related_comunity = get_field('related_community', $id); ?>
 
         <?php if(is_array($related_comunity)): ?>
 
           <h4 class="ip-white">
             <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
 
-              <?= get_the_title($comunity).'&nbsp;'; ?>
+              <?= get_the_title($comunity).',&nbsp;'; ?>
 
             <?php endforeach; ?>
 
@@ -36,15 +44,16 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
         <?php endif; ?>
       </div>
-      <div class="cell small-3 medium-2 ip-white">
-        <time><i class="icon icon-time ip-white"></i> <?= get_field('time', $id); ?></time>
+
+
+
+      <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
+        <time><i class="icon icon-time ip-white"></i> <?= $date->format('jS M Y'); ?></time>
       </div>
 
-      <div class="cell small-3 medium-2 ip-white">
-        <time><i class="icon icon-calendar ip-white"></i> <?= get_field('date', $id); ?></time>
+      <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
+        <time><i class="icon icon-calendar ip-white"></i> <?= $date->format('H:iA'); ?></time>
       </div>
-
-      <?php $event_url = get_field('event_url', $id);  ?>
 
       <?php if ($event_url): ?>
         <div class="cell medium-auto medium-text-right">

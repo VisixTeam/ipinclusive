@@ -93,13 +93,16 @@
 
       &.super-parent {
         a {
-          color: map-get($ip-palette, "orange");
-          font-size: rem-calc(18);
-          font-weight: $global-weight-bold;
-          text-transform: none;
 
-          &::after {
-            font-weight: $global-weight-normal;
+          &:not(.button) {
+            color: map-get($ip-palette, "orange");
+            font-size: rem-calc(18);
+            font-weight: $global-weight-bold;
+            text-transform: none;
+
+            &::after {
+              font-weight: $global-weight-normal;
+            }
           }
         }
       }
@@ -166,9 +169,12 @@
       }
 
       a {
-        font-size: rem-calc(16);
-        text-transform: none;
-        font-weight: $global-weight-normal;
+
+        &:not(.button) {
+          font-size: rem-calc(16);
+          text-transform: none;
+          font-weight: $global-weight-normal;
+        }
       }
     }
   }
