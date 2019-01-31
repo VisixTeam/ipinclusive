@@ -18,41 +18,36 @@ $content = str_replace(']]>', ']]&gt;', $content);
   <div class="grid-container">
     <div class="grid-x grid-margin-y align-middle">
       <?php
-        $originalDate = get_field('date_and_time', $id);
-        $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
-        $event_url = get_field('event_url', $id);
+      $originalDate = get_field('date_and_time', $id);
+      $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
+      $event_url = get_field('event_url', $id);
       ?>
+      <?php $post_categories = get_the_terms( $id, 'events_communities' ); ?>
 
-      <div class="cell small-6 <?= ($event_url ? 'medium-3': 'medium-4');  ?>">
+      <?php if ($post_categories): ?>
 
-
-        <?php $related_comunity = get_field('related_community', $id); ?>
-
-        <?php if(is_array($related_comunity)): ?>
-
+        <div class="cell small-6 <?= ($event_url ? 'medium-3': 'medium-4');  ?>">
+          
           <h4 class="ip-white">
-            <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
+            <?php foreach ($post_categories as $cat_index => $c) : ?>
 
-              <?= get_the_title($comunity).',&nbsp;'; ?>
+              <?php $itemPos = ( $cat_index !== count( $post_categories ) -1 ) ? "," : ""; ?>
+
+              <?= $c->name.$itemPos; ?>
 
             <?php endforeach; ?>
 
           </h4>
-        <?php else: ?>
+        </div>
 
-          <h4 class="ip-white"><?= get_the_title($related_comunity); ?></h4>
-
-        <?php endif; ?>
-      </div>
-
-
+      <?php endif; ?>
 
       <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
-        <time><i class="icon icon-time ip-white"></i> <?= $date->format('jS M Y'); ?></time>
+        <time><i class="icon icon-time ip-white"></i> <?= $date->format('jS F Y'); ?></time>
       </div>
 
       <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
-        <time><i class="icon icon-calendar ip-white"></i> <?= $date->format('H:iA'); ?></time>
+        <time><i class="icon icon-calendar ip-white"></i> <?= $date->format('H:i'); ?></time>
       </div>
 
       <?php if ($event_url): ?>

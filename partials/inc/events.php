@@ -14,35 +14,41 @@
     <div class="card-section">
       <?php $related_comunity = get_field('related_community', $info); ?>
 
-      <div class="grid-x small-up-2 align-middle">
-        <div class="cell">
-          <time><i class="icon icon-time ip-orange"></i> <?= get_field('time', $info); ?></time>
+
+      <?php
+      $originalDate = get_field('date_and_time', $info);
+      $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
+      $event_url = get_field('event_url', $info);
+      ?>
+      <?php if (!empty($originalDate)): ?>
+
+        <div class="grid-x small-up-2 align-middle">
+          <div class="cell">
+            <time><i class="icon icon-time ip-orange"></i> <?= $date->format('H:i'); ?></time>
+          </div>
+          <div class="cell">
+            <time><i class="icon icon-calendar ip-orange"></i> <?= $date->format('dS M y'); ?></time>
+          </div>
         </div>
-        <div class="cell">
-          <time><i class="icon icon-calendar ip-orange"></i> <?= get_field('date', $info); ?></time>
-        </div>
-      </div>
 
-      <div class="spacer tiny"></div>
+        <div class="spacer tiny"></div>
+      <?php endif; ?>
 
-      <?php if (isset($related_comunity) && !empty($related_comunity)): ?>
+      <?php $post_categories = get_the_terms( $info, 'events_communities' ); ?>
 
-        <?php if(is_array($related_comunity)): ?>
+      <?php if ($post_categories): ?>
 
-          <h5 class="ip-pink">
-            <?php foreach ($related_comunity as $related_comunity_index =>  $comunity) : ?>
+        <h5 class="ip-pink">
 
-              <?= get_the_title($comunity).'&nbsp;'; ?>
+          <?php foreach ($post_categories as $cat_index => $c) : ?>
 
-            <?php endforeach; ?>
+            <?php $itemPos = ( $cat_index !== count( $post_categories ) -1 ) ? "," : ""; ?>
 
-          </h5>
-        <?php else: ?>
+            <?= $c->name.$itemPos; ?>
 
-          <h5 class="ip-pink"><?= get_the_title($related_comunity); ?></h5>
+          <?php endforeach; ?>
 
-        <?php endif; ?>
-
+        </h5>
       <?php endif; ?>
 
       <h3 class="ip-teal h3"><?= get_the_title($info); ?></h3>

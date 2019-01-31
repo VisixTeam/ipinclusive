@@ -65,7 +65,7 @@ add_filter('visix_post_forms_args_news', function ($args, $post_data) {
     );
   } elseif($post_data['recommended'] == '2') {
     $args['orderby'] = 'publish_date';
-    $args['order'] = 'ASC';
+    $args['order'] = 'DESC';
   }
 
 

@@ -36,10 +36,6 @@
                   <div class="grid-x grid-margin-y">
 
                     <div class="cell">
-                      <p>Please indicate the basis on which you are signing the Charter: *</p>
-                    </div>
-
-                    <div class="cell">
 
                       <?php foreach ($field_group['fields'] as $key => $field) : ?>
 
@@ -70,7 +66,7 @@
                     </div>
 
                     <div class="cell">
-                      <p>Details of Equality, Diversity and Inclusion Officer or Representative (if not same as above).</p>
+                      <p class="help-text">Details of Equality, Diversity and Inclusion Officer:</p>
                     </div>
 
                     <div class="cell">
@@ -104,6 +100,10 @@
                 </div>
                 <div class="cell medium-6 large-8">
                   <div class="grid-x grid-margin-y">
+
+                    <div class="cell">
+                      <p class="help-text">Please indicate the basis on which you are signing the Charter: *</p>
+                    </div>
 
                     <div class="cell">
                       <?php

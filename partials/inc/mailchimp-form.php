@@ -97,16 +97,6 @@
               <div class="input-container">
                 <input type="checkbox" id="gdpr_26925" name="gdpr[26925]" value="Y" class="av-checkbox "> <label class="checkbox subfield" for="gdpr_26925">Email</label>
               </div>
-
-              <div class="input-container">
-                <input type="checkbox" id="gdpr_26929" name="gdpr[26929]" value="Y" class="av-checkbox">
-                <label class="checkbox subfield" for="gdpr_26929">Direct Mail</label>
-              </div>
-
-              <div class="input-container">
-                <input type="checkbox" id="gdpr_26933" name="gdpr[26933]" value="Y" class="av-checkbox ">
-                <label class="checkbox subfield" for="gdpr_26933">Customized Online Advertising</label>
-              </div>
             </div>
           </div>
         </div>

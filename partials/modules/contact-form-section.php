@@ -19,7 +19,7 @@
 
           <?php else: ?>
 
-          <?php visix_form( $contact_form , ['redirect' => '/contact-us/confirmation']); ?>
+          <?php visix_form( $contact_form , ['redirect' => '/contact-us/welcome']); ?>
 
           <?php endif; ?>
         </div>

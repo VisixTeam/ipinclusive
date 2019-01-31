@@ -24,7 +24,7 @@ $query = (isset($_GET['query']) ? $_GET['query'] : null);
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell medium-3">
-        <h2 class="ip-teal">Signatories</h2>
+        <h2 class="ip-teal">All signatories</h2>
         <?php $signatories = get_signatories(); ?>
 
         <p class="ip-orange">Showing <span id="signatories-count"><?= count($signatories); ?></span> of <?= count($signatories); ?></p>

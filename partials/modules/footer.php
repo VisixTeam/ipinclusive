@@ -36,70 +36,21 @@
       <div class="cell">
         <h3><a href="<?= site_url('resources'); ?>" class="ip-white">Resources</a></h3>
 
-        <ul class="menu no-bullet">
-          <?php $communities = get_pages_by_post_type('resources');
+        <div class="spacer"></div>
 
-          foreach($communities as $community):?>
+        <h3><a href="<?= site_url('our-supporters-and-partners/'); ?>" class="ip-white">Our Supporters &amp Partners</a></h3>
 
-          <li>
-            <a href="<?= get_permalink($community); ?>"><?= get_the_title($community); ?></a>
-          </li>
+        <div class="spacer"></div>
 
-          <?php endforeach; ?>
-        </ul>
+        <h3><a href="<?= site_url('news'); ?>" class="ip-white">News &amp Features</a></h3>
       </div>
 
       <div class="cell">
         <h3><a href="<?= site_url('events'); ?>" class="ip-white">Events</a></h3>
 
-        <ul class="menu no-bullet">
-          <?php $communities = get_pages_by_post_type('events');
+        <div class="spacer"></div>
 
-          foreach($communities as $community):?>
-
-          <li>
-            <a href="<?= get_permalink($community); ?>"><?= get_the_title($community); ?></a>
-          </li>
-
-          <?php endforeach; ?>
-        </ul>
-      </div>
-
-      <div class="cell">
-        <h3><a href="<?= site_url('our-supporters-and-partners/'); ?>" class="ip-white">Our Supporters &amp Partners</a></h3>
-
-        <ul class="menu no-bullet">
-          <?php $communities = get_pages_by_post_type('companies');
-
-          foreach($communities as $community):?>
-
-          <li>
-            <a target="
-            " href="<?= get_field('company_url', $community); ?>"><?= get_the_title($community); ?></a>
-          </li>
-
-          <?php endforeach; ?>
-        </ul>
-      </div>
-
-      <div class="cell">
-        <h3><a href="<?= site_url('news'); ?>" class="ip-white">News &amp Features</a></h3>
-
-        <ul class="menu no-bullet">
-          <?php $articles = get_pages_by_post_type('post');
-
-          foreach($articles as $article):?>
-
-          <li>
-            <a href="<?= get_permalink($article); ?>"><?= get_the_title($article); ?></a>
-          </li>
-
-          <?php endforeach; ?>
-        </ul>
-      </div>
-
-      <div class="cell large-auto">
-        <h3><a href="<?= site_url('contact'); ?>" class="ip-white">Contact</a></h3>
+        <h3><a href="<?= site_url('contact'); ?>" class="ip-white">Contact Us</a></h3>
 
         <?php if (have_rows('profile', 'option')): ?>
 
