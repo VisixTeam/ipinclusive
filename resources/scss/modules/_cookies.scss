@@ -1,0 +1,16 @@
+$iubenda-background-color: $light-gray;
+$iubenda-color: white;
+$iubenda-padding: 30px 40px;
+$iubenda-close-btn-color: white;
+$iubenda-banner-content-links-color: $orange;
+
+@import 'modules/iubenda';
+
+.iubenda-banner {
+  .iubenda-cs-content {
+    .iubenda-cs-close-btn {
+      @extend .button;
+      @extend .orange;
+    }
+  }
+}

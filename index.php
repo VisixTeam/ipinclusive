@@ -5,6 +5,23 @@
 
 <?php visix_partial('modules/banner', $hero['hero']); ?>
 
+<?php $row = 1; ?>
+<?php if ( have_rows('sections', $post_id) ): ?>
+
+  <?php while ( have_rows('sections', $post_id) ) : the_row();  ?>
+
+    <?php if ($row == 1): ?>
+      
+      <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
+
+    <?php endif; ?>
+
+    <?php ++$row; ?>
+
+  <?php endwhile;  ?>
+
+<?php endif; ?>
+
 <?php
 $recommended = (isset($_GET['recommended']) ? $_GET['recommended'] : null);
 $news_cat_id = (isset($_GET['news_cat_id']) ? $_GET['news_cat_id'] : null);
@@ -91,12 +108,18 @@ $news_tag_id = (isset($_GET['news_tag_id']) ? $_GET['news_tag_id'] : null);
   </div>
 </section>
 
-
+<?php $row_1 = 1; ?>
 <?php if ( have_rows('sections', $post_id) ): ?>
 
   <?php while ( have_rows('sections', $post_id) ) : the_row();  ?>
 
-    <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
+    <?php if ($row_1 > 1): ?>
+
+      <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
+
+    <?php endif; ?>
+
+    <?php ++$row_1; ?>
 
   <?php endwhile;  ?>
 

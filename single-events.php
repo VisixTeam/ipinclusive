@@ -27,7 +27,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
       <?php if ($post_categories): ?>
 
         <div class="cell small-6 <?= ($event_url ? 'medium-3': 'medium-4');  ?>">
-          
+
           <h4 class="ip-white">
             <?php foreach ($post_categories as $cat_index => $c) : ?>
 
@@ -43,11 +43,11 @@ $content = str_replace(']]>', ']]&gt;', $content);
       <?php endif; ?>
 
       <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
-        <time><i class="icon icon-time ip-white"></i> <?= $date->format('jS F Y'); ?></time>
+        <time><i class="icon icon-time ip-white"></i> <?= $date->format('H:i'); ?></time>
       </div>
 
       <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
-        <time><i class="icon icon-calendar ip-white"></i> <?= $date->format('H:i'); ?></time>
+        <time><i class="icon icon-calendar ip-white"></i> <?= $date->format('jS F Y'); ?></time>
       </div>
 
       <?php if ($event_url): ?>

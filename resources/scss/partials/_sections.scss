@@ -72,6 +72,12 @@
 
   &.signatories-filtering {
     @extend .resources-filtering;
+
+    .signatory {
+      .card-image {
+        height: 150px;
+      }
+    }
   }
 
   &.news-filter {
