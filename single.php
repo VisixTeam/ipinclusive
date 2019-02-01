@@ -26,7 +26,7 @@
 
       <?php if ($post_categories): ?>
       <div class="cell <?= ($post_tags ? 'small-6' : ''); ?>">
-
+        <h5 class="ip-pink h3">Categories:</h5>
         <h3 class="ip-pink">
 
           <?php foreach ($post_categories as $c_index => $c) :
@@ -48,6 +48,7 @@
       <?php if ($post_tags): ?>
 
       <div class="cell <?= ($post_categories ? 'small-6' : ''); ?>">
+        <h5 class="ip-teal h3">Tags:</h5>
         <h3 class="ip-teal">
 
           <?php foreach ($post_tags as $tags_index => $tags): ?>

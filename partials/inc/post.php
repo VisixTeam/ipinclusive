@@ -18,8 +18,8 @@
       ?>
 
       <div class="spacer tiny"></div>
-
-        <h5 class="ip-pink">
+        <h5 class="ip-pink h6">Categories:</h5>
+        <h5 class="ip-pink h6">
           <?php foreach ($post_categories as $c_index => $c) :
 
             $cat = get_category( $c ); ?>
@@ -31,6 +31,8 @@
           <?php endforeach; ?>
 
         </h5>
+
+      <div class="spacer tiny"></div>
 
       <a href="<?= get_permalink($info); ?>" class="ip-pink h3"><h3><?= get_the_title($info); ?></h3></a>
       <div class="spacer tiny"></div>

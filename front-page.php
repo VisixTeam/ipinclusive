@@ -13,10 +13,10 @@
     <div class="grid-x grid-margin-y align-middle" style="background-image: url(<?= esc_url($slide['slide_image']); ?>);">
       <div class="slide-container hide-for-small-only">
         <div class="cell">
-          <h5 class="ip-pink slide-title"><?= $slide['slide_title'];  ?></h5>
+          <a href="<?= $slide['slide_cta_url']; ?>" class="ip-pink slide-title"><h5 class="ip-pink slide-title"><?= $slide['slide_title'];  ?></h5></a>
         </div>
         <div class="cell large-6">
-          <h2 class="h1 ip-teal slide-content"><?= $slide['slide_content']; ?></h2>
+          <a href="<?= $slide['slide_cta_url']; ?>" class="ip-teal slide-content"><h2 class="h1 ip-teal"><?= $slide['slide_content']; ?></h2></a>
         </div>
         <div class="cell">
           <a href="<?= $slide['slide_cta_url']; ?>" class="ip-orange">Learn more <i class='icon icon-long-arrow-right ip-orange'></i></a>
