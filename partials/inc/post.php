@@ -9,7 +9,7 @@
     <?php $image_id = get_post_thumbnail_id($info); ?>
 
     <?php $card_image = get_the_post_thumbnail_url($info); ?>
-    <div class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'small')[0]; ?>">
+    <div class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
     </div>
     <div class="card-section">
       <?php
@@ -20,11 +20,13 @@
       <div class="spacer tiny"></div>
 
         <h5 class="ip-pink">
-          <?php foreach ($post_categories as $c) :
+          <?php foreach ($post_categories as $c_index => $c) :
 
             $cat = get_category( $c ); ?>
 
-            <?= $cat->name.'&nbsp;'; ?>
+            <?php $itemPos = ( $c_index !== count( $post_categories ) -1 ) ? "," : ""; ?>
+
+            <a class="ip-pink" href="<?= site_url("newsandfeatures/?news_cat_id=$cat->term_id"); ?>"><?= $cat->name; ?></a><?= $itemPos; ?>
 
           <?php endforeach; ?>
 

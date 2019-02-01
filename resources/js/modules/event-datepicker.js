@@ -25,7 +25,18 @@
       eventClick: function(calEvent) {
         $('#event-title').text(calEvent.title);
 
-        $('#event-link').attr('href', calEvent.event_link).show()
+        if(calEvent.type == 'events') {
+          $('#event-link').attr('href', calEvent.event_link).show()
+        } else {
+          if (calEvent.date_link !== null) {
+            $('#event-link').attr({
+              'href': calEvent.date_link,
+              'target': '_blank',
+            }).show()
+          } else {
+            $('#event-link').hide()
+          }
+        }
 
         $('#calendar-more_info').foundation('open');
       },

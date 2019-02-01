@@ -15,12 +15,14 @@
 
           <div class="cell small-6">
 
-            <h5 class="ip-pink">
-              <?php foreach ($post_categories as $c) :
+            <h5 class="ip-pink h6">
+              <?php foreach ($post_categories as $post_index => $c) :
 
                 $cat = get_category( $c ); ?>
 
-                <?= $cat->name.'&nbsp;'; ?>
+                <?php $itemPos = ( $post_index !== count( $post_categories ) -1 ) ? "," : ""; ?>
+
+                <?= $cat->name.$itemPos; ?>
 
               <?php endforeach; ?>
 
@@ -34,11 +36,13 @@
         <?php if ($post_tags): ?>
 
           <div class="cell <?= ($post_categories ? 'small-6' : ''); ?>">
-            <h5 class="ip-pink">
+            <h5 class="ip-teal h6">
 
-              <?php foreach ($post_tags as $tags): ?>
+              <?php foreach ($post_tags as $tags_index => $tags): ?>
 
-                <?= $tags->name.'&nbsp;'; ?>
+                <?php $itemPos = ( $tags_index !== count( $post_tags ) -1 ) ? "," : ""; ?>
+
+                <?= $tags->name.$itemPos; ?>
 
               <?php endforeach; ?>
 

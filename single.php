@@ -29,11 +29,13 @@
 
         <h3 class="ip-pink">
 
-          <?php foreach ($post_categories as $c) :
+          <?php foreach ($post_categories as $c_index => $c) :
 
             $cat = get_category( $c ); ?>
 
-            <a class="ip-pink" href="<?= site_url("news/?news_cat_id=$cat->term_id"); ?>"><?= $cat->name; ?></a>&nbsp;
+            <?php $itemPos = ( $c_index !== count( $post_categories ) -1 ) ? "," : ""; ?>
+
+            <a class="ip-pink" href="<?= site_url("newsandfeatures/?news_cat_id=$cat->term_id"); ?>"><?= $cat->name; ?></a><?= $itemPos; ?>
 
           <?php endforeach; ?>
 
@@ -46,11 +48,13 @@
       <?php if ($post_tags): ?>
 
       <div class="cell <?= ($post_categories ? 'small-6' : ''); ?>">
-        <h3 class="ip-pink">
+        <h3 class="ip-teal">
 
-          <?php foreach ($post_tags as $tags): ?>
+          <?php foreach ($post_tags as $tags_index => $tags): ?>
 
-            <a class="ip-pink" href="<?= site_url("news/?news_tag_id=$tags->term_id"); ?>"><?= $tags->name; ?></a>&nbsp;
+            <?php $itemPos = ( $tags_index !== count( $post_tags ) -1 ) ? "," : ""; ?>
+
+            <a class="ip-teal" href="<?= site_url("newsandfeatures/?news_tag_id=$tags->term_id"); ?>"><?= $tags->name; ?></a><?= $itemPos; ?>
 
           <?php endforeach; ?>
 
