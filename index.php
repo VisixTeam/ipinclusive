@@ -11,7 +11,7 @@
   <?php while ( have_rows('sections', $post_id) ) : the_row();  ?>
 
     <?php if ($row == 1): ?>
-      
+
       <?php visix_partial( 'modules/' . get_row_layout(), get_row(true)['data'] ); ?>
 
     <?php endif; ?>
@@ -60,7 +60,7 @@ $news_tag_id = (isset($_GET['news_tag_id']) ? $_GET['news_tag_id'] : null);
               'name' => 'recommended',
               'type' => 'select',
               'allow_null' => true,
-              'placeholder' => 'View by recommended:',
+              'placeholder' => 'View by recommended',
               'choices' => [
                 '1' => 'Most viewed',
                 '2' => 'Most recent'
@@ -74,7 +74,7 @@ $news_tag_id = (isset($_GET['news_tag_id']) ? $_GET['news_tag_id'] : null);
               'name' => 'news_tag_id',
               'type' => 'select',
               'allow_null' => true,
-              'placeholder' => 'Filter By Tags:',
+              'placeholder' => 'Filter By Tags',
               'choices' => tags_to_choices(get_all_news_tags()),
             ]
           ], VISIX_PLUGIN_FORMS_NAME ); ?>

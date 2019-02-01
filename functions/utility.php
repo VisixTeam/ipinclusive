@@ -144,7 +144,7 @@ function search_excerpt_highlight() {
     $keys = implode('|', explode(' ', get_search_query()));
     $excerpt = preg_replace('/(' . $keys .')/iu', '<mark>\0</mark>', $excerpt);
 
-    echo '<p>' . $excerpt . '</p>';
+    echo $excerpt;
 }
 
 
