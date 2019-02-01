@@ -61,6 +61,14 @@
 
                     <?php endif; ?>
 
+                    <?php $location = get_field( "location", $feature ); ?>
+
+                    <?php if ($location): ?>
+
+                      <time><i class="icon icon-pin ip-teal"></i> <?= $location; ?></time>
+
+                    <?php endif; ?>
+
                     <?php $related_comunity = get_field('related_community', $feature); ?>
 
                     <?php if (isset($related_comunity) && !empty($related_comunity)): ?>

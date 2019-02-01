@@ -175,9 +175,9 @@
                     },
                     "hide_admin": 0,
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
+                    "tabs": "text",
                     "media_upload": 0,
+                    "toolbar": "full",
                     "delay": 0
                 }
             ]
@@ -201,5 +201,5 @@
     "active": 0,
     "description": "",
     "recaptcha": 0,
-    "modified": 1548081833
+    "modified": 1549016158
 }

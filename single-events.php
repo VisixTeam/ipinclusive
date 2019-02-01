@@ -26,7 +26,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
       <?php if ($post_categories): ?>
 
-        <div class="cell small-6 <?= ($event_url ? 'medium-3': 'medium-4');  ?>">
+        <div class="cell small-6 <?= ($event_url ? 'medium-3': 'medium-3');  ?>">
 
           <h4 class="ip-white">
             <?php foreach ($post_categories as $cat_index => $c) : ?>
@@ -44,17 +44,27 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
       <?php if ($date): ?>
 
-        <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
+        <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-3');  ?> ip-white">
           <time><i class="icon icon-time ip-white"></i> <?= $date->format('H:i'); ?></time>
         </div>
 
-        <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-4');  ?> ip-white">
+        <div class="cell small-3 <?= ($event_url ? 'medium-2': 'medium-3');  ?> ip-white">
           <time><i class="icon icon-calendar ip-white"></i> <?= $date->format('jS F Y'); ?></time>
         </div>
       <?php endif; ?>
 
+      <?php $location = get_field( "location", $id ); ?>
+
+      <?php if ($location): ?>
+
+        <div class="cell small-6 medium-2 medium-text-center ip-white">
+          <time><i class="icon icon-pin ip-white"></i> <?= $location; ?></time>
+        </div>
+
+      <?php endif; ?>
+
       <?php if ($event_url): ?>
-        <div class="cell medium-auto medium-text-right">
+        <div class="cell small-6 <?= ($location ? 'medium-3' : 'medium-auto'); ?> medium-text-right">
           <a href="<?= $event_url; ?>" target="_blank" class="button hollow white">Book to attend <i class="icon icon-open-in-new"></i></a>
         </div>
 
