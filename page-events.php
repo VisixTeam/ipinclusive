@@ -61,14 +61,6 @@
 
                     <?php endif; ?>
 
-                    <?php $location = get_field( "location", $feature ); ?>
-
-                    <?php if ($location): ?>
-
-                      <time><i class="icon icon-pin ip-teal"></i> <?= $location; ?></time>
-
-                    <?php endif; ?>
-
                     <?php $related_comunity = get_field('related_community', $feature); ?>
 
                     <?php if (isset($related_comunity) && !empty($related_comunity)): ?>
@@ -92,6 +84,21 @@
                     <?php endif; ?>
 
                     <a href="<?= get_permalink($feature); ?>" class="ip-teal h2"><?= get_the_title($feature); ?></a>
+
+                    <div class="spacer tiny"></div>
+
+                    <?php $location = get_field( "location", $feature ); ?>
+
+                    <?php if ($location): ?>
+
+                      <div class="grid-x">
+                        <div class="cell">
+                          <time><i class="icon icon-pin ip-teal"></i> <?= $location; ?></time>
+                        </div>
+                      </div>
+
+                    <?php endif; ?>
+
                     <div class="spacer tiny"></div>
                     <a class="button clear orange" href="<?= get_permalink($feature); ?>">View <i class="icon icon-long-arrow-right"></i></a>
                   </div>

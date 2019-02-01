@@ -20,7 +20,7 @@ function create_post_type() {
       'query_var'   => true,
       'position'      => 20,
       'supports'    => array('title', 'thumbnail', 'editor'),
-      'rewrite'    => array('slug' => 'community'),
+      'rewrite'    => array('slug' => 'community', 'with_front' => false),
       'show_in_nav_menus' => true,
       'hierarchical'  => false,
     )
@@ -96,7 +96,7 @@ function create_post_type() {
       'query_var'   => true,
       'position'    => 40,
       'supports'    => array('title', 'thumbnail', 'editor'),
-      'rewrite'     => array('slug' => 'events'),
+      'rewrite'     => array('slug' => 'events', 'with_front' => false),
       'show_in_nav_menus' => true,
     )
   );
@@ -146,7 +146,7 @@ function create_post_type() {
       'query_var'   => true,
       'position'    => 42,
       'supports'    => array('title', 'thumbnail', 'editor'),
-      'rewrite'     => array('slug' => 'resources'),
+      'rewrite'     => array('slug' => 'resources', 'with_front' => false),
       'show_in_nav_menus' => true,
     )
   );

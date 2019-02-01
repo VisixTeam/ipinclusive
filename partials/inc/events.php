@@ -34,12 +34,6 @@
         <div class="spacer tiny"></div>
       <?php endif; ?>
 
-      <?php $location = get_field( "location", $info ); ?>
-
-      <?php if ($location): ?>
-        <time><i class="icon icon-pin ip-teal"></i> <?= $location; ?></time>
-      <?php endif; ?>
-
       <?php $post_categories = get_the_terms( $info, 'events_communities' ); ?>
 
       <?php if ($post_categories): ?>
