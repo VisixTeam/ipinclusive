@@ -18,6 +18,7 @@
 
     @include breakpoint(large) {
       background-color: rgba($white, .8);
+      padding-bottom: 5px;
     }
 
     &.no-transparent {
@@ -51,10 +52,6 @@
   }
 
   .main-menu {
-    .button {
-      display: inline;
-    }
-
     @include breakpoint(mediumLand) {
       .mediumLand-7 {
         padding-right: 30px;

@@ -7,12 +7,12 @@
             <?php visix_partial('svgs/logo'); ?>
           </a>
         </div>
-        <div class="show-for-mediumLand cell mediumLand-7 text-right">
+        <div class="show-for-mediumLand cell mediumLand-6 text-right">
           <a href="<?= site_url('stay-in-touch'); ?>" class="button teal">Stay in touch</a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="<?= site_url('sign-up-to-the-ip-inclusive-charter'); ?>" class="button orange">Sign the ip inclusive charter</a>
         </div>
-        <div class="cell small-4 mediumLand-2 medium-text-center large-text-right hide-for-mediumLand-only">
-          <a href="<?= site_url('contact'); ?>">Contact us</a>
+        <div class="cell small-4 mediumLand-3 medium-text-center large-text-right hide-for-mediumLand-only">
+          <a class="button teal" href="<?= site_url('contact'); ?>">Contact us</a>
           &nbsp;
           &nbsp;
           <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange hide-for-small-only"><i class="icon icon-search"></i></a>

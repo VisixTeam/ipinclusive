@@ -9,8 +9,8 @@
     <?php $image_id = get_post_thumbnail_id($info); ?>
 
     <?php $card_image = get_the_post_thumbnail_url($info); ?>
-    <div class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
-    </div>
+    <a href="<?= get_permalink($info); ?>" class="card-image b-lazy" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
+    </a>
     <div class="card-section">
       <?php
         $post_categories = wp_get_post_categories( $info );
@@ -32,7 +32,7 @@
 
         </h5>
 
-      <h3 class="ip-pink h3"><?= get_the_title($info); ?></h3>
+      <a href="<?= get_permalink($info); ?>" class="ip-pink h3"><h3><?= get_the_title($info); ?></h3></a>
       <div class="spacer tiny"></div>
 
       <div class="grid-x small-up-2 align-middle">
