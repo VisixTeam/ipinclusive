@@ -54,6 +54,26 @@
             "first_day": 1
         },
         {
+            "key": "field_5c532f88c462f",
+            "label": "Event Location",
+            "name": "location",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5c3da34df8df7",
             "label": "Featured?",
             "name": "",
@@ -109,5 +129,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1548759046
+    "modified": 1548955555
 }

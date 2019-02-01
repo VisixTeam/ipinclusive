@@ -34,7 +34,7 @@ function get_all_resources($recommended = null, $resource_cat_id = null , $query
       );
     } elseif($recommended == '2') {
       $args['orderby'] = 'publish_date';
-      $args['order'] = 'ASC';
+      $args['order'] = 'DESC';
     }
   }
 
