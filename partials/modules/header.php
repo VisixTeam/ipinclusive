@@ -15,6 +15,9 @@
           <a href="<?= site_url('contact'); ?>">Contact us</a>
           &nbsp;
           &nbsp;
+          <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange hide-for-small-only"><i class="icon icon-search"></i></a>
+        </div>
+        <div class="cell small-1 show-for-small-only">
           <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange"><i class="icon icon-search"></i></a>
         </div>
         <div class="cell small-2 mediumLand-1 text-right">
