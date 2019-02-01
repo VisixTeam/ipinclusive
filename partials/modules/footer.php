@@ -1,6 +1,6 @@
 <footer>
   <div class="grid-container">
-    <div class="grid-x grid-padding-x grid-margin-y medium-up-2 large-up-4">
+    <div class="grid-x grid-padding-x grid-margin-y medium-up-2 large-up-5">
       <div class="cell">
         <h3><a href="<?= site_url('about'); ?>" class="ip-white">About us</a></h3>
 
@@ -39,10 +39,6 @@
         <div class="spacer"></div>
 
         <h3><a href="<?= site_url('our-supporters-and-partners/'); ?>" class="ip-white">Our Supporters &amp Partners</a></h3>
-
-        <div class="spacer"></div>
-
-        <h3><a href="<?= site_url('news'); ?>" class="ip-white">News &amp Features</a></h3>
       </div>
 
       <div class="cell">
@@ -50,6 +46,10 @@
 
         <div class="spacer"></div>
 
+        <h3><a href="<?= site_url('news'); ?>" class="ip-white">News &amp Features</a></h3>
+      </div>
+
+      <div class="cell">
         <h3><a href="<?= site_url('contact'); ?>" class="ip-white">Contact Us</a></h3>
 
         <?php if (have_rows('profile', 'option')): ?>

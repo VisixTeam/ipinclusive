@@ -131,7 +131,7 @@ $community_id = (isset($_GET['related_community']) ? $_GET['related_community'] 
       </div>
 
       <div class="cell">
-        <a href="#" id="event-link" class="button clear orange">View all <i class="icon icon-long-arrow-right"></i></a>
+        <a href="#" id="event-link" class="button clear orange">View <i class="icon icon-long-arrow-right"></i></a>
       </div>
     </div>
   </div>
