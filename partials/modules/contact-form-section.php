@@ -19,7 +19,16 @@
 
           <?php else: ?>
 
-          <?php visix_form( $contact_form , ['redirect' => '/welcome']); ?>
+            <?php if ($confirmation_form_page == 'confirmation'): ?>
+
+              <?php visix_form( $contact_form , ['redirect' => '/contact/confirmation']); ?>
+
+            <?php else:  ?>
+
+              <?php visix_form( $contact_form , ['redirect' => '/welcome']); ?>
+
+            <?php endif; ?>
+
 
           <?php endif; ?>
         </div>
@@ -30,7 +39,15 @@
 
   <section class="contact-form-section ip-<?= $background_colour['colour']; ?>-bg">
 
-    <?php visix_form( $contact_form , ['redirect' => '/contact-us/confirmation']); ?>
+    <?php if ($confirmation_form_page == 'confirmation'): ?>
+
+      <?php visix_form( $contact_form , ['redirect' => '/contact/confirmation']); ?>
+
+    <?php else:  ?>
+
+      <?php visix_form( $contact_form , ['redirect' => '/welcome']); ?>
+
+    <?php endif; ?>
 
 <?php endif; ?>
 

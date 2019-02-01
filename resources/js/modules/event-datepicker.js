@@ -25,11 +25,7 @@
       eventClick: function(calEvent) {
         $('#event-title').text(calEvent.title);
 
-        if(calEvent.type == 'events') {
-          $('#event-link').attr('href', calEvent.event_link).show()
-        } else {
-          $('#event-link').hide()
-        }
+        $('#event-link').attr('href', calEvent.event_link).show()
 
         $('#calendar-more_info').foundation('open');
       },

@@ -27,8 +27,10 @@
           <?php $email = get_field('email', $info); ?>
           <?php $has_twitter = get_field('has_twitter', $info); ?>
           <?php $twitter_username = get_field('twitter_username', $info); ?>
+          <?php $has_linkedin = get_field('has_linkedin', $info); ?>
+          <?php $linkedin_url = get_field('linkedin_url', $info); ?>
 
-          <div class="grid-x">
+          <div class="grid-x align-middle grid-margin-x">
             <?php if ($email): ?>
               <div class="cell small-6">
                 <a href="mailto: <?= get_field('email', $info); ?>" class="button clear orange large"><i class="icon icon-email"></i></a>
@@ -38,6 +40,12 @@
             <?php if($has_twitter && !empty($twitter_username)): ?>
               <div class="cell small-6">
                 <a href="<?= $twitter_username; ?>" target="_blank" class="button clear orange large"><i class="icon icon-twitter"></i></a>
+              </div>
+            <?php endif; ?>
+
+            <?php if($has_linkedin && !empty($linkedin_url)): ?>
+              <div class="cell small-6">
+                <a href="<?= $linkedin_url; ?>" target="_blank" class="button clear orange large"><i class="icon icon-linkedin"></i></a>
               </div>
             <?php endif; ?>
           </div>
