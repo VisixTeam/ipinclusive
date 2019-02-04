@@ -46,7 +46,7 @@
 
         <div class="spacer"></div>
 
-        <h3><a href="<?= site_url('news'); ?>" class="ip-white">News &amp Features</a></h3>
+        <h3><a href="<?= site_url('newsandfeatures'); ?>" class="ip-white">News &amp Features</a></h3>
       </div>
 
       <div class="cell">
