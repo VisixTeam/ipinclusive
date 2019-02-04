@@ -13,16 +13,22 @@
 
 <?php $image = get_the_post_thumbnail_url($id); ?>
 
-<?php visix_partial('modules/banner', ['custom_title' => get_the_title($id), 'communities_background_image' => $image]); ?>
+<?php
+  visix_partial('modules/banner', ['custom_title' => get_the_title($id), 'communities_background_image' => $image]); ?>
 
+<?php
+  $page_title = get_the_title();
+  $segment_list = get_list_segment($page_title);
+  $segment_count = $segment_list->member_count;
 
-<?php $community = get_field('community'); ?>
+  $community = get_field('community');
+?>
 
 <section class="section members" style="background-color: <?= $community['colour']; ?>;">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell medium-9">
-        <span id="members-count" style="color: <?= $community['colour']; ?>"> </span> Members
+        <span id="members-count" style="color: <?= $community['colour']; ?>"><?= $segment_count; ?></span> Members
       </div>
       <div class="cell medium-3">
         <a href="<?= site_url('stay-in-touch'); ?>" target="_blank" class="button hollow white">Join this community</a>

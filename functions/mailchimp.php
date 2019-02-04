@@ -25,45 +25,37 @@ function rudr_mailchimp_curl_connect( $url, $request_type, $api_key, $data = arr
   return curl_exec($mch);
 }
 
+function get_list_segment($segment_name) {
 
-$api_key = '9c7506fe6cbc5fe7c98ebc644a620f8a-us17';
+  $segment_name = sanitize_title($segment_name);
 
-// Query String Perameters are here
-// for more reference please vizit http://developer.mailchimp.com/documentation/mailchimp/reference/lists/
-$data = array(
-  'fields' => array('segments'), // total_items, _links
-  // 'email' => 'ipinclusivedata@gmail.com',
-  'count' => 1, // the number of lists to return, default - all
-);
+  $api_key = '9c7506fe6cbc5fe7c98ebc644a620f8a-us17';
 
-$url = 'https://' . substr($api_key,strpos($api_key,'-')+1) . '.api.mailchimp.com/3.0/lists/';
-$result = json_decode( rudr_mailchimp_curl_connect( $url, 'GET', $api_key, $data) );
-pp( $result->lists[0]->_links);
+  // Query String Perameters are here
+  // for more reference please vizit http://developer.mailchimp.com/documentation/mailchimp/reference/lists/
+  $data = array(
+    'fields' => 'segments',
+    'email' => 'ipinclusivedata@gmail.com',
+    'count' => 3,
+  );
 
-// function get_mailchimp_count() {
-//
-//   $api_key = '9c7506fe6cbc5fe7c98ebc644a620f8a-us17';
-//
-//   // Query String Perameters are here
-//   // for more reference please vizit http://developer.mailchimp.com/documentation/mailchimp/reference/lists/
-//   $data = array(
-//     'fields' => array('lists'), // total_items, _links
-//     'email' => 'ipinclusivedata@gmail.com',
-//     'count' => 1, // the number of lists to return, default - all
-//   );
-//
-//   $url = 'https://' . substr($api_key,strpos($api_key,'-')+1) . '.api.mailchimp.com/3.0/lists/';
-//   $result = json_decode( rudr_mailchimp_curl_connect( $url, 'GET', $api_key, $data) );
-//   pp( $result);
-//
-//   if( !empty($result->lists) ) {
-//
-//     return $result->lists[0]->stats->member_count;
-//
-//   }
-//   return 0;
-// }
-//
+  $url = 'https://' . substr($api_key,strpos($api_key,'-')+1) . '.api.mailchimp.com/3.0/lists/4a8b55c9e3/segments/';
+
+  $result = json_decode( rudr_mailchimp_curl_connect( $url, 'GET', $api_key, $data) );
+  $found_segment = false;
+
+  foreach ($result->segments as $key => $segment) {
+    if (sanitize_title($segment->name) == $segment_name) {
+      $found_segment = $segment;
+    }
+  }
+  return $found_segment;
+}
+
+function get_mailchimp_count() {
+
+}
+
 // /**
 // * Get form posts callback
 // */

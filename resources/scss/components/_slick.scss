@@ -65,6 +65,16 @@
 
     > div {
       width: 100%;
+
+      @include breakpoint(medium) {
+        .team {
+          height: 100%;
+
+          .card {
+            height: 100%;
+          }
+        }
+      }
     }
   }
 
@@ -270,5 +280,5 @@
         height: auto;
       }
     }
-  }  
+  }
 }

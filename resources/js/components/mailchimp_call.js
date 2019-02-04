@@ -3,7 +3,7 @@
   $(document).ready(function(){
 
     if($('#members-count').length > 0) {
-      $('#members-count').text('test');
+      // $('#members-count').text('test');
 
       $.ajax({
         type: 'POST',
@@ -16,8 +16,8 @@
 
           if (res.success) {
             var res = JSON.parse(res.data)
-            console.log('res', res.mailchimp_count)
-            $('#members-count').text(res.mailchimp_count);
+            console.log('res', res)
+            // $('#members-count').text(res.mailchimp_count);
           }
         },
         error: function (err) {
