@@ -22,7 +22,7 @@
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell medium-9">
-        <span style="color: <?= $community['colour']; ?>"><?= getPostViews($id); ?> </span> Members
+        <span id="members-count" style="color: <?= $community['colour']; ?>"> </span> Members
       </div>
       <div class="cell medium-3">
         <a href="<?= site_url('stay-in-touch'); ?>" target="_blank" class="button hollow white">Join this community</a>

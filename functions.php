@@ -74,4 +74,5 @@ include 'functions/post.php';
 include 'functions/events.php';
 include 'functions/signatories.php';
 include 'functions/resources.php';
+include 'functions/mailchimp.php';
 include 'functions/wp_login.php';

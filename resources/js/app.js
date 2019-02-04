@@ -27,6 +27,7 @@ require('./modules/questionnaire')
 
 require('./components/slick')
 require('./components/filtering')
+require('./components/mailchimp_call')
 
 $(function () {
   var bLazy = new Blazy({
