@@ -142,26 +142,6 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
-        },
-        {
-            "key": "field_5c389e1889451",
-            "label": "Captcha",
-            "name": "captcha",
-            "type": "recaptcha",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "cell medium-6",
-                "id": ""
-            },
-            "hide_admin": 0,
-            "site_key": "6LdjW0wUAAAAAPmqtVB0kTm4bhcITRlkIxLSVQQz",
-            "secret_key": "6LdjW0wUAAAAANGFW0wZTbI0eoGxM8kQPIyMsmqI",
-            "re_theme": "light",
-            "re_type": "image",
-            "re_size": "normal"
         }
     ],
     "location": [
@@ -182,5 +162,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1548751453
+    "modified": 1549296715
 }

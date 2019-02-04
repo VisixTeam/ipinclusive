@@ -89,24 +89,6 @@
           </div>
         </div>
 
-        <div class="cell">
-          <div class="field">
-            <label>Marketing Permissions</label>
-            <p class="ip-white">Please select all the ways you would like to hear from IP Inclusive:</p>
-            <div class="options-list">
-              <div class="input-container">
-                <input type="checkbox" id="gdpr_26925" name="gdpr[26925]" value="Y" class="av-checkbox "> <label class="checkbox subfield" for="gdpr_26925">Email</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cell">
-          <div class="content__gdprLegal">
-              <p class="ip-white">We use Mailchimp to host our mailing lists. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
-          </div>
-        </div>
-
         <div id="mce-responses" class="clear">
       		<div class="response" id="mce-error-response" style="display:none"></div>
       		<div class="response" id="mce-success-response" style="display:none"></div>

@@ -39,10 +39,6 @@ footer {
       font-weight: $global-weight-light;
       padding-right: 54px;
 
-      @include breakpoint(medium) {
-        font-size: rem-calc(21)
-      }
-
       i {
         color: $orange;
         margin-right: 13px;
