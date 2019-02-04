@@ -9,19 +9,18 @@
   $content = apply_filters('the_content', $content);
   $content = str_replace(']]>', ']]&gt;', $content);
   setPostViews($id);
+  $community = get_field('community');
 ?>
 
 <?php $image = get_the_post_thumbnail_url($id); ?>
 
 <?php
-  visix_partial('modules/banner', ['custom_title' => get_the_title($id), 'communities_background_image' => $image]); ?>
+  visix_partial('modules/banner', ['custom_title' => get_the_title($id), 'communities_background_image' => $image, 'color_title' => $community['colour']]); ?>
 
 <?php
   $page_title = get_the_title();
   $segment_list = get_list_segment($page_title);
   $segment_count = $segment_list->member_count;
-
-  $community = get_field('community');
 ?>
 
 <section class="section members" style="background-color: <?= $community['colour']; ?>;">

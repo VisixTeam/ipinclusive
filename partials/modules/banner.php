@@ -24,6 +24,10 @@
               <h1><?= $communities_title; ?></h1>
             <?php elseif(!empty($communities_title) && is_search()): ?>
               <h1><?= $communities_title ?> <mark><?= (isset($s) ? $s : ''); ?></mark></h1>
+
+            <?php elseif(is_singular('community')): ?>
+              <h1 style="color: <?= $color_title; ?>"><?= get_the_title(); ?></h1>
+
             <?php else: ?>
               <h1 style="color: <?= ($color_title ? $title_color : '' ); ?>"><?= get_the_title(); ?></h1>
             <?php endif; ?>
