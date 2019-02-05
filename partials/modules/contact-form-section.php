@@ -13,7 +13,7 @@
 
         <div class="cell <?= ($form_title ? 'medium-9': ''); ?> ip-teal-bg form-wrapper-<?= $form_theme_colour; ?>">
 
-          <?php if (!$contact_form): ?>
+          <?php if (!$contact_form && $is_mailchimp_form == true): ?>
 
             <?php visix_partial('inc/mailchimp-form'); ?>
 
