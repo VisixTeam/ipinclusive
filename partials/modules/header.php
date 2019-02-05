@@ -11,16 +11,16 @@
           <a href="<?= site_url('stay-in-touch'); ?>" class="button teal">Stay in touch</a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="<?= site_url('sign-up-to-the-ip-inclusive-charter'); ?>" class="button orange">Sign the ip inclusive charter</a>
         </div>
-        <div class="cell small-4 mediumLand-3 medium-text-center large-text-right hide-for-mediumLand-only hide-for-small-only">
+        <div class="cell small-4 medium-5 mediumLand-3 medium-text-center large-text-right hide-for-mediumLand-only hide-for-small-only">
           <a class="button teal" href="<?= site_url('contact'); ?>">Contact us</a>
           &nbsp;
           &nbsp;
           <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange hide-for-small-only"><i class="icon icon-search"></i></a>
         </div>
-        <div class="cell small-3 text-center medium-text-left show-for-small-only">
+        <div class="cell small-3 medium-1 text-center medium-text-right mediumLand-text-center hide-for-medium-only hide-for-large">
           <a href="javascript:;" id="search" data-open="search-modal" class="button clear orange"><i class="icon icon-search"></i></a>
         </div>
-        <div class="cell small-3 mediumLand-1 text-right">
+        <div class="cell small-3 medium-2 mediumLand-1 text-right">
           <button class="hamburger hamburger--squeeze" data-toggle="main-menu" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
