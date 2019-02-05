@@ -13,7 +13,7 @@
 
         <div class="cell <?= ($form_title ? 'medium-9': ''); ?> ip-teal-bg form-wrapper-<?= $form_theme_colour; ?>">
 
-          <?php if (!$contact_form && $is_mailchimp_form == true): ?>
+          <?php if (!$contact_form && $is_mailchimp == true): ?>
 
             <?php visix_partial('inc/mailchimp-form'); ?>
 
@@ -39,13 +39,22 @@
 
   <section class="contact-form-section ip-<?= $background_colour['colour']; ?>-bg">
 
-    <?php if ($confirmation_form_page == 'confirmation'): ?>
+    <?php if (!$contact_form && $is_mailchimp == true): ?>
 
-      <?php visix_form( $contact_form , ['redirect' => '/contact/confirmation']); ?>
+      <?php visix_partial('inc/mailchimp-form'); ?>
 
-    <?php else:  ?>
+    <?php else: ?>
 
-      <?php visix_form( $contact_form , ['redirect' => '/welcome']); ?>
+      <?php if ($confirmation_form_page == 'confirmation'): ?>
+
+        <?php visix_form( $contact_form , ['redirect' => '/contact/confirmation']); ?>
+
+      <?php else:  ?>
+
+        <?php visix_form( $contact_form , ['redirect' => '/welcome']); ?>
+
+      <?php endif; ?>
+
 
     <?php endif; ?>
 
