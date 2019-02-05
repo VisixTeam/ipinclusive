@@ -4,12 +4,33 @@
 
   <div class="card">
     <?php $card_image = $image_id; ?>
-    <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
-    </div>
+    <?php $company_url = get_field('company_url',$info); ?>
+
+    <?php if ($company_url): ?>
+
+      <a href="<?= $company_url; ?>" target="_blank" class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
+      </a>
+
+    <?php else: ?>
+
+      <div class="card-image <?php if($card_image): ?> b-lazy <?php endif; ?>" style="background-image: url(<?= wp_get_attachment_image_src($image_id, 'small')[0];  ?>);" data-blazy="<?= wp_get_attachment_image_src($image_id, 'medium')[0]; ?>">
+      </div>
+
+    <?php endif; ?>
+
     <div class="card-section">
       <div class="grid-x">
         <div class="cell small-9">
-          <h3 class="ip-teal h4"><?= get_the_title($info); ?></h3>
+
+          <?php if ($company_url): ?>
+
+            <a href="<?= $company_url; ?>" target="_blank"><h3 class="ip-teal h4"><?= get_the_title($info); ?></h3></a>
+
+          <?php else: ?>
+
+            <h3 class="ip-teal h4"><?= get_the_title($info); ?></h3>
+
+          <?php endif; ?>
 
           <?php $job_title = get_field('job_title', $info); ?>
           <?php $company = get_field('company', $info); ?>
@@ -19,7 +40,9 @@
           <?php endif; ?>
 
           <?php if ($company): ?>
+
             <span class="ip-pink h4"><?= $company; ?></span>
+
           <?php endif; ?>
         </div>
         <div class="cell small-3">
@@ -30,7 +53,7 @@
           <?php $has_linkedin = get_field('has_linkedin', $info); ?>
           <?php $linkedin_url = get_field('linkedin_url', $info); ?>
 
-          <div class="grid-x align-middle grid-margin-x">
+          <div class="grid-x align-middle">
             <?php if ($email): ?>
               <div class="cell small-6">
                 <a href="mailto: <?= get_field('email', $info); ?>" class="button clear orange large"><i class="icon icon-email"></i></a>
