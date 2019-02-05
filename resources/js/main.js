@@ -18,10 +18,10 @@
     readMoreBtn.click(function(){
       if(readMoreContent.hasClass('hide')){
         readMoreContent.removeClass('hide');
-        readMoreBtn.text('Read less');
+        readMoreBtn.text('Read less').addClass('less');
       } else {
         readMoreContent.addClass('hide');
-        readMoreBtn.text('Read more');
+        readMoreBtn.text('Read more').removeClass('less');
       }
     });
   }
