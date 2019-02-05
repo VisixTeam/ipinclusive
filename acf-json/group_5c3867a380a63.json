@@ -73,7 +73,7 @@
                         "af_form"
                     ],
                     "taxonomy": "",
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "return_format": "id",
                     "ui": 1
@@ -85,7 +85,14 @@
                     "type": "select",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c3867d9d44a9",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -235,5 +242,5 @@
     "active": 0,
     "description": "",
     "recaptcha": 0,
-    "modified": 1549023652
+    "modified": 1549365312
 }
