@@ -33,14 +33,12 @@
       <?php endif; ?>
 
       <div class="spacer tiny"></div>
+    
 
-      <?php if (is_page('our-supporters-and-partners')): ?>
+      <h3 class="ip-teal h4"><?= get_the_title($info); ?></h3>
 
-        <h3 class="ip-teal h4"><?= get_the_title($info); ?></h3>
+      <div class="spacer tiny"></div>
 
-        <div class="spacer tiny"></div>
-
-      <?php endif; ?>
 
       <a class="button clear orange" href="<?= get_field('company_url',$info); ?>" target="_blank">View <i class="icon icon-open-in-new"></i></a>
     </div>
