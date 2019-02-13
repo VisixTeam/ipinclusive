@@ -14,3 +14,32 @@ $iubenda-banner-content-links-color: $orange;
     }
   }
 }
+
+#cookie-notice {
+  background-color: rgba($medium-gray, .9) !important;
+}
+
+.cookie-notice-container {
+  padding: 20px 50px;
+  text-align: left;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: 0 1 80%;
+
+  @include breakpoint(small only) {
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+}
+
+#cn-notice-text {
+  display: block;
+  margin-bottom: 20px;
+  font-size: rem-calc(18);
+  line-height: 1.4;
+
+  a {
+    text-decoration: underline;
+  }
+}

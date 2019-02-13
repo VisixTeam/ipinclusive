@@ -252,6 +252,7 @@
   @include breakpoint(medium up){
     .slick-list {
       display: flex;
+      width: 100%;
     }
 
     .slick-track {
