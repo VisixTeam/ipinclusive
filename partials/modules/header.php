@@ -7,7 +7,7 @@
             <?php visix_partial('svgs/logo'); ?>
           </a>
         </div>
-        <div class="show-for-mediumLand cell mediumLand-6 text-right">
+        <div class="show-for-mediumLand cell mediumLand-6 text-right ie-block">
           <a href="<?= site_url('stay-in-touch'); ?>" class="button teal">Stay in touch</a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="<?= site_url('sign-up-to-the-ip-inclusive-charter'); ?>" class="button orange">Sign the ip inclusive charter</a>
         </div>

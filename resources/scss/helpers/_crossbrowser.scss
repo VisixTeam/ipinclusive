@@ -1,0 +1,17 @@
+.edge, .ie {
+  @include breakpoint(medium up) {
+    .home-banner {
+      .slick-slide {
+        display: block;
+        max-width: inherit;
+      }
+    }
+
+    .ie-block {
+      a {
+        display: inline;
+        font-size: rem-calc(15);
+      }
+    }
+  }
+}
