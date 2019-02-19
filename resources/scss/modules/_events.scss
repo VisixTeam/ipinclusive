@@ -59,6 +59,10 @@
   }
 }
 
+#event-filter {
+  background-size: 5%;
+}
+
 .events-calendar {
   @extend .featured-event;
 
@@ -77,8 +81,8 @@
 
   a {
     display: inline-flex;
-    width: 40px;
-    height: 40px;
+    width: 64px;
+    height: 64px;
     border: 1px solid $orange;
     align-items: center;
     justify-content: center;

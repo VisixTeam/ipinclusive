@@ -4,9 +4,9 @@
       <?php if ($field['allow_null']) : ?>
 
         <?php if (is_page('sign-up-to-the-ip-inclusive-charter')): ?>
-          <option value=""><?= 'Please Select'; ?></option>  
+          <option value=""><?= 'Please Select'; ?></option>
         <?php else: ?>
-        <option value=""><?= (isset($field['placeholder']) ? $field['placeholder'] : 'Please Select'); ?></option>
+        <option value="<?= (is_page('events') ? 'all': ''); ?>"><?= (isset($field['placeholder']) ? $field['placeholder'] : 'Please Select'); ?></option>
 		<?php endif; ?>
       <?php endif; ?>
       <?php foreach ($field['choices'] as $value => $label) : ?>
