@@ -5,18 +5,18 @@
       .slick-track {
         display: block;
       }
-      
+
       .slick-slide {
         display: block;
         max-width: inherit;
       }
     }
+  }
 
-    .ie-block {
-      a {
-        display: inline;
-        font-size: rem-calc(15);
-      }
+  .ie-block {
+    a {
+      display: inline;
+      font-size: rem-calc(15);
     }
   }
 }
