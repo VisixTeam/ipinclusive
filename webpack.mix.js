@@ -35,7 +35,6 @@ mix.sass('resources/scss/app.scss', 'assets/css/app.css', {
 mix.browserSync({
   proxy: 'ipinclusive.work',
   notify: false,
-  https: true,
   files: [
     "resources/**/*",
     "*.php",

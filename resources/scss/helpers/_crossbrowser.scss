@@ -13,10 +13,18 @@
     }
   }
 
+  .cookie-notice-container {
+    display: block;
+  }
+
   .ie-block {
     a {
       display: inline;
       font-size: rem-calc(15);
+
+      @include breakpoint(medium only) {
+        font-size: rem-calc(12);
+      }
     }
   }
 }
