@@ -45,6 +45,7 @@
   @include breakpoint(medium) {
     .slick-list, .slick-track {
       display: flex;
+      margin-left: 0;
     }
   }
 

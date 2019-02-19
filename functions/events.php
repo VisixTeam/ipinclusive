@@ -30,6 +30,15 @@ function get_events_and_dates() {
     'post_type' => array('date', 'events'),
     'post_status'  => 'publish',
     'showposts' => -1,
+    'meta_query' => array(
+      'relation' => 'AND',
+      array(
+        'key' => 'has_date',
+        'value' => '1',
+        'compare' => '=='
+      ),
+
+    )
   );
 
   $query = new WP_Query($args);
