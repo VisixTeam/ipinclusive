@@ -1,6 +1,11 @@
 .edge, .ie {
   @include breakpoint(medium up) {
     .home-banner {
+
+      .slick-track {
+        display: block;
+      }
+      
       .slick-slide {
         display: block;
         max-width: inherit;
