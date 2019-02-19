@@ -2,6 +2,15 @@
   position: relative;
 }
 
+.fc-event-time, .fc-event-title {
+  padding: 0 3px;
+  white-space: nowrap;
+}
+
+.fc-title {
+  white-space: normal;
+}
+
 .fc-unthemed {
   background-color: $white;
   box-shadow: 0 0 10px 0 rgba(177,177,177,0.5);
