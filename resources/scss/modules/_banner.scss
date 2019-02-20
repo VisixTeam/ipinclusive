@@ -63,6 +63,7 @@
       a {
         font-weight: $global-weight-bold;
         font-size: rem-calc(21);
+        outline: none;
 
         &:hover {
           .icon {

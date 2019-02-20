@@ -39,7 +39,7 @@
 			<?php endif; ?>
 
 			<div class="cell">
-        <label for="email">Your comment</label>
+        <label for="comment">Your comment</label>
         <textarea name="comment" id="comment" cols="100%" rows="5" tabindex="2"></textarea>
       </div>
 

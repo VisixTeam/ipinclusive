@@ -113,7 +113,7 @@
   </section>
 <?php endif; ?>
 
-<section class="section events-calendar filtering">
+<section class="section events-calendar">
   <div class="grid-container">
     <div class="grid-x grid-margin-y">
       <div class="cell large-3">
@@ -122,14 +122,35 @@
 
       <div class="cell large-9">
         <div class="calendar-container" data-events="<?php echo htmlspecialchars(json_encode(get_events_and_dates()), ENT_QUOTES, 'UTF-8'); ?>">
-          <div class="view-options">
-            <a href="javascript:;" data-view="month" class="change-calendar-view active-view" id="calendar-view">
-              <i class="icon icon-calendar ip-orange"></i>
-            </a>
+          <div class="grid-x">
+            <div class="cell medium-4">
+              <div class="view-options">
+                <a href="javascript:;" data-view="month" class="change-calendar-view active-view" id="calendar-view">
+                  <i class="icon icon-calendar ip-orange"></i>
+                </a>
 
-            <a href="javascript:;" data-view="listMonth" class="change-calendar-view" id="list-view">
-              <i class="icon icon-view-list-alt ip-orange"></i>
-            </a>
+                <a href="javascript:;" data-view="listMonth" class="change-calendar-view" id="list-view">
+                  <i class="icon icon-view-list-alt ip-orange"></i>
+                </a>
+              </div>
+            </div>
+
+            <?php
+              $event_communities = get_event_tax();
+            ?>
+
+            <div class="cell medium-8">
+              <?php visix_partial( 'inputs/field', [
+                'field' => [
+                  'name' => 'community',
+                  'id' => 'event-filter',
+                  'type' => 'select',
+                  'allow_null' => true,
+                  'placeholder' => 'Filter by community',
+                  'choices' => tags_to_choices($event_communities),
+                ]
+              ], VISIX_PLUGIN_FORMS_NAME ); ?>
+            </div>
           </div>
           <div id="calendar"></div>
         </div>

@@ -48,6 +48,27 @@ function get_events_and_dates() {
     $originalDate = get_field('date_and_time', $post->ID);
     $date = DateTime::createFromFormat('d/m/Y g:i a', $originalDate);
 
+    $event_tax = get_the_terms($post->ID, 'events_communities');
+
+    if (!empty($event_tax) && ! is_wp_error($event_tax)) {
+      $tax = wp_list_pluck($event_tax, 'term_id');
+      $tax_term = wp_list_pluck($event_tax, 'taxonomy');
+    } else {
+      $tax = 'all';
+    }
+
+    $term_color = get_field('colour_theme', 'events_communities'.'_'.$tax);
+
+
+    if (!isset($term_color)) {
+      if($post->post_type == 'date') {
+        $term_color = '#555555';
+      } else {
+        $term_color = '#0077A1';
+      }
+    }
+
+
     $results[] = array(
       'id' => $post->ID,
       'title' => $post->post_title,
@@ -55,10 +76,20 @@ function get_events_and_dates() {
       'event_link' => get_permalink($post->ID),
       'date_link' => get_field('date_link', $post->ID),
       'type' => $post->post_type,
+      'event_communities_id' => $tax,
+      'backgroundColor' => $term_color,
     );
   }
 
   return $results;
+}
+
+function get_event_tax() {
+  $query = get_terms(array(
+    'taxonomy' => 'events_communities',
+  ));
+
+  return $query;
 }
 
 

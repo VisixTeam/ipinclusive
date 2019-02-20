@@ -1,6 +1,7 @@
 (function($){
 
   var events = $('.calendar-container').attr('data-events');
+  var eventFilter = $('#event-filter');
 
   if($('#calendar').length > 0) {
 
@@ -10,18 +11,27 @@
         center: 'title',
         right: 'next'
       },
+      handleWindowResize: true,
+      editable: false,
       height: 'auto',
       aspectRatio: 3,
       eventBorderColor: 'transparent',
       eventSources: [
         {
           events: JSON.parse(events),
-          backgroundColor: '#0077A1',
           textColor: '#fff',
           overlap: true,
           allDay: false,
         }
       ],
+      eventRender: function eventRender(event, element) {
+
+        if ( eventFilter.val() != 'all' ) {
+          if (event.event_communities_id.indexOf(parseInt(eventFilter.val())) >= 0 ) {
+            return false
+          }
+        }
+      },
       eventClick: function(calEvent) {
         $('#event-title').text(calEvent.title);
 
@@ -45,6 +55,10 @@
       displayEventEnd: false,
       eventLimit: true
     })
+
+    eventFilter.on('change',function(){
+      $('#calendar').fullCalendar('rerenderEvents');
+    });
 
     $('.change-calendar-view').each(function(){
       $(this).on('click', function(){
