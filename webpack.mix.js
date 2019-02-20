@@ -35,6 +35,7 @@ mix.sass('resources/scss/app.scss', 'assets/css/app.css', {
 mix.browserSync({
   proxy: 'https://ipinclusive.work',
   port: 3030,
+  https: true,
   notify: false,
   files: [
     "resources/**/*",

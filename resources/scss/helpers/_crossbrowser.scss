@@ -2,7 +2,7 @@
   @include breakpoint(medium up) {
     .home-banner {
 
-      .slick-track {
+      .slick-track, .slick-list {
         display: block;
       }
 
