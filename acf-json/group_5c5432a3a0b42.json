@@ -6,7 +6,7 @@
             "key": "field_5c5432e5f2108",
             "label": "Colour Theme",
             "name": "colour_theme",
-            "type": "color_picker",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,7 +16,19 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "default_value": ""
+            "choices": {
+                "green": "Green",
+                "teal": "Teal",
+                "orange": "Orange",
+                "pink": "Pink"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -37,5 +49,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1549022036
+    "modified": 1552396441
 }

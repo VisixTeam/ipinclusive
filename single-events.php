@@ -14,7 +14,25 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
 <?php visix_partial('modules/banner', ['custom_title' => get_the_title($id), 'communities_background_image' => $image]); ?>
 
-<section class="section event-details ip-pink-bg">
+<?php
+$event_communities_tax = get_the_terms($id, 'events_communities');
+$event_cat = array();
+$accepted_communities = array('IP Out', 'IP &amp; ME', 'Women in IP');
+
+foreach ($event_communities_tax as $event_community) {
+  $event_cat_title = $event_community->name;
+  $event_cat_id = $event_community->term_id;
+
+  $event_cat[] = $event_cat_title;
+
+  if ($event_cat_title == in_array($event_cat_title, $accepted_communities)) {
+    $event_cat['id'] = $event_cat_id;
+  }
+}
+$event_cat_color = get_field('colour_theme', 'term_'.$event_cat['id']);
+?>
+
+<section class="section event-details ip-<?= ($event_cat_color ? $event_cat_color : 'teal'); ?>-bg">
   <div class="grid-container">
     <div class="grid-x grid-margin-y align-middle">
       <?php
