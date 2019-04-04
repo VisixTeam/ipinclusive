@@ -28,3 +28,35 @@
     }
   }
 }
+
+.ie {
+  #header {
+    .main-menu {
+      height: 80px;
+
+      .cell {
+        &.medium-5.mediumLand-3.small-4 {
+          .button.teal {
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .cards-section {
+    padding: 20px 0;
+
+
+
+    @include breakpoint(medium) {
+      .slick-list, .slick-track {
+        display: block;
+      }
+    }
+  }
+
+  .events-calendar {
+    @extend .cards-section;
+  }
+}

@@ -27,7 +27,9 @@
       eventRender: function eventRender(event, element) {
 
         if ( eventFilter.val() != 'all' ) {
-          if (event.event_communities_id.indexOf(parseInt(eventFilter.val())) >= 0 ) {
+
+          let eventFilterVal = eventFilter.val();
+          if (event.event_communities_id.indexOf(parseInt(eventFilterVal)) < 0 ) {
             return false
           }
         }

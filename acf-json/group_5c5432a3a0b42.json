@@ -17,13 +17,13 @@
             },
             "hide_admin": 0,
             "choices": {
-                "green": "Green",
-                "teal": "Teal",
-                "orange": "Orange",
-                "pink": "Pink"
+                "#7FA025": "Green",
+                "#0077A1": "Teal",
+                "#F49B25": "Orange",
+                "#9E3D90": "Pink"
             },
             "default_value": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
@@ -49,5 +49,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1552396441
+    "modified": 1554389525
 }

@@ -185,6 +185,7 @@ register_taxonomy(
     'hierarchical' => true,
     'label' => 'Resources Types',
     'query_var' => true,
+    'show_admin_column' => true,
     'rewrite' => array('slug' => 'resources_type'),
     'capabilities' => array(
       'manage_terms' => 'manage_categories',
@@ -202,6 +203,7 @@ register_taxonomy(
     'hierarchical' => true,
     'label' => 'Team Communities',
     'query_var' => true,
+    'show_admin_column' => true,
     'rewrite' => array('slug' => 'team_communities'),
     'capabilities' => array(
       'manage_terms' => 'manage_categories',
@@ -218,6 +220,7 @@ register_taxonomy(
   array(
     'hierarchical' => true,
     'label' => 'Events Communities',
+    'show_admin_column' => true,
     'query_var' => true,
     'rewrite' => array('slug' => 'events_communities'),
     'capabilities' => array(
@@ -236,6 +239,7 @@ register_taxonomy(
     'hierarchical' => true,
     'label' => 'Signatories Category',
     'query_var' => true,
+    'show_admin_column' => true,
     'rewrite' => array('slug' => 'signatories_category'),
     'capabilities' => array(
       'manage_terms' => 'manage_categories',

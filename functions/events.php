@@ -57,15 +57,17 @@ function get_events_and_dates() {
       $tax = 'all';
     }
 
-    $term_color = get_field('colour_theme', 'events_communities'.'_'.$tax);
-
+    $term_color = get_field('colour_theme', 'events_communities'.'_'.$tax[0]);
+    $final_color;
 
     if (!isset($term_color)) {
       if($post->post_type == 'date') {
-        $term_color = '#555555';
+        $final_color = '#555555';
       } else {
-        $term_color = '#0077A1';
+        $final_color = $term_color;
       }
+    } else {
+      $final_color = $term_color;
     }
 
 
@@ -77,8 +79,9 @@ function get_events_and_dates() {
       'date_link' => get_field('date_link', $post->ID),
       'type' => $post->post_type,
       'event_communities_id' => $tax,
-      'backgroundColor' => $term_color,
+      'backgroundColor' => $final_color,
     );
+
   }
 
   return $results;

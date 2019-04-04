@@ -52,6 +52,8 @@ add_filter('visix_post_forms_args_signatories', function ($args, $post_data) {
   $args['post_type'] = 'signatories';
   $args['post_per_page'] = 6;
   $args['s'] = $post_data['query'];
+  $args['orderby'] = 'title';
+  $args['order'] = 'ASC';
   return $args;
 
 }, 1, 10);

@@ -146,7 +146,7 @@
                   'id' => 'event-filter',
                   'type' => 'select',
                   'allow_null' => true,
-                  'placeholder' => 'Filter by community',
+                  'placeholder' => 'Filter by event type',
                   'choices' => tags_to_choices($event_communities),
                 ]
               ], VISIX_PLUGIN_FORMS_NAME ); ?>
