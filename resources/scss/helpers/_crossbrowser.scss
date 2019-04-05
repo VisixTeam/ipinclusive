@@ -29,6 +29,22 @@
   }
 }
 
+.edge {
+  #header {
+    .main-menu {
+      height: 80px;
+
+      .cell {
+        &.medium-5.mediumLand-3.small-4 {
+          .button.teal {
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .ie {
   #header {
     .main-menu {
