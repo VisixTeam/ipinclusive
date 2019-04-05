@@ -24,6 +24,24 @@
             "multiple": 1,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_5ca727f5848b7",
+            "label": "Schedule Archive",
+            "name": "schedule_archive",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
         }
     ],
     "location": [
@@ -44,5 +62,5 @@
     "active": 1,
     "description": "",
     "recaptcha": 0,
-    "modified": 1547474611
+    "modified": 1554459119
 }
